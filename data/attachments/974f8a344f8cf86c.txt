@@ -1,0 +1,55 @@
+[LOG] Using Firebase Production Services for environment: stage [4:50:48 AM]
+[LOG] trackEvent view_login {timestamp: 2026-09-11T04:50:49.658Z} [4:50:49 AM]
+[LOG] Using Firebase Production Services for environment: stage [4:50:51 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:50:55 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:50:55 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:50:57 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:50:59 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:18 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:18 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:18 AM]
+❌ CONSOLE ERROR: Error: La plantilla del año anterior pertenece a otra empresa
+    at https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-dV6oQ_u9.js:9465:15
+❌ CONSOLE ERROR: Error: La plantilla del año anterior pertenece a otra empresa
+    at https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-dV6oQ_u9.js:9465:15
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:46 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:46 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:46 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:46 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:51:47 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:51:47 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:51:47 AM]
+
+⚠️  1 error(s) detected during test execution:
+  1. Error: La plantilla del año anterior pertenece a otra empresa
+    at https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-dV6oQ_u9.js:9465:15
+
+⚠️  1 error(s) detected during test execution:
+  1. Error: La plantilla del año anterior pertenece a otra empresa
+    at https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-dV6oQ_u9.js:9465:15

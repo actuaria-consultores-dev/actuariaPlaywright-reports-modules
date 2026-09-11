@@ -1,0 +1,314 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/EstudioActuarial/crearEstudio.test.ts >> Verificar creacion Estudio actuarial cusando empresa por primea vez en el sistema (no estudios previos) >> Crear Estudio Actuarial | [AP] | TC02-01-E: Verificar nueva empresa con opción "La entidad no realizó el"
+- Location: tests/specs/EstudioActuarial/crearEstudio.test.ts:179:2
+
+# Error details
+
+```
+Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /.*\/dashboard\/estudios\/nuevo-estudio/
+Received string:  "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/home"
+Timeout: 20000ms
+
+Call log:
+  - Expect "toHaveURL" with timeout 20000ms
+    43 × locator resolved to <html lang="es-419">…</html>
+       - unexpected value "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/home"
+
+```
+
+```yaml
+- banner:
+  - button "Notificaciones":
+    - img
+    - text: 99+
+  - button "image MODITEX":
+    - img "image"
+    - paragraph: MODITEX
+- complementary:
+  - link "Actuaria":
+    - /url: /dashboard
+    - img "Actuaria"
+  - button "abrir/cerrar menú"
+  - textbox "Buscar..."
+  - list:
+    - button "Inicio":
+      - img
+      - text: Inicio
+    - list:
+      - listitem: Panel General
+      - button "Mi cuenta":
+        - img
+        - text: Mi cuenta
+      - button "Servicios":
+        - img
+        - text: Servicios
+      - button "Recursos":
+        - img
+        - text: Recursos
+    - list:
+      - listitem: Pruebas
+      - link "Checkout demo":
+        - /url: /dashboard/checkout-demo
+        - img
+        - text: Checkout demo
+  - paragraph: Actuaria+ Stage
+  - paragraph: soporteplus@actuaria.com
+  - text: v 1.11.3
+- heading "Hola, CHRISTIAN" [level=1]
+- paragraph: "Sesión anterior: hoy, 04:45 · hace 1 minuto"
+- button "Inicio"
+- button "Estudio actuarial"
+- button "Actas de jubilación"
+- button "Control tributario"
+- button "NavIA ᴮᵉᵗᵃ"
+- separator
+- alert:
+  - text: No pudimos cargar la información
+  - button "Reintentar"
+- heading "Mis Servicios" [level=4]
+- paragraph: Elige el servicio que necesitas y empieza tu pedido cuando quieras.
+- img
+- button "Conocer más":
+  - paragraph: Conocer más
+- heading "Estudios actuariales" [level=6]
+- paragraph: Genera tu cálculo actuarial de provisiones de beneficios post-empleo
+- text: Disponible
+- button "Ingresar"
+- button
+- paragraph: Cumple con la normativa contable y toma decisiones con respaldo actuarial. Calculamos provisiones por jubilación y desahucio con resultados sólidos, normativos y listos para auditar.
+- button "Conocer más":
+  - paragraph: Conocer más
+- heading "Informe de impuestos diferidos" [level=6]
+- paragraph: Calcula el activo por impuesto diferido para obtener beneficios tributarios
+- text: Contratar
+- button "Ingresar" [disabled]
+- button
+- paragraph: Calculamos el impuesto diferido por provisiones de jubilación y desahucio bajo normativa contable, para reflejar correctamente la situación fiscal de tu empresa y facilitar la obtención de beneficio tributario.
+- img
+- button "Conocer más":
+  - paragraph: Conocer más
+- heading "Actas de jubilación patronal" [level=6]
+- paragraph: Documento técnico para la obtención de la pensión mensual y fondo global
+- text: Disponible
+- button "Ingresar"
+- button
+- paragraph: Calculamos la jubilación patronal según normativa laboral, generando la pensión mensual y el fondo global acumulado, con criterios técnicos y proyecciones confiables para cumplir obligaciones patronales.
+- img
+- button "Conocer más":
+  - paragraph: Conocer más
+- heading "Control tributario de provisiones" [level=6]
+- paragraph: Composición histórica de provisiones, para el cumplimiento normativo
+- text: Disponible
+- button "Ingresar"
+- button
+- paragraph: Controla provisiones de forma precisa, identifica salidas de personal, organiza tus reportes y asegura el cumplimiento fiscal, todo sin fricciones y en menos tiempo.
+- img
+- button "Conocer más":
+  - paragraph: Conocer más
+- heading "Simulador de beneficios post empleo" [level=6]
+- paragraph: Analiza tus provisiones, anticipando escenarios para la toma de decisiones
+- text: Contratar
+- button "Ingresar" [disabled]
+- button
+- paragraph: Anticipa el impacto futuro de tus provisiones con proyecciones claras y visuales. Mejora la planificación financiera, la toma de decisiones y la transparencia con un análisis demográfico ágil y estratégico.
+- img
+- button "Conocer más":
+  - paragraph: Conocer más
+- heading "Consulta con NavIA ᴮᵉᵗᵃ" [level=6]
+- paragraph: Responde todas tus dudas con nuestra inteligencia artificial actuarial
+- text: Disponible
+- button "Ingresar"
+- button
+- paragraph: Agente de inteligencia artificial entrenado con toda la normativa laboral y modelos actuariales para responder cualquier duda sobre tu informe de jubilación patronal.
+- link "Escríbenos a WhatsApp":
+  - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  1   | import { story, test, precondition, expect } from '@pages/TestBase';
+  2   | import { createLogger, Logger } from '@helpers/logger';
+  3   | import { gotoWithRetry } from '@helpers/navigation';
+  4   | import {
+  5   | 	completeEstudioActuarialWorkflow,
+  6   | 	verifyActaPendingDeletionWorkflow,
+  7   | 	verifyNoStudyDataWarningWorkflow,
+  8   | 	verifyInvoiceEmailWorkflow,
+  9   | 	verifyContinueWithPendingStudyWorkflow,
+  10  | 	verifyContinueWithPendingStudyAtSpecificStepWorkflow,
+  11  | 	verifyPendingStudyDataPersistenceWorkflow,
+  12  | 	verifyContinueWithPendingStudyOnPage2Workflow,
+  13  | 	verifyPrimerEstudio2025WithDataRecoveryWorkflow,
+  14  | } from '../../workflows/estudioActuarialWorkflows';
+  15  | import {
+  16  | 	CONFIG_TC02_01,
+  17  | 	CONFIG_TC02_01_DEBUG_NETWORK,
+  18  | 	CONFIG_TC02_01_B,
+  19  | 	CONFIG_TC02_01_C,
+  20  | 	CONFIG_TC02_01_D,
+  21  | 	CONFIG_TC02_01_E,
+  22  | 	CONFIG_TC02_01_F,
+  23  | 	CONFIG_TC02_01_G,
+  24  | 	CONFIG_TC02_01_H,
+  25  | 	CONFIG_TC02_01_I,
+  26  | 	CONFIG_TC02_11_NO_STUDY_DATA,
+  27  | 	EXPECTED_NO_STUDY_DATA_WARNING,
+  28  | 	EXPECTED_SELECT_STUDY_MESSAGE,
+  29  | 	EMAIL_DATA_TC02_01,
+  30  | 	EMAIL_DATA_TC02_01_B,
+  31  | 	EMAIL_DATA_TC02_01_C,
+  32  | 	EMAIL_DATA_TC02_01_D,
+  33  | 	EMAIL_DATA_TC02_01_E,
+  34  | 	EMAIL_DATA_TC02_01_F,
+  35  | 	EMAIL_DATA_TC02_01_I,
+  36  | } from '@data/estudioActuarialTestData';
+  37  | 
+  38  | // ─── Shared helpers (SRP / DRY) ──────────────────────────────────────────────
+  39  | 
+  40  | /**
+  41  |  * Reusable precondition: logs in as the given user and navigates to the
+  42  |  * specified target URL. Centralises the login → dashboard → navigate pattern
+  43  |  * so each story block only states *what* it needs, not *how* to get there.
+  44  |  */
+  45  | async function loginAndNavigate(
+  46  | 	loginPage: any,
+  47  | 	page: any,
+  48  | 	logger: Logger,
+  49  | 	credentials: { emailEnvKey: string; passwordEnvKey: string },
+  50  | 	targetPath: string,
+  51  | 	targetUrlPattern: RegExp
+  52  | ) {
+  53  | 	logger.inicio(`Preparando entorno → ${targetPath}`);
+  54  | 	// Navegación acotada + reintentos (evita cuelgues opacos del hook en CI)
+  55  | 	await gotoWithRetry(page, '/', { logger, label: 'Página de login' });
+  56  | 
+  57  | 	await test.step('Login', async () => {
+  58  | 		const email    = process.env[credentials.emailEnvKey]    || '';
+  59  | 		const password = process.env[credentials.passwordEnvKey] || '';
+  60  | 		logger.autenticacion('Iniciando sesión', email);
+  61  | 		await loginPage.loginFormulario(email, password);
+  62  | 		logger.exito('Sesión iniciada correctamente');
+  63  | 	});
+  64  | 
+  65  | 	await test.step('Verificar dashboard', async () => {
+  66  | 		await expect(page).toHaveURL(/.*\/dashboard\/portal\/.*/, { timeout: 20000 });
+  67  | 		logger.navegacion('Dashboard cargado correctamente');
+  68  | 	});
+  69  | 
+  70  | 	await test.step(`Navegar a ${targetPath}`, async () => {
+  71  | 		// gotoWithRetry: tras el login el SPA puede abortar el goto (net::ERR_ABORTED);
+  72  | 		// se reintenta con waitUntil 'domcontentloaded' en lugar de esperar 'load'.
+  73  | 		await gotoWithRetry(page, targetPath, { logger, label: targetPath });
+> 74  | 		await expect(page).toHaveURL(targetUrlPattern, { timeout: 20000 });
+      |                      ^ Error: expect(page).toHaveURL(expected) failed
+  75  | 		logger.navegacion(`Navegación exitosa → ${targetPath}`);
+  76  | 	});
+  77  | }
+  78  | 
+  79  | /**
+  80  |  * Wraps a single test case with consistent boilerplate:
+  81  |  *  - creates a scoped logger for the TC
+  82  |  *  - logs start message
+  83  |  *  - sets the timeout
+  84  |  *  - logs completion and errors
+  85  |  * This keeps each test body focused on *what* it tests (OCP/SRP).
+  86  |  */
+  87  | async function runWithLogging(
+  88  | 	tcId: string,
+  89  | 	description: string,
+  90  | 	timeoutMs: number,
+  91  | 	fn: (logger: Logger) => Promise<void>
+  92  | ) {
+  93  | 	const log = createLogger(tcId);
+  94  | 	log.inicio(`${description}`);
+  95  | 	test.setTimeout(timeoutMs);
+  96  | 	try {
+  97  | 		await fn(log);
+  98  | 		log.completado(`${tcId} finalizado exitosamente`);
+  99  | 	} catch (err: any) {
+  100 | 		log.error(`${tcId} falló`, err);
+  101 | 		throw err;
+  102 | 	}
+  103 | }
+  104 | 
+  105 | /**
+  106 |  * Returns true when the "Enviar pedido" mock is NOT activated
+  107 |  * (CONFIRMAR_PEDIDO_MOCK=false). In that case the flow runs against the real
+  108 |  * backend and a real invoice email is sent to the Gmail inbox, so the test
+  109 |  * must verify the email (verifyInvoiceEmailWorkflow) using the TC's EMAIL_DATA_*.
+  110 |  */
+  111 | function isMockDisabled(config: { confirmarPedidoMock?: { enabled?: boolean; debugNetwork?: boolean } }): boolean {
+  112 | 	return !!config.confirmarPedidoMock
+  113 | 		&& config.confirmarPedidoMock.enabled === false
+  114 | 		&& !config.confirmarPedidoMock.debugNetwork;
+  115 | }
+  116 | 
+  117 | story('Verificar creacion Estudio actuarial cusando empresa por primea vez en el sistema (no estudios previos)', async () => {
+  118 | 	const storyLogger = createLogger('EstudioActuarial-CrearNuevo');
+  119 | 
+  120 | 	precondition(async ({ loginPage, page }) => {
+  121 | 		await loginAndNavigate(
+  122 | 			loginPage, page, storyLogger,
+  123 | 			{ emailEnvKey: 'ACTUARIA2_TEST_USER', passwordEnvKey: 'ACTUARIA2_TEST_USER_PASSWORD' },
+  124 | 			'/dashboard/estudios/nuevo-estudio',
+  125 | 			/.*\/dashboard\/estudios\/nuevo-estudio/
+  126 | 		);
+  127 | 	});
+  128 | 
+  129 | 	test('Crear Estudio Actuarial | [HP] | TC02-01: Verificar nueva empresa se registra por primera vez @daily', async ({ estudioActuarialPage, page }) => {
+  130 | 		await runWithLogging('TC02-01', 'Nueva empresa - primera vez en el sistema', 400000, async (log) => {
+  131 | 			log.info('Ejecutando flujo completo de creación de estudio actuarial');
+  132 | 			await completeEstudioActuarialWorkflow(estudioActuarialPage, CONFIG_TC02_01);
+  133 | 			log.exito('Flujo completado - estudio no persiste en BD (mock)');
+  134 | 
+  135 | 			// Mock desactivado (CONFIRMAR_PEDIDO_MOCK=false): el flujo corre contra
+  136 | 			// el backend real y se envía un email real → verificar que llegó a Gmail.
+  137 | 			if (isMockDisabled(CONFIG_TC02_01)) {
+  138 | 				await verifyInvoiceEmailWorkflow(estudioActuarialPage, page, CONFIG_TC02_01, EMAIL_DATA_TC02_01);
+  139 | 			}
+  140 | 		});
+  141 | 	});
+  142 | 
+  143 | 	test.skip('Crear Estudio Actuarial | [DBG] | TC02-01-DEBUG: Capturar endpoints reales sin interceptación (Enviar)', async ({ estudioActuarialPage }) => {
+  144 | 		await runWithLogging('TC02-01-DEBUG', 'Modo debug: captura de endpoints reales sin interceptación', 600000, async (log) => {
+  145 | 			log.info('Ejecutando flujo completo SIN interceptación - revisar log [NET] con cuerpos reales (test-results/debug-network)');
+  146 | 			await completeEstudioActuarialWorkflow(estudioActuarialPage, CONFIG_TC02_01_DEBUG_NETWORK);
+  147 | 			log.exito('Captura de endpoints reales completada');
+  148 | 		});
+  149 | 	});
+  150 | 
+  151 | 	test('Crear Estudio Actuarial | [HP] | TC02-01-B: Verificar nueva empresa se registra por primera vez con plan Starter', async ({ estudioActuarialPage, page }) => {
+  152 | 		await runWithLogging('TC02-01-B', 'Nueva empresa - Plan Starter', 400000, async (log) => {
+  153 | 			log.info('Incluye carga de nómina y archivo de beneficios');
+  154 | 			await completeEstudioActuarialWorkflow(estudioActuarialPage, CONFIG_TC02_01_B);
+  155 | 			log.exito('Plan Starter verificado correctamente');
+  156 | 
+  157 | 			// Mock desactivado (CONFIRMAR_PEDIDO_MOCK=false): el flujo corre contra
+  158 | 			// el backend real y se envía un email real → verificar que llegó a Gmail.
+  159 | 			if (isMockDisabled(CONFIG_TC02_01_B)) {
+  160 | 				await verifyInvoiceEmailWorkflow(estudioActuarialPage, page, CONFIG_TC02_01_B, EMAIL_DATA_TC02_01_B);
+  161 | 			}
+  162 | 		});
+  163 | 	});
+  164 | 
+  165 | 	test('Crear Estudio Actuarial | [HP] | TC02-01-C: Verificar nueva empresa se registra por primera vez con plan Plus', async ({ estudioActuarialPage, page }) => {
+  166 | 		await runWithLogging('TC02-01-C', 'Nueva empresa - Plan Plus', 400000, async (log) => {
+  167 | 			log.info('Incluye carga de nómina y archivo de beneficios');
+  168 | 			await completeEstudioActuarialWorkflow(estudioActuarialPage, CONFIG_TC02_01_C);
+  169 | 			log.exito('Plan Plus verificado correctamente');
+  170 | 
+  171 | 			// Mock desactivado (CONFIRMAR_PEDIDO_MOCK=false): el flujo corre contra
+  172 | 			// el backend real y se envía un email real → verificar que llegó a Gmail.
+  173 | 			if (isMockDisabled(CONFIG_TC02_01_C)) {
+  174 | 				await verifyInvoiceEmailWorkflow(estudioActuarialPage, page, CONFIG_TC02_01_C, EMAIL_DATA_TC02_01_C);
+```

@@ -1,0 +1,61 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-GestionCompleta] goto /dashboard/estudios/nuevo-estudio interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-10] Archivo inválido en sección Beneficios Pagados - debe mostrar mensaje de error
+⚠️  [TC02-10] Mensaje de error esperado: "Formato incorrecto. Carga el archivo de pagos con el formato establecido y sin incluir personal desvinculado para continuar."
+
+======================================================================
+🎯 VALIDACIÓN DE ARCHIVO DE BENEFICIOS PAGADOS
+======================================================================
+   • Plan: ACTUARIAL
+   • Año de valoración: 2024
+   • Opción saldos: iniciaOperaciones
+   • Error esperado: Formato incorrecto. Carga el archivo de pagos con el formato establecido y sin incluir personal desvinculado para continuar.
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [BeneficiosFileValidationWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan ACTUARIAL
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [BeneficiosFileValidationWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando estudio
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Inicia Operaciones
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Inicia Operaciones
+✅ [EstudioActuarialPage] Inicia Operaciones seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Inicia Operaciones
+👆 [EstudioActuarialPage] Click después de seleccionar Inicia Operaciones: Botón Siguiente
+ℹ️  📤 Subiendo archivo de nómina: caso1.xlsx
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: caso1.xlsx...
+✅ Archivo de nómina subido: caso1.xlsx
+✅ [BeneficiosFileValidationWorkflow] Estudio configurado
+
+📍 Paso 4: Verificando resumen
+✅ [BeneficiosFileValidationWorkflow] Resumen verificado
+
+📍 Paso 5: Validando carga de archivo de Beneficios
+ℹ️  [BeneficiosFileValidationWorkflow] ✅ Botón Siguiente está deshabilitado antes de subir archivo de Beneficios
+ℹ️  [BeneficiosFileValidationWorkflow] ⏳ Esperando confirmación de subida: caso1.xlsx...
+✅ [BeneficiosFileValidationWorkflow] ✅ Archivo de beneficios cargado y validado
+
+✅ ✅ ✅ [BeneficiosFileValidationWorkflow] Flujo de validación de archivo de beneficios completado exitosamente
+
+✅ [TC02-10] Mensaje de error de beneficios mostrado correctamente
+
+✅ ✅ ✅ [TC02-10] TC02-10 finalizado exitosamente
+
+
+ℹ️  7 non-blocking error(s) ignored by filter.
+
+📋 100 console message(s) logged to stderr

@@ -1,0 +1,7 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/home
+  • CONSOLE ERROR → {error: AxiosError: Request failed with status code 404 at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  • RED (4xx/5xx) → GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/empresas/analysis_data/0992700726001 → 404
+  • CONSOLE → {error: AxiosError: Request failed with status code 404 at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+===================================================================

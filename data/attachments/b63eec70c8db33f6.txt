@@ -1,0 +1,10 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/ozYvuwoAgXOCb0W2fDj2/2
+  • CONSOLE ERROR → {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+  • CONSOLE ERROR → {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+  • RED (4xx/5xx) → POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/query/custom → 500
+  • RED (4xx/5xx) → POST https://middleware-vpmay2wg5q-ue.a.run.app/actuafast/v2?keys=modelo_analisis_base → 400
+  • CONSOLE → {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+  • CONSOLE → {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+===================================================================

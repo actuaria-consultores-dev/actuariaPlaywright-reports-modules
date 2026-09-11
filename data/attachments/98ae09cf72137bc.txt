@@ -1,0 +1,42 @@
+🎭️ [EstudioActuarial-Pendientes] Preparando entorno → /dashboard/estudios/mis-estudios
+🔐 [EstudioActuarial-Pendientes] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-Pendientes] Sesión iniciada correctamente
+🔍 [EstudioActuarial-Pendientes] Dashboard cargado correctamente
+🔍 [EstudioActuarial-Pendientes] Navegación exitosa → /dashboard/estudios/mis-estudios
+🎭️ [TC03-02] Continuación de estudio pendiente desde Mis Estudios
+ℹ️  [TC03-02] Buscando primer estudio pendiente disponible en la tabla
+ℹ️  Iniciando flujo: Continuar con estudio pendiente
+ℹ️  [EstudioActuarialPage] Navegando a pestaña Estudios Pendientes
+ℹ️  [EstudioActuarialPage] Esperando que el conteo de estudios pendientes se cargue
+✅ Navegado a "Estudios Pendientes"
+ℹ️  [EstudioActuarialPage] Extrayendo conteo de estudios pendientes
+✅ [EstudioActuarialPage] Conteo extraído: 345 estudios pendientes
+✅ El conteo de estudios pendientes es mayor a 0
+ℹ️  [EstudioActuarialPage] Extrayendo datos de tabla
+⚠️  [EstudioActuarialPage] No se encontraron filas con botón Eliminar - tabla puede estar vacía
+ℹ️  [EstudioActuarialPage] Se encontraron 5 filas en la tabla
+✅ [EstudioActuarialPage] Se encontraron 5 estudios pendientes para probar
+ℹ️  [EstudioActuarialPage] Fila 1: 17/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 2: 10/09/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 3: 17/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 4: 28/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 5: 24/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  Intentando continuar con un estudio en el paso 6
+ℹ️  [EstudioActuarialPage] 🔍 Intento 1 (a[href*="/nuevo-estudio/"])...
+✅ [EstudioActuarialPage] ✅ "Continuar con el estudio" navegó a: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/JOQhOg8RfavtzvkOblEa/5
+👆 Click para estudio en paso 6: Botón Continuar con el estudio
+✅ Redireccionado a la URL correcta para el paso 6
+✅ El encabezado muestra "Paso 6 de 7"
+
+✅ ✅ ✅ Flujo de continuar con estudio pendiente completado
+
+✅ [TC03-02] Navegación al estudio pendiente verificada correctamente
+
+✅ ✅ ✅ [TC03-02] TC03-02 finalizado exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

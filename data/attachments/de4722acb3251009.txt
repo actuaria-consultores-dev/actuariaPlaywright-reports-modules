@@ -1,0 +1,73 @@
+🎭️ [EstudioActuarial-2025-DataRecovery] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-2025-DataRecovery] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-2025-DataRecovery] Sesión iniciada correctamente
+🔍 [EstudioActuarial-2025-DataRecovery] Dashboard cargado correctamente
+🔍 [EstudioActuarial-2025-DataRecovery] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-01-H] Año 2025 - mes de corte Diciembre - recuperación de saldos contables
+ℹ️  [TC02-01-H] Verificando recuperación automática de datos del estudio del año anterior
+⚠️  [TC02-01-H] Saldos editados manualmente: Jubilación Patronal y Bonificación por Desahucio
+
+======================================================================
+🎯 INICIANDO FLUJO ESTUDIO ACTUARIAL CON RECUPERACIÓN DE DATOS (2025)
+======================================================================
+   • Plan: PLUS
+   • Año de valoración: 2025
+   • Mes de valoración: 31 de Diciembre
+   • Mes de corte: Diciembre
+   • Opción saldos: primerEstudio
+   • Normativa: pymes
+   • Tasa incremento: estandar
+   • Tasa rotación: especifico
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [TC02-01-H-Workflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan PLUS
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [TC02-01-H-Workflow] Plan seleccionado
+
+📍 Paso 3: Configurando fecha de valoración: 2025 / 31 de Diciembre / corte Diciembre
+✅ [TC02-01-H-Workflow] Fecha de valoración configurada
+ℹ️  [TC02-01-H-Workflow] Seleccionando "No, deseo seleccionar valores"
+✅ [EstudioActuarialPage] "No, deseo seleccionar valores" seleccionado
+ℹ️  [TC02-01-H-Workflow] Editando saldos: Jubilación=4, Desahucio=4
+ℹ️  [EstudioActuarialPage] Panel de edición de saldos abierto
+✅ [EstudioActuarialPage] Jubilación Patronal establecida a: 4
+✅ [EstudioActuarialPage] Bonificación por Desahucio establecida a: 4
+✅ [EstudioActuarialPage] Saldos guardados
+ℹ️  [TC02-01-H-Workflow] Verificando valores de celdas de saldos
+✅ [EstudioActuarialPage] Celdas de saldos verificadas: nth(2)=4, nth(3)=4
+✅ [TC02-01-H-Workflow] Celdas de saldos verificadas: Jubilación=4, Desahucio=4
+✅ [TC02-01-H-Workflow] Navegado a Carga de Nómina
+ℹ️  [TC02-01-H-Workflow] Subiendo archivo de nómina: caso1.xlsx
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: caso1.xlsx...
+✅ [TC02-01-H-Workflow] Archivo de nómina subido: caso1.xlsx
+ℹ️  [TC02-01-H-Workflow] Verificando "Dato recuperado del estudio" en Normativa
+✅ [EstudioActuarialPage] "Dato recuperado del estudio" visible
+ℹ️  [TC02-01-H-Workflow] Configurando tasa de incremento: estandar
+✅ [TC02-01-H-Workflow] Tasa de incremento configurada
+ℹ️  [TC02-01-H-Workflow] Configurando tasa de rotación: especifico (sin datos del año anterior)
+ℹ️  [EstudioActuarialPage] Ingresando No. trabajadores al inicio: 690
+ℹ️  [EstudioActuarialPage] Ingresando Salidas: 75
+✅ [TC02-01-H-Workflow] Tasa de rotación configurada
+ℹ️  [TC02-01-H-Workflow] Verificando "Dato recuperado del estudio" en Política de pago
+✅ [EstudioActuarialPage] "Dato recuperado del estudio" visible
+ℹ️  [TC02-01-H-Workflow] Verificando pantalla Paso 4 de 7 - Desvinculaciones
+ℹ️  [EstudioActuarialPage] URL actual: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/evjFdQLavDUjrjtH16zd/2
+✅ [EstudioActuarialPage] Pantalla Paso 4 - Empleados activos (Resumen) verificada
+
+✅ ✅ ✅ [TC02-01-H-Workflow] Flujo TC02-01-H completado exitosamente
+
+✅ [TC02-01-H] Recuperación de datos y edición de saldos verificada hasta Paso 4
+
+✅ ✅ ✅ [TC02-01-H] TC02-01-H finalizado exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 44 console message(s) logged to stderr

@@ -1,0 +1,75 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-16] Archivo >1MB - debe rechazarse con error de tamaño
+⚠️  [TC02-16] Error esperado: "Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más"
+
+======================================================================
+🎯 VALIDACIÓN DE ERROR DE CARGA DE ARCHIVO
+======================================================================
+   • Plan: ACTUARIAL
+   • Año de valoración: 2024
+   • Opción saldos: primerEstudio
+   • Error esperado: Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [SingleUploadErrorWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan ACTUARIAL
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [SingleUploadErrorWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando fecha de valoración
+ℹ️  [SingleUploadErrorWorkflow] Configurando opciones de saldos contables
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Primer Estudio
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Primer Estudio
+✅ [EstudioActuarialPage] Primer Estudio seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Primer Estudio
+👆 [EstudioActuarialPage] Click después de seleccionar Primer Estudio: Botón Siguiente
+ℹ️  [SingleUploadErrorWorkflow] Intentando subir archivo con error esperado: Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más
+⚠️  [SingleUploadErrorWorkflow] ⚠️ Upload error handled: Error: expect(locator).toBeVisible() failed
+
+Locator: locator('div[role="alert"]').filter({ hasText: 'Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más' })
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for locator('div[role="alert"]').filter({ hasText: 'Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más' })
+
+❌ [TC02-16] TC02-16 falló
+   Detalle: expect(locator).toContainText(expected) failed
+
+Locator: locator('div[role="alert"]')
+Expected substring: "Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más"
+Received string:    "Procesando archivo..."
+Timeout: 10000ms
+
+Call log:
+  - Expect "toContainText" with timeout 10000ms
+  - waiting for locator('div[role="alert"]')
+    23 × locator resolved to <div role="alert" aria-describedby="notistack-snackbar" class="go1888806478 notistack-MuiContent notistack-MuiContent-info go167266335 go1930647212 go3162094071">…</div>
+       - unexpected value "Procesando archivo..."
+
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/ozYvuwoAgXOCb0W2fDj2/2
+  • CONSOLE ERROR → {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+  • CONSOLE ERROR → {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+  • RED (4xx/5xx) → POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/query/custom → 500
+  • RED (4xx/5xx) → POST https://middleware-vpmay2wg5q-ue.a.run.app/actuafast/v2?keys=modelo_analisis_base → 400
+  • CONSOLE → {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+  • CONSOLE → {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+===================================================================
+
+ℹ️  5 non-blocking error(s) ignored by filter.
+
+📋 44 console message(s) logged to stderr

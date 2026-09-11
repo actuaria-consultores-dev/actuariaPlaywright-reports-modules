@@ -1,0 +1,45 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-08] Archivo de nómina con columnas/datos faltantes - debe mostrar errores de validación
+⚠️  [TC02-08] Se esperan 3 errores de validación al procesar el archivo
+
+======================================================================
+🎯 VALIDACIÓN DE ARCHIVO DE NÓMINA - ERRORES ESPERADOS
+======================================================================
+   • Plan: ACTUARIAL
+   • Año de valoración: 2024
+   • Opción saldos: primerEstudio
+   • Errores esperados: 3
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [FileValidationWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan ACTUARIAL
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [FileValidationWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando fecha de valoración
+ℹ️  [FileValidationWorkflow] Configurando opciones de saldos contables
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Primer Estudio
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Primer Estudio
+✅ [EstudioActuarialPage] Primer Estudio seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Primer Estudio
+👆 [EstudioActuarialPage] Click después de seleccionar Primer Estudio: Botón Siguiente
+ℹ️  [FileValidationWorkflow] ⏳ Esperando confirmación de subida: missingData.xlsx...
+✅ [FileValidationWorkflow] 3 errores de validación verificados correctamente
+✅ [TC02-08] Errores de validación mostrados correctamente en la interfaz
+
+✅ ✅ ✅ [TC02-08] TC02-08 finalizado exitosamente
+
+
+ℹ️  5 non-blocking error(s) ignored by filter.
+
+📋 36 console message(s) logged to stderr

@@ -1,0 +1,199 @@
+🎭️ [EstudioActuarial-CrearNuevo] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-CrearNuevo] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-CrearNuevo] Sesión iniciada correctamente
+🔍 [EstudioActuarial-CrearNuevo] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-CrearNuevo] goto /dashboard/estudios/nuevo-estudio interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-CrearNuevo] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-01-C] Nueva empresa - Plan Plus
+ℹ️  [TC02-01-C] Incluye carga de nómina y archivo de beneficios
+
+======================================================================
+🎯 INICIANDO FLUJO COMPLETO DE ESTUDIO ACTUARIAL
+======================================================================
+   • Plan: PLUS
+   • Año de valoración: 2024
+   • Opción saldos: iniciaOperaciones
+   • Normativa: pymes
+   • Tasa incremento: estandar
+   • Tasa rotación: estandar
+======================================================================
+
+ℹ️  [EstudioActuarialWorkflow] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [EstudioActuarialWorkflow] Contexto           : PLUS - inicio del flujo (paso 7 = "Enviar pedido")
+ℹ️  [EstudioActuarialWorkflow] Env                : CONFIRMAR_PEDIDO_MOCK = 'true'
+ℹ️  [EstudioActuarialWorkflow] Lectura del env    : valor 'true' → el mock queda ACTIVADO
+ℹ️  [EstudioActuarialWorkflow] Config del TC      : confirmarPedidoMock = { enabled: true, debugNetwork: false }
+ℹ️  [EstudioActuarialWorkflow] Modo efectivo      : 🟢 MOCK ACTIVADO — los endpoints del paso final serán interceptados (el backend real NO se toca)
+✅ [EstudioActuarialWorkflow] INTERCEPTARÁ: sí
+ℹ️  [EstudioActuarialWorkflow] ═══════════════════════════════════════════
+
+📍 Paso 1: Creando nuevo estudio
+✅ [EstudioActuarialWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan PLUS
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [EstudioActuarialWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando estudio (fecha, saldos, nómina, normativa, tasas)
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Inicia Operaciones
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Inicia Operaciones
+✅ [EstudioActuarialPage] Inicia Operaciones seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Inicia Operaciones
+👆 [EstudioActuarialPage] Click después de seleccionar Inicia Operaciones: Botón Siguiente
+ℹ️  📤 Subiendo archivo de nómina: caso1.xlsx
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: caso1.xlsx...
+✅ Archivo de nómina subido: caso1.xlsx
+✅ [EstudioActuarialWorkflow] Configuración completada
+
+📍 Paso 4: Verificando resumen y datos de empleados
+✅ [EstudioActuarialWorkflow] Resumen verificado
+ℹ️  [EstudioActuarialWorkflow] 🔄 Ruta Inicia Operaciones: Yendo a configuración de beneficios
+ℹ️  [EstudioActuarialPage] Configurando beneficios para empresa que inicia operaciones
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: PagosporEmpleados.xlsx...
+✅ [EstudioActuarialPage] Archivo PagosporEmpleados.xlsx subido exitosamente
+✅ [EstudioActuarialPage] Beneficios configurados exitosamente
+ℹ️  [EstudioActuarialWorkflow] 🧾 Verificando Detalle de la factura...
+✅ [EstudioActuarialWorkflow] Sección de factura visible
+ℹ️  [EstudioActuarialWorkflow] 📋 Verificando items individuales y totales...
+ℹ️  [EstudioActuarialPage] Iniciando verificación completa de factura
+ℹ️  [EstudioActuarialPage] Total de items a verificar: 4
+ℹ️  [EstudioActuarialPage] Verificando items individuales de la factura...
+ℹ️  [EstudioActuarialPage]   1. INFORME NIC12 PARA ESTUDIO NIIF 2024 → $81.60
+ℹ️  [EstudioActuarialPage]   2. SIMULADOR DE BENEFICIOS POST-EMPLEO → $81.60
+ℹ️  [EstudioActuarialPage]   3. JUBILACION PATRONAL NIIF PYMES 2024 (17 TRABAJADORES) → $166.87
+ℹ️  [EstudioActuarialPage]   4. DESAHUCIO NIIF PYMES 2024 (17 TRABAJADORES) → $105.13
+✅ [EstudioActuarialPage] 4 items verificados exitosamente
+ℹ️  [EstudioActuarialPage] Verificando totales de la factura...
+ℹ️  [EstudioActuarialPage]   Descuento: $76.80
+ℹ️  [EstudioActuarialPage]   Subtotal: $435.20
+ℹ️  [EstudioActuarialPage]   IVA (15%): $65.28
+ℹ️  [EstudioActuarialPage]   Total: $500.48
+
+✅ ✅ ✅ [EstudioActuarialPage] Factura completa verificada correctamente
+
+✅ [EstudioActuarialWorkflow] Factura completa verificada correctamente
+
+📍 Paso 6: Completando datos del pedido
+ℹ️  [EstudioActuarialPage] Deteniendo antes de click en Enviar (skipFinalSubmit: true)
+✅ [EstudioActuarialWorkflow] Datos del pedido completados
+
+📍 Paso 7: Enviando pedido del estudio
+
+📍 Paso 7: Enviando pedido del estudio
+ℹ️  [EstudioActuarial-Step7-Enviar] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [EstudioActuarial-Step7-Enviar] Contexto           : paso 7 - justo antes de hacer clic en "Siguiente" (Enviar)
+ℹ️  [EstudioActuarial-Step7-Enviar] Env                : CONFIRMAR_PEDIDO_MOCK = 'true'
+ℹ️  [EstudioActuarial-Step7-Enviar] Lectura del env    : valor 'true' → el mock queda ACTIVADO
+ℹ️  [EstudioActuarial-Step7-Enviar] Config del TC      : confirmarPedidoMock = { enabled: true, debugNetwork: false }
+ℹ️  [EstudioActuarial-Step7-Enviar] Modo efectivo      : 🟢 MOCK ACTIVADO — los endpoints del paso final serán interceptados (el backend real NO se toca)
+✅ [EstudioActuarial-Step7-Enviar] INTERCEPTARÁ: sí
+ℹ️  [EstudioActuarial-Step7-Enviar] ═══════════════════════════════════════════
+ℹ️  [EstudioActuarial-Step7-Enviar] MODO MOCK: armando interceptación antes de hacer clic en "Siguiente"
+
+======================================================================
+🎯 ARMANDO INTERCEPTACIÓN DE ENDPOINTS (MOCKOON-STYLE)
+======================================================================
+   • ingresarPedido: /\/workflow\/ingresar-pedido(?:\?|$)/
+   • workflowEstado: /\/workflow\/(?!ingresar-pedido)/
+   • ventaEfectiva: /\/api\/EffectiveSale\/search\//
+   • notificaciones: /\/firestore\/send-email(?:\?|$)/
+======================================================================
+
+✅ [EstudioActuarialWorkflow] 🟢 MOCK ACTIVO: interceptando 4 endpoints del paso "Enviar pedido"
+ℹ️  [EstudioActuarialWorkflow]    1) POST workflow/ingresar-pedido
+ℹ️  [EstudioActuarialWorkflow]    2) GET  workflow/status (catch-all → SUCCEEDED)
+ℹ️  [EstudioActuarialWorkflow]    3) GET  EffectiveSale/search/{idVentaEfectiva}
+ℹ️  [EstudioActuarialWorkflow]    4) POST firestore/send-email
+✅ [EstudioActuarialWorkflow] Rutas de interceptación registradas (el backend real no recibirá estas llamadas)
+✅ [EstudioActuarial-Step7-Enviar] 🟢 MOCK ACTIVO: las peticiones del paso 7 serán respondidas por el mock (el backend real no se toca)
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://u.clarity.ms/collect -> 204
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6 -> 200
+ℹ️  [EstudioActuarialWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://u.clarity.ms/collect -> 204
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido -> 200
+ℹ️  [EstudioActuarialWorkflow] Interceptado (workflow estado): GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F83da83d5-54f2-48a3-b75b-28b7bf14c5cc
+ℹ️  [EstudioActuarialWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F83da83d5-54f2-48a3-b75b-28b7bf14c5cc
+ℹ️  [EstudioActuarialWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F83da83d5-54f2-48a3-b75b-28b7bf14c5cc -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/ms6YYiFm6tpRx3A8WYGI -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/ms6YYiFm6tpRx3A8WYGI -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7 -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/ms6YYiFm6tpRx3A8WYGI -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/ms6YYiFm6tpRx3A8WYGI -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7 -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/parametros?collection=constantes -> 200
+ℹ️  [EstudioActuarialWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/search/a0FVD0000096WzK2AU
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://u.clarity.ms/collect -> 204
+ℹ️  [EstudioActuarialWorkflow] [NET] GET https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/search/a0FVD0000096WzK2AU -> 200
+ℹ️  [EstudioActuarialWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email -> 200
+ℹ️  [EstudioActuarialWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email -> 200
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://u.clarity.ms/collect -> 204
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://u.clarity.ms/collect -> 204
+ℹ️  [EstudioActuarialWorkflow] [NET] POST https://u.clarity.ms/collect -> 204
+
+======================================================================
+🎯 📡 ENDPOINTS INTERCEPTADOS (MOCKOON-STYLE)
+======================================================================
+   • total: 4
+======================================================================
+
+
+======================================================================
+🎯 ▶ POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F83da83d5-54f2-48a3-b75b-28b7bf14c5cc
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/search/a0FVD0000096WzK2AU
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+ℹ️  [EstudioActuarial-Step7-Enviar] Verificando pantalla final de confirmación
+ℹ️  [EstudioActuarialPage] Verificando pantalla final de confirmación del estudio
+ℹ️  [EstudioActuarialPage] Diálogo de encuesta detectado - cerrando con X
+✅ [EstudioActuarialPage] Diálogo de encuesta cerrado
+✅ [EstudioActuarialPage] Pantalla final de confirmación del estudio verificada
+✅ [EstudioActuarial-Step7-Enviar] Confirmación del pedido verificada
+📊 [EstudioActuarial-Step7-Enviar] Endpoints interceptados: 4 de los esperados
+✅ [EstudioActuarial-Step7-Enviar] 🟢 CONFIRMADO: el mock interceptó el paso 7 (backend real no recibió estas llamadas)
+✅ [EstudioActuarialWorkflow] Pedido enviado
+
+✅ ✅ ✅ [EstudioActuarialWorkflow] FLUJO COMPLETADO EXITOSAMENTE (66.96s)
+
+ℹ️  [EstudioActuarialWorkflow] ⏱️  Tiempo total: 66.96 segundos
+✅ [TC02-01-C] Plan Plus verificado correctamente
+
+✅ ✅ ✅ [TC02-01-C] TC02-01-C finalizado exitosamente
+
+
+ℹ️  7 non-blocking error(s) ignored by filter.
+
+📋 144 console message(s) logged to stderr

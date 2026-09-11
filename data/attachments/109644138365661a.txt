@@ -1,0 +1,46 @@
+[LOG] Using Firebase Production Services for environment: stage [4:47:44 AM]
+[LOG] trackEvent view_login {timestamp: 2026-09-11T04:47:45.418Z} [4:47:45 AM]
+[LOG] Using Firebase Production Services for environment: stage [4:47:47 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:47:50 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:47:51 AM]
+[LOG] Sistema Name:  Estudios - Stage version:  1.1.18 [4:47:54 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:10 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:10 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:10 AM]
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:11 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:11 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:11 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:11 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:11 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:11 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:11 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:11 AM]
+[WARNING] Skipped "0" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:11 AM]
+[WARNING] Skipped "0" because an invalid file extension was provided. [4:48:11 AM]
+[WARNING] Skipped "1" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types. [4:48:11 AM]
+[WARNING] Skipped "1" because an invalid file extension was provided. [4:48:11 AM]
+
+⚠️  2 error(s) detected during test execution:
+  1. {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+  2. {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}
+
+⚠️  2 error(s) detected during test execution:
+  1. {error: AxiosError$1, message: Error al obtener documentos: Error: 3 INVALID_ARGUMENT: 'IN' requires an non-empty ArrayValue., content: Object}
+  2. {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}

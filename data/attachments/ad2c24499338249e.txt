@@ -1,0 +1,87 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-12] Dropdown retención IVA - verifica opciones y valores para Contribuyentes Especiales
+ℹ️  [TC02-12] Validando opciones de retención IVA: 20 % y 70 %
+
+======================================================================
+🎯 VALIDACIÓN DROPDOWN RETENCIÓN IVA CONTRIBUYENTES ESPECIALES
+======================================================================
+   • Plan: ACTUARIAL
+   • Año de valoración: 2024
+   • Primera opción: 20 %
+   • Segunda opción: 70 %
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [IvaRetencionDropdownWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [IvaRetencionDropdownWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando estudio
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Inicia Operaciones
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Inicia Operaciones
+✅ [EstudioActuarialPage] Inicia Operaciones seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Inicia Operaciones
+👆 [EstudioActuarialPage] Click después de seleccionar Inicia Operaciones: Botón Siguiente
+ℹ️  📤 Subiendo archivo de nómina: caso1.xlsx
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: caso1.xlsx...
+✅ Archivo de nómina subido: caso1.xlsx
+✅ Configuración completada
+
+📍 Paso 4: Verificando resumen
+✅ Resumen verificado
+
+📍 Paso 5: Configurando beneficios
+ℹ️  [EstudioActuarialPage] Configurando beneficios para empresa que inicia operaciones
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: PagosporEmpleados.xlsx...
+✅ [EstudioActuarialPage] Archivo PagosporEmpleados.xlsx subido exitosamente
+✅ [EstudioActuarialPage] Beneficios configurados exitosamente
+✅ Beneficios configurados
+ℹ️  Verificando ubicación en Paso 6
+✅ Estamos en Paso 6 de 7 - Datos del pedido
+ℹ️  Verificando estado inicial del checkbox
+✅ Checkbox visible y desmarcado
+ℹ️  Verificando dropdown inicial no visible
+✅ Dropdown no visible (estado esperado)
+👆 Marcar: Checkbox Contribuyentes Especiales
+✅ Checkbox marcado
+ℹ️  Verificando aparición del dropdown
+✅ Dropdown apareció correctamente
+👆 Seleccionar 20 %: Dropdown IVA
+✅ Valor 20 % seleccionado y verificado
+👆 Desmarcar: Checkbox Contribuyentes Especiales
+✅ Checkbox desmarcado
+ℹ️  Verificando desaparición del dropdown
+✅ Dropdown desapareció correctamente
+ℹ️  Probando múltiples cambios de estado
+✅ Checkbox marcado nuevamente, dropdown visible
+✅ Valor cambiado a 70 %
+✅ Checkbox desmarcado finalmente, dropdown desapareció
+
+======================================================================
+🎯 FLUJO DE VALIDACIÓN IVA DROPDOWN COMPLETADO
+======================================================================
+   • Estado inicial: Checkbox desmarcado, dropdown no visible
+   • Al marcar: Dropdown aparece
+   • Selección de valores: Funciona correctamente
+   • Al desmarcar: Dropdown desaparece
+   • Múltiples toggles: Funcionan correctamente
+======================================================================
+
+✅ [TC02-12] Todas las opciones del dropdown de retención IVA verificadas correctamente
+
+✅ ✅ ✅ [TC02-12] TC02-12 finalizado exitosamente
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 139 console message(s) logged to stderr

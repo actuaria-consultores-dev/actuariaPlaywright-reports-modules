@@ -1,0 +1,82 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-13] Carga de nómina y validación de datos de empleados en tabla de resultados
+ℹ️  [TC02-13] Archivo esperado: caso1.xlsx (17.46 KB)
+ℹ️  [TC02-13] Total empleados esperados: 17
+
+======================================================================
+🎯 VALIDACIÓN DE CARGA DE NÓMINA Y DATOS DE EMPLEADOS
+======================================================================
+   • Plan: STARTER
+   • Año de valoración: 2024
+   • Opción saldos: iniciaOperaciones
+   • Archivo: caso1.xlsx
+   • Total empleados esperados: 17
+======================================================================
+
+
+📍 Paso 1: Verificando empresa y creando estudio
+✅ Estudio iniciado
+
+📍 Paso 2: Seleccionando plan starter
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ Plan seleccionado
+
+📍 Paso 3: Configurando fecha de valoración
+✅ Fecha de valoración configurada
+ℹ️  Seleccionando saldos contables - iniciaOperaciones
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Inicia Operaciones
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Inicia Operaciones
+✅ [EstudioActuarialPage] Inicia Operaciones seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Inicia Operaciones
+👆 [EstudioActuarialPage] Click después de seleccionar Inicia Operaciones: Botón Siguiente
+✅ Saldos contables configurados
+ℹ️  Verificando encabezado de página
+✅ Heading "Carga de Nómina" visible
+
+📍 Paso 3: Cargando archivo de nómina: caso1.xlsx
+ℹ️  [EstudioActuarialPage] Esperando confirmación de subida: caso1.xlsx...
+✅ Archivo de nómina cargado correctamente
+✅ Tab "Carga de información de colaboradores" activo
+ℹ️  Verificando archivo: caso1.xlsx
+✅ Archivo visible: caso1.xlsx (17.46 KB)
+✅ Botones de acción del archivo visibles (Eliminar/Descargar)
+ℹ️  Verificando mensaje de advertencias...
+✅ Mensaje de advertencias visible con botón "Ver más"
+ℹ️  Verificando columnas de tabla de empleados...
+✅ 20 columnas de tabla verificadas
+ℹ️  Verificando datos del primer empleado...
+✅ Datos del primer empleado verificados correctamente
+ℹ️  Verificando paginación de empleados...
+✅ Paginación verificada: 17 empleados totales
+ℹ️  Probando navegación entre páginas...
+✅ Navegación a siguiente página funciona correctamente
+ℹ️  Verificando botones de navegación...
+✅ Botones Siguiente y Regresar habilitados
+
+======================================================================
+🎯 VALIDACIÓN DE CARGA DE NÓMINA COMPLETADA
+======================================================================
+   • Archivo cargado: caso1.xlsx
+   • Empleados procesados: 17
+   • Columnas de tabla: 20
+   • Datos de empleado: Validados
+   • Mensaje de advertencias: Visible
+   • Paginación: Funcional
+   • Navegación: Habilitada
+======================================================================
+
+✅ [TC02-13] Nómina cargada y datos de empleados validados correctamente
+
+✅ ✅ ✅ [TC02-13] TC02-13 finalizado exitosamente
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 36 console message(s) logged to stderr

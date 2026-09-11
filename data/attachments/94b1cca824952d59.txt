@@ -1,0 +1,241 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/EstudioActuarial/crearEstudioTwo.test.ts >> Verificar gestión de Estudios Actuariales >> Carga de Nómina | [SP] | TC02-16: Verificar límite de tamaño de archivo (>1MB)
+- Location: tests/specs/EstudioActuarial/crearEstudioTwo.test.ts:289:2
+
+# Error details
+
+```
+Error: expect(locator).toContainText(expected) failed
+
+Locator: locator('div[role="alert"]')
+Expected substring: "Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más"
+Received string:    "Procesando archivo..."
+Timeout: 10000ms
+
+Call log:
+  - Expect "toContainText" with timeout 10000ms
+  - waiting for locator('div[role="alert"]')
+    23 × locator resolved to <div role="alert" aria-describedby="notistack-snackbar" class="go1888806478 notistack-MuiContent notistack-MuiContent-info go167266335 go1930647212 go3162094071">…</div>
+       - unexpected value "Procesando archivo..."
+
+```
+
+```yaml
+- alert:
+  - img
+  - text: Procesando archivo...
+```
+
+# Test source
+
+```ts
+  1260 | 		await expect(dropdown).toContainText(expectedValue);
+  1261 | 	}
+  1262 | 
+  1263 | 	async verifyIvaDropdownValue(expectedValue: string) {
+  1264 | 		const dropdown = this.page.getByLabel('%');
+  1265 | 		await expect(dropdown).toContainText(expectedValue);
+  1266 | 	}
+  1267 | 
+  1268 | 	/**
+  1269 | 	 * Invoice Details Verification (Detalle de la factura)
+  1270 | 	 */
+  1271 | 	async verifyInvoiceDetailsSection() {
+  1272 | 		await expect(this.page.getByText('Detalle de la factura')).toBeVisible({ timeout: 10000 });
+  1273 | 		await expect(this.page.getByRole('heading', { name: 'Descripción' })).toBeVisible({ timeout: 10000 });
+  1274 | 		await expect(this.page.getByRole('heading', { name: 'Precio' })).toBeVisible({ timeout: 10000 });
+  1275 | 	}
+  1276 | 
+  1277 | 	async verifyInvoiceItem(descripcion: string, precio: string) {
+  1278 | 		// Ensure the invoice item is visible (wait up to 20s)
+  1279 | 
+  1280 | 		// Verify the item description is visible with more flexible matching and longer timeout
+  1281 | 		const itemLocator = this.page.getByText(descripcion);
+  1282 | 		await expect(itemLocator).toBeVisible({ timeout: 20000 });
+  1283 | 
+  1284 | 		// Find the parent row/container and verify price is in same context
+  1285 | 		const itemRow = this.page.locator(`text=${descripcion}`).locator('..');
+  1286 | 		await expect(itemRow).toContainText(precio, { timeout: 10000 });
+  1287 | 	}
+  1288 | 
+  1289 | 	async verifyInvoiceTotal(label: string, expectedValue: string) {
+  1290 | 		// Verify labels like "Descuento", "Subtotal", "IVA (15%)", "Total"
+  1291 | 		// Use heading role for more specific targeting
+  1292 | 		const labelLocator = this.page.getByRole('heading', { name: label, exact: true });
+  1293 | 		await expect(labelLocator).toBeVisible({ timeout: 10000 });
+  1294 | 
+  1295 | 		// Verify the value is also visible as a heading in the same section
+  1296 | 		const valueLocator = this.page.getByRole('heading', { name: expectedValue, exact: true });
+  1297 | 		await expect(valueLocator).toBeVisible({ timeout: 10000 });
+  1298 | 	}
+  1299 | 
+  1300 | 	async verifyCompleteInvoice(expectedInvoice: { items: Array<{ descripcion: string; precio: string }>; descuento: string; subtotal: string; iva: string; total: string }) {
+  1301 | 		this.pageLogger.info('Iniciando verificación completa de factura');
+  1302 | 		this.pageLogger.info(`Total de items a verificar: ${expectedInvoice.items.length}`);
+  1303 | 		
+  1304 | 		// Verify all invoice items
+  1305 | 		this.pageLogger.info('Verificando items individuales de la factura...');
+  1306 | 		let itemCount = 1;
+  1307 | 		for (const item of expectedInvoice.items) {
+  1308 | 			this.pageLogger.info(`  ${itemCount}. ${item.descripcion} → ${item.precio}`);
+  1309 | 			await this.verifyInvoiceItem(item.descripcion, item.precio);
+  1310 | 			itemCount++;
+  1311 | 		}
+  1312 | 		this.pageLogger.exito(`${expectedInvoice.items.length} items verificados exitosamente`);
+  1313 | 
+  1314 | 		// Verify totals
+  1315 | 		this.pageLogger.info('Verificando totales de la factura...');
+  1316 | 		this.pageLogger.info(`  Descuento: ${expectedInvoice.descuento}`);
+  1317 | 		await this.verifyInvoiceTotal('Descuento', expectedInvoice.descuento);
+  1318 | 		
+  1319 | 		this.pageLogger.info(`  Subtotal: ${expectedInvoice.subtotal}`);
+  1320 | 		await this.verifyInvoiceTotal('Subtotal', expectedInvoice.subtotal);
+  1321 | 		
+  1322 | 		this.pageLogger.info(`  IVA (15%): ${expectedInvoice.iva}`);
+  1323 | 		await this.verifyInvoiceTotal('IVA (15%)', expectedInvoice.iva);
+  1324 | 		
+  1325 | 		this.pageLogger.info(`  Total: ${expectedInvoice.total}`);
+  1326 | 		await this.verifyInvoiceTotal('Total', expectedInvoice.total);
+  1327 | 		
+  1328 | 		this.pageLogger.completado('Factura completa verificada correctamente');
+  1329 | 	}
+  1330 | 
+  1331 | 	/**
+  1332 | 	 * Verify error messages for file validation
+  1333 | 	 */
+  1334 | 	async verifyFileValidationErrors(expectedErrors: string[]) {
+  1335 | 		await this.page.getByRole('button', { name: 'Ver más' }).click();
+  1336 | 		// Wait for first expected error to appear (documents may take a moment to render)
+  1337 | 		if (expectedErrors.length > 0) {
+  1338 | 			await expect(this.page.locator(`text=${expectedErrors[0]}`).first()).toBeVisible({ timeout: 10000 });
+  1339 | 		}
+  1340 | 
+  1341 | 		for (const errorMsg of expectedErrors) {
+  1342 | 			await expect(this.page.locator(`text=${errorMsg}`).first()).toBeVisible();
+  1343 | 		}
+  1344 | 	}
+  1345 | 
+  1346 | 	/**
+  1347 | 	 * Verify single error message (for upload errors without Ver más button)
+  1348 | 	 */
+  1349 | 	async verifySingleUploadError(errorMessage: string) {
+  1350 | 		const alertError = this.page.locator('div[role="alert"]').filter({ hasText: errorMessage });
+  1351 | 		await expect(alertError).toBeVisible({ timeout: 10000 });
+  1352 | 		this.pageLogger.exito(`Error message verified: ${errorMessage}`);
+  1353 | 	}
+  1354 | 
+  1355 | 	/**
+  1356 | 	 * Verify error alert contains expected text
+  1357 | 	 */
+  1358 | 	async verifyErrorAlertContains(expectedText: string) {
+  1359 | 		const alertError = this.page.locator('div[role="alert"]');
+> 1360 | 		await expect(alertError).toContainText(expectedText, { timeout: 10000 });
+       |                            ^ Error: expect(locator).toContainText(expected) failed
+  1361 | 		this.pageLogger.exito(`Error alert contains: ${expectedText}`);
+  1362 | 	}
+  1363 | 
+  1364 | 	/**
+  1365 | 	 * Verify step heading visibility
+  1366 | 	 */
+  1367 | 	async verifyStepHeading(stepNumber: number) {
+  1368 | 		await expect(this.page.getByRole('heading', { name: `Paso ${stepNumber} de` })).toBeVisible();
+  1369 | 	}
+  1370 | 
+  1371 | 	/**
+  1372 | 	 * Verify landing on Paso 4 - Desvinculaciones screen
+  1373 | 	 * Waits for network idle, then checks the step heading and section title
+  1374 | 	 */
+  1375 | 	async verifyPaso4Desvinculaciones() {
+  1376 | 		this.pageLogger.info(`URL actual: ${this.page.url()}`);
+  1377 | 		await expect(this.page.getByRole('heading', { name: 'Paso 4 de' })).toBeVisible({ timeout: 30000 });
+  1378 | 		await expect(this.page.getByText('Empleados activos')).toBeVisible({ timeout: 15000 });
+  1379 | 		this.pageLogger.exito('Pantalla Paso 4 - Empleados activos (Resumen) verificada');
+  1380 | 	}
+  1381 | 
+  1382 | 	async navigateToActasPendientes() {}
+  1383 | 
+  1384 | 	async getListOfPendingActas() {}
+  1385 | 
+  1386 | 	/**
+  1387 | 	 * Navigate to Estudios Pendientes tab
+  1388 | 	 */
+  1389 | 	async navigateToEstudiosPendientes() {
+  1390 | 		this.pageLogger.info('Navegando a pestaña Estudios Pendientes');
+  1391 | 		await this.page.getByRole('tab', { name: /Estudios Pendientes/ }).click();
+  1392 | 		await expect(this.page.getByRole('table')).toBeVisible({ timeout: 10000 });
+  1393 | 
+  1394 | 		// Wait a bit for the count API call to complete and update the tab label
+  1395 | 		this.pageLogger.info('Esperando que el conteo de estudios pendientes se cargue');
+  1396 | 		await this.page.waitForTimeout(2000);
+  1397 | 	}
+  1398 | 
+  1399 | 	/**
+  1400 | 	 * Extract the pending estudios count from the tab label
+  1401 | 	 * Example: "ESTUDIOS PENDIENTES (100)" returns 100
+  1402 | 	 */
+  1403 | 	async extractPendingEstudiosCount(): Promise<number> {
+  1404 | 		this.pageLogger.info('Extrayendo conteo de estudios pendientes');
+  1405 | 
+  1406 | 		// Wait for the tab to have a number in parentheses (indicating count is loaded)
+  1407 | 		// Also ensure the count is greater than 0 (not the initial placeholder)
+  1408 | 		await this.page.waitForFunction(
+  1409 | 			() => {
+  1410 | 				const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  1411 | 				const pendingTab = tabs.find(tab => tab.textContent?.includes('Estudios Pendientes'));
+  1412 | 				if (!pendingTab) return false;
+  1413 | 				const text = pendingTab.textContent || '';
+  1414 | 				const match = text.match(/\((\d+)\)/);
+  1415 | 				if (!match) return false;
+  1416 | 				const count = parseInt(match[1], 10);
+  1417 | 				// Wait until count is loaded and greater than 0
+  1418 | 				return count > 0;
+  1419 | 			},
+  1420 | 			{ timeout: 20000 }
+  1421 | 		);
+  1422 | 
+  1423 | 		// Find the tab with "Estudios Pendientes" text and extract the number
+  1424 | 		const tabText = await this.page.getByRole('tab', { name: /Estudios Pendientes/ }).textContent();
+  1425 | 
+  1426 | 		if (!tabText) {
+  1427 | 			throw new Error('No se pudo obtener el texto de la pestaña Estudios Pendientes');
+  1428 | 		}
+  1429 | 
+  1430 | 		// Extract number from format like "ESTUDIOS PENDIENTES (100)"
+  1431 | 		const match = tabText.match(/\((\d+)\)/);
+  1432 | 
+  1433 | 		if (!match || !match[1]) {
+  1434 | 			throw new Error(`No se pudo extraer el número del texto: "${tabText}"`);
+  1435 | 		}
+  1436 | 
+  1437 | 		const count = parseInt(match[1], 10);
+  1438 | 		this.pageLogger.exito(`Conteo extraído: ${count} estudios pendientes`);
+  1439 | 
+  1440 | 		return count;
+  1441 | 	}
+  1442 | 
+  1443 | 	/**
+  1444 | 	 * Validate Datos del Usuario section is visible and contains expected data structure
+  1445 | 	 */
+  1446 | 	async validateDatosUsuarioSection() {
+  1447 | 		this.pageLogger.info('Validando sección Datos del Usuario');
+  1448 | 
+  1449 | 		// Verify section is visible
+  1450 | 		await expect(this.datosUsuarioSection).toBeVisible({ timeout: 10000 });
+  1451 | 
+  1452 | 		// Verify all field labels are visible
+  1453 | 		await expect(this.rucLabel).toBeVisible();
+  1454 | 		await expect(this.razonSocialLabel).toBeVisible();
+  1455 | 		await expect(this.nombreComercialLabel).toBeVisible();
+  1456 | 		await expect(this.paisLabel).toBeVisible();
+  1457 | 		await expect(this.provinciaLabel).toBeVisible();
+  1458 | 		await expect(this.ciudadLabel).toBeVisible();
+  1459 | 		await expect(this.direccionLabel).toBeVisible();
+  1460 | 		await expect(this.telefonoLabel).toBeVisible();
+```

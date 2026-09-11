@@ -1,0 +1,50 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-GestionCompleta] goto /dashboard/estudios/nuevo-estudio interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-17] Archivo con formato incorrecto (no .xlsx) - debe rechazarse
+⚠️  [TC02-17] Error esperado: "El archivo subido no es un archivo Excel válido" - solo se aceptan archivos .xlsx
+
+======================================================================
+🎯 VALIDACIÓN DE ERROR DE CARGA DE ARCHIVO
+======================================================================
+   • Plan: ACTUARIAL
+   • Año de valoración: 2024
+   • Opción saldos: primerEstudio
+   • Error esperado: El archivo subido no es un archivo Excel válido
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [SingleUploadErrorWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan ACTUARIAL
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [SingleUploadErrorWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando fecha de valoración
+ℹ️  [SingleUploadErrorWorkflow] Configurando opciones de saldos contables
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Primer Estudio
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Primer Estudio
+✅ [EstudioActuarialPage] Primer Estudio seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Primer Estudio
+👆 [EstudioActuarialPage] Click después de seleccionar Primer Estudio: Botón Siguiente
+ℹ️  [SingleUploadErrorWorkflow] Intentando subir archivo con error esperado: El archivo subido no es un archivo Excel válido
+✅ [EstudioActuarialPage] Error message verified: El archivo subido no es un archivo Excel válido
+✅ [SingleUploadErrorWorkflow] Error "El archivo subido no es un archivo Excel válido" verificado correctamente
+✅ [TC02-17] Error de formato inválido mostrado correctamente - archivo rechazado
+
+✅ ✅ ✅ [TC02-17] TC02-17 finalizado exitosamente
+
+
+ℹ️  8 non-blocking error(s) ignored by filter.
+
+📋 45 console message(s) logged to stderr

@@ -1,0 +1,55 @@
+🎭️ [EstudioActuarial-Pendientes] Preparando entorno → /dashboard/estudios/mis-estudios
+🔐 [EstudioActuarial-Pendientes] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-Pendientes] Sesión iniciada correctamente
+🔍 [EstudioActuarial-Pendientes] Dashboard cargado correctamente
+🔍 [EstudioActuarial-Pendientes] Navegación exitosa → /dashboard/estudios/mis-estudios
+🎭️ [TC03-01] Eliminación de acta pendiente desde Mis Estudios
+ℹ️  [TC03-01] Obteniendo conteo inicial de estudios pendientes
+ℹ️  🔍 Iniciando flujo de verificación de eliminación de acta...
+ℹ️  [EstudioActuarialPage] Navegando a pestaña Estudios Pendientes
+ℹ️  [EstudioActuarialPage] Esperando que el conteo de estudios pendientes se cargue
+ℹ️  [EstudioActuarialPage] Extrayendo conteo de estudios pendientes
+✅ [EstudioActuarialPage] Conteo extraído: 346 estudios pendientes
+ℹ️  📊 Conteo inicial: ESTUDIOS PENDIENTES (346)
+ℹ️  [EstudioActuarialPage] Extrayendo datos de tabla
+⚠️  [EstudioActuarialPage] No se encontraron filas con botón Eliminar - tabla puede estar vacía
+ℹ️  [EstudioActuarialPage] Se encontraron 5 filas en la tabla
+✅ [EstudioActuarialPage] Se encontraron 5 estudios pendientes para probar
+ℹ️  [EstudioActuarialPage] Fila 1: 20/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 5 | 
+ℹ️  [EstudioActuarialPage] Fila 2: 17/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 3: 10/09/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 4: 17/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Fila 5: 28/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 6 | 
+ℹ️  [EstudioActuarialPage] Eliminando acta pendiente
+ℹ️  [EstudioActuarialPage] Intento de eliminacion 1...
+✅ [EstudioActuarialPage] Boton eliminar presionado exitosamente en intento 1
+ℹ️  [EstudioActuarialPage] Confirmando eliminacion - esperando dialogo
+ℹ️  [EstudioActuarialPage] Confirmando con boton: "Aceptar"
+ℹ️  [EstudioActuarialPage] Extrayendo conteo de estudios pendientes
+✅ [EstudioActuarialPage] Conteo extraído: 345 estudios pendientes
+ℹ️  📊 Conteo final (ciclo 1): ESTUDIOS PENDIENTES (345)
+ℹ️  [EstudioActuarialPage] Extrayendo datos de tabla
+⚠️  [EstudioActuarialPage] No se encontraron filas con botón Eliminar - tabla puede estar vacía
+ℹ️  [EstudioActuarialPage] Se encontraron 5 filas en la tabla
+ℹ️  [EstudioActuarialPage] Comparando datos para validar eliminación
+ℹ️  [EstudioActuarialPage] Conteo de filas: Antes: 5, Después: 5
+✅ [EstudioActuarialPage] Validación de contenido pasó - los datos han cambiado
+✅ [EstudioActuarialPage] Confirmado: Fila 1 fue eliminada de la tabla
+ℹ️  [EstudioActuarialPage] Datos de fila eliminada: 20/08/2026 | 2024 |  | MODITEX S.A. | Pendiente | 5 | 
+
+✅ ✅ ✅ [EstudioActuarialPage] Verificación de eliminación completada exitosamente
+
+✅ ✅ Conteo actualizado correctamente: 346 → 345 (ciclo 1)
+
+✅ ✅ ✅ Flujo de verificación de eliminación de acta completado exitosamente
+
+✅ [TC03-01] Eliminación verificada - contador y tabla actualizados correctamente
+
+✅ ✅ ✅ [TC03-01] TC03-01 finalizado exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

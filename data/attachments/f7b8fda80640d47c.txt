@@ -1,0 +1,46 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-16] Archivo >1MB - debe rechazarse con error de tamaño
+⚠️  [TC02-16] Error esperado: "Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más"
+
+======================================================================
+🎯 VALIDACIÓN DE ERROR DE CARGA DE ARCHIVO
+======================================================================
+   • Plan: ACTUARIAL
+   • Año de valoración: 2024
+   • Opción saldos: primerEstudio
+   • Error esperado: Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más
+======================================================================
+
+
+📍 Paso 1: Creando nuevo estudio
+✅ [SingleUploadErrorWorkflow] Estudio creado
+
+📍 Paso 2: Seleccionando plan ACTUARIAL
+📊 [EstudioActuarialPage] Botón Siguiente está deshabilitado sin plan seleccionado
+✅ [EstudioActuarialPage] Botón Siguiente se habilitó después de seleccionar plan
+✅ [SingleUploadErrorWorkflow] Plan seleccionado
+
+📍 Paso 3: Configurando fecha de valoración
+ℹ️  [SingleUploadErrorWorkflow] Configurando opciones de saldos contables
+ℹ️  [EstudioActuarialPage] Intentando seleccionar: Primer Estudio
+ℹ️  [EstudioActuarialPage] Intento 1/4: Seleccionando Primer Estudio
+✅ [EstudioActuarialPage] Primer Estudio seleccionado exitosamente en intento 1
+📊 [EstudioActuarialPage] ✅ Botón Siguiente está habilitado después de seleccionar Primer Estudio
+👆 [EstudioActuarialPage] Click después de seleccionar Primer Estudio: Botón Siguiente
+ℹ️  [SingleUploadErrorWorkflow] Intentando subir archivo con error esperado: Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más
+✅ [EstudioActuarialPage] Error message verified: Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más
+✅ [SingleUploadErrorWorkflow] Error "Se encontraron los siguientes errores al procesar la base actual. Corríjelos y vuelve a cargar el archivo.Ver más" verificado correctamente
+✅ [TC02-16] Error de límite de tamaño mostrado correctamente - archivo rechazado
+
+✅ ✅ ✅ [TC02-16] TC02-16 finalizado exitosamente
+
+
+ℹ️  5 non-blocking error(s) ignored by filter.
+
+📋 36 console message(s) logged to stderr

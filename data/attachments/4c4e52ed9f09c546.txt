@@ -1,0 +1,86 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-00-B] Selección exclusiva de planes - solo un plan puede estar activo a la vez
+ℹ️  [TC02-00-B] Verifica que al seleccionar un plan los demás se deseleccionan automáticamente
+📊 [TC02-00-B] Verificando que empresa "23KA" está lista antes de la selección de planes
+✅ [TC02-00-B] Empresa cargada correctamente
+ℹ️  [TC02-00-B] Probando selección de cada plan: Actuarial, Starter, Plus, Enterprise
+
+======================================================================
+🎯 VALIDACIÓN DE SELECCIÓN EXCLUSIVA DE PLANES
+======================================================================
+   • Planes a probar: Actuarial, Starter, Plus, Enterprise
+   • Objetivo: Verificar que solo un plan puede estar seleccionado a la vez
+======================================================================
+
+
+📍 Paso 1: Navegando a página de selección de planes
+✅ [ExclusivePlanSelectionWorkflow] Página de selección de planes cargada
+ℹ️  [ExclusivePlanSelectionWorkflow] ✅ Estado inicial: Plan seleccionado por defecto, botón habilitado
+📊 [EstudioActuarialPage] Plan actuarial está seleccionado exclusivamente
+✓ [EstudioActuarialPage] Plan actuarial: esperado "Seleccionado" → actual "Sí"
+✓ [EstudioActuarialPage] Plan starter: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan plus: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan enterprise: esperado "No Seleccionado" → actual "Correcto"
+✅ [EstudioActuarialPage] Exactamente 1 plan seleccionado
+ℹ️  [ExclusivePlanSelectionWorkflow] 🎯 Probando selección del plan Basic...
+ℹ️  [EstudioActuarialPage] Seleccionando plan actuarial
+✅ [EstudioActuarialPage] Plan actuarial seleccionado
+📊 [EstudioActuarialPage] Plan actuarial está seleccionado exclusivamente
+✓ [EstudioActuarialPage] Plan actuarial: esperado "Seleccionado" → actual "Sí"
+✓ [EstudioActuarialPage] Plan starter: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan plus: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan enterprise: esperado "No Seleccionado" → actual "Correcto"
+✅ [EstudioActuarialPage] Exactamente 1 plan seleccionado
+ℹ️  [ExclusivePlanSelectionWorkflow] ✅ Botón Siguiente habilitado después de seleccionar Basic
+ℹ️  [ExclusivePlanSelectionWorkflow] 🎯 Probando selección del plan Starter...
+ℹ️  [EstudioActuarialPage] Seleccionando plan starter
+✅ [EstudioActuarialPage] Plan starter seleccionado
+📊 [EstudioActuarialPage] Plan starter está seleccionado exclusivamente
+✓ [EstudioActuarialPage] Plan actuarial: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan starter: esperado "Seleccionado" → actual "Sí"
+✓ [EstudioActuarialPage] Plan plus: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan enterprise: esperado "No Seleccionado" → actual "Correcto"
+✅ [EstudioActuarialPage] Exactamente 1 plan seleccionado
+ℹ️  [ExclusivePlanSelectionWorkflow] ✅ Botón Siguiente habilitado después de seleccionar Starter
+ℹ️  [ExclusivePlanSelectionWorkflow] 🎯 Probando selección del plan Plus...
+ℹ️  [EstudioActuarialPage] Seleccionando plan plus
+✅ [EstudioActuarialPage] Plan plus seleccionado
+📊 [EstudioActuarialPage] Plan plus está seleccionado exclusivamente
+✓ [EstudioActuarialPage] Plan actuarial: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan starter: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan plus: esperado "Seleccionado" → actual "Sí"
+✓ [EstudioActuarialPage] Plan enterprise: esperado "No Seleccionado" → actual "Correcto"
+✅ [EstudioActuarialPage] Exactamente 1 plan seleccionado
+ℹ️  [ExclusivePlanSelectionWorkflow] ✅ Botón Siguiente habilitado después de seleccionar Plus
+ℹ️  [ExclusivePlanSelectionWorkflow] 🎯 Probando selección del plan Enterprise...
+ℹ️  [EstudioActuarialPage] Seleccionando plan enterprise
+✅ [EstudioActuarialPage] Plan enterprise seleccionado
+📊 [EstudioActuarialPage] Plan enterprise está seleccionado exclusivamente
+✓ [EstudioActuarialPage] Plan actuarial: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan starter: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan plus: esperado "No Seleccionado" → actual "Correcto"
+✓ [EstudioActuarialPage] Plan enterprise: esperado "Seleccionado" → actual "Sí"
+✅ [EstudioActuarialPage] Exactamente 1 plan seleccionado
+ℹ️  [ExclusivePlanSelectionWorkflow] ✅ Botón Siguiente habilitado después de seleccionar Enterprise
+
+📍 Paso 2: Validación final de selección exclusiva
+ℹ️  [EstudioActuarialPage] Seleccionando plan actuarial
+✅ [EstudioActuarialPage] Plan actuarial seleccionado
+✅ [ExclusivePlanSelectionWorkflow] ✅ Exactamente 1 plan seleccionado
+
+✅ ✅ ✅ [ExclusivePlanSelectionWorkflow] Flujo de selección exclusiva de planes completado exitosamente!
+
+✅ [TC02-00-B] Selección exclusiva verificada - ningún par de planes puede estar activo simultáneamente
+
+✅ ✅ ✅ [TC02-00-B] TC02-00-B finalizado exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr
