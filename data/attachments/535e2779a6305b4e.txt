@@ -1,0 +1,344 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/EstudioActuarial/crearEstudioTwo.test.ts >> Verificar gestión de Estudios Actuariales >> Crear Estudio Actuarial | [HP] | TC02-09: Verificar nueva empresa se registra por primera vez, con fecha de evaluacion 2024 Junio
+- Location: tests/specs/EstudioActuarial/crearEstudioTwo.test.ts:267:2
+
+# Error details
+
+```
+Error: No email received within 10 seconds from no-reply-qa@portal.actuaria.com
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - banner [ref=f3e4]:
+      - generic [ref=f3e6]:
+        - button "Notificaciones" [ref=f3e7] [cursor=pointer]:
+          - generic [ref=f3e8]: 99+
+        - button [ref=f3e12] [cursor=pointer]:
+          - img "image" [ref=f3e13]
+          - paragraph [ref=f3e14]: 23KA
+    - complementary [ref=f3e17]:
+      - generic [ref=f3e18]:
+        - link [ref=f3e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f3e20]
+        - button "abrir/cerrar menú" [ref=f3e21] [cursor=pointer]
+      - generic [ref=f3e26]:
+        - textbox "Buscar..." [ref=f3e30]
+        - group
+      - list [ref=f3e32]:
+        - button "Inicio" [ref=f3e33] [cursor=pointer]
+        - list [ref=f3e39]:
+          - listitem [ref=f3e40]: Panel General
+          - generic [ref=f3e41]:
+            - button "Estudios Actuariales" [ref=f3e42] [cursor=pointer]
+            - generic [ref=f3e52]:
+              - link "Listado de estudios" [ref=f3e53] [cursor=pointer]:
+                - /url: /dashboard/estudios/mis-estudios
+              - link "Nuevo estudio" [ref=f3e59] [cursor=pointer]:
+                - /url: /dashboard/estudios/nuevo-estudio
+      - generic [ref=f3e66]:
+        - paragraph [ref=f3e67]: Actuaria+ Stage
+        - paragraph [ref=f3e68]: soporteplus@actuaria.com
+        - generic [ref=f3e69]: v 1.11.3
+    - generic [ref=f3e74]:
+      - generic [ref=f3e75]:
+        - heading "Hola, Christian" [level=1] [ref=f3e76]
+        - paragraph [ref=f3e77]: "Sesión anterior: hoy, 19:14 · hace 2 minutos"
+      - generic [ref=f3e78]:
+        - button "Inicio" [ref=f3e79] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f3e81] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f3e83] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f3e85] [cursor=pointer]
+        - button "Control tributario" [ref=f3e87] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f3e89] [cursor=pointer]
+      - separator [ref=f3e91]
+      - generic [ref=f3e92]:
+        - generic [ref=f3e94]:
+          - 'heading "Nuevo estudio actuarial: 23KA S.A. modalidad Asesoría Personalizada" [level=4] [ref=f3e95]'
+          - paragraph [ref=f3e96]: Completa los pasos para solicitar el estudio actuarial de tu empresa.
+        - navigation "breadcrumb" [ref=f3e97]:
+          - list [ref=f3e98]:
+            - listitem [ref=f3e99]:
+              - link "Inicio" [ref=f3e100] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=f3e101]
+            - listitem [ref=f3e104]:
+              - heading "Estudio actuarial" [level=6] [ref=f3e105]
+        - generic [ref=f3e107]:
+          - heading "Seguimiento del pedido" [level=6] [ref=f3e108]
+          - paragraph [ref=f3e109]: Pedido enviado
+          - generic [ref=f3e110]:
+            - 'generic "Regresar a: Datos iniciales del estudio" [ref=f3e111]':
+              - generic [ref=f3e112] [cursor=pointer]
+            - 'generic "Regresar a: Configuración de hipótesis" [ref=f3e113]':
+              - generic [ref=f3e114] [cursor=pointer]
+            - 'generic "Regresar a: Carga de nómina" [ref=f3e115]':
+              - generic [ref=f3e116] [cursor=pointer]
+            - 'generic "Regresar a: Validación de la información" [ref=f3e117]':
+              - generic [ref=f3e118] [cursor=pointer]
+            - 'generic "Regresar a: Variables actuariales" [ref=f3e119]':
+              - generic [ref=f3e120] [cursor=pointer]
+            - 'generic "Regresar a: Beneficios pagados durante el año de valoración" [ref=f3e121]':
+              - generic [ref=f3e122] [cursor=pointer]
+            - 'generic "Regresar a: Saldos de Activo por Impuesto Diferido" [ref=f3e123]':
+              - generic [ref=f3e124] [cursor=pointer]
+            - 'generic "Regresar a: Tasa de impuesto a la renta" [ref=f3e125]':
+              - generic [ref=f3e126] [cursor=pointer]
+            - 'generic "Regresar a: Revalidación de la información" [ref=f3e127]':
+              - generic [ref=f3e128] [cursor=pointer]
+            - 'generic "Regresar a: Datos del pedido" [ref=f3e129]':
+              - generic [ref=f3e130] [cursor=pointer]
+        - generic [ref=f3e132]:
+          - heading "Seguimiento del pedido" [level=2] [ref=f3e133]
+          - generic [ref=f3e135]:
+            - heading "Estudio actuarial 2024 · 23KA S.A." [level=2] [ref=f3e136]
+            - paragraph [ref=f3e137]: Pedido N.º 148987 · enviado el 8 de octubre de 2026
+          - generic [ref=f3e139]:
+            - heading "Así va tu pedido" [level=3] [ref=f3e140]
+            - progressbar "Así va tu pedido" [ref=f3e141]
+            - generic [ref=f3e143]:
+              - generic [ref=f3e146]:
+                - paragraph [ref=f3e148]: Borrador
+                - paragraph [ref=f3e149]: 8 de octubre, 19:16 · Guardado automáticamente mientras completas tu pedido
+              - generic [ref=f3e152]:
+                - paragraph [ref=f3e154]: Enviado
+                - paragraph [ref=f3e155]: 8 de octubre, 19:17 · Una vez enviado ya no se edita
+              - generic [ref=f3e158]:
+                - paragraph [ref=f3e160]: En revisión
+                - paragraph [ref=f3e161]: Recibimos tu pedido y lo validamos
+              - generic [ref=f3e164]:
+                - paragraph [ref=f3e166]: En proceso
+                - paragraph [ref=f3e167]: Estamos trabajando en tu estudio
+              - generic [ref=f3e170]:
+                - paragraph [ref=f3e172]: Finalizado
+                - paragraph [ref=f3e173]: Servicio completo · emitimos tu factura y te damos instrucciones de pago
+              - generic [ref=f3e176]:
+                - paragraph [ref=f3e178]: Entregado
+                - paragraph [ref=f3e179]: Pago confirmado · descarga completa disponible
+          - generic [ref=f3e180]:
+            - heading "Estado terminal · solo si aplica" [level=3] [ref=f3e181]
+            - generic [ref=f3e184]:
+              - paragraph [ref=f3e185]: Cancelado
+              - paragraph [ref=f3e186]: Puedes cancelar hasta que tu pedido entre En proceso
+          - button [ref=f3e188] [cursor=pointer]
+  - link "Escríbenos a WhatsApp" [ref=f3e192] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  242 |     try {
+  243 |       let query = `from:${senderEmail}`;
+  244 |       if (searchQuery) {
+  245 |         query += ` ${searchQuery}`;
+  246 |       }
+  247 |       query += ' newer_than:2m';
+  248 | 
+  249 |       const listResponse = await gmail.users.messages.list({
+  250 |         userId: 'me',
+  251 |         maxResults: 5,
+  252 |         q: query,
+  253 |       });
+  254 | 
+  255 |       const messages = listResponse.data.messages || [];
+  256 | 
+  257 |       if (messages.length > 0 && messages[0].id) {
+  258 |         const messageResponse = await gmail.users.messages.get({
+  259 |           userId: 'me',
+  260 |           id: messages[0].id!,
+  261 |           format: 'full',
+  262 |         });
+  263 | 
+  264 |         const message = messageResponse.data;
+  265 |         const body = extractMessageBody(message.payload);
+  266 |         const link = extractLink(body, linkPattern);
+  267 | 
+  268 |         if (link) {
+  269 |           console.log(`✅ Link found: ${link}`);
+  270 |           return link;
+  271 |         }
+  272 |       }
+  273 | 
+  274 |       await new Promise(resolve => setTimeout(resolve, pollInterval));
+  275 | 
+  276 |     } catch (error: any) {
+  277 |       console.error(`❌ Error checking Gmail: ${error.message}`);
+  278 |       throw error;
+  279 |     }
+  280 |   }
+  281 | 
+  282 |   throw new Error(
+  283 |     `Link not found within ${timeout / 1000} seconds from ${senderEmail}`
+  284 |   );
+  285 | }
+  286 | 
+  287 | /**
+  288 |  * Get the most recent email from a specific sender
+  289 |  * 
+  290 |  * @param senderEmail - Email address of the sender
+  291 |  * @param timeout - Maximum time to wait for new email
+  292 |  * @returns Email details including subject, body, and snippet
+  293 |  */
+  294 | export async function getRecentEmail(
+  295 |   senderEmail: string,
+  296 |   timeout: number = 30000
+  297 | ): Promise<{
+  298 |   subject: string;
+  299 |   body: string;
+  300 |   snippet: string;
+  301 |   date: string;
+  302 | }> {
+  303 |   // Note: signature unchanged for backward compatibility; if caller wants to supply token, use getRecentEmailWithToken
+  304 |   const auth = await loadCredentials();
+  305 |   const gmail = google.gmail({ version: 'v1', auth });
+  306 | 
+  307 |   const startTime = Date.now();
+  308 |   const pollInterval = 3000;
+  309 | 
+  310 |   console.log(`📧 Waiting for email from ${senderEmail}...`);
+  311 | 
+  312 |   while (Date.now() - startTime < timeout) {
+  313 |     try {
+  314 |       const listResponse = await gmail.users.messages.list({
+  315 |         userId: 'me',
+  316 |         maxResults: 1,
+  317 |         q: `from:${senderEmail} newer_than:2m`,
+  318 |       });
+  319 | 
+  320 |       const messages = listResponse.data.messages || [];
+  321 | 
+  322 |       if (messages.length > 0 && messages[0].id) {
+  323 |         const messageResponse = await gmail.users.messages.get({
+  324 |           userId: 'me',
+  325 |           id: messages[0].id!,
+  326 |           format: 'full',
+  327 |         });
+  328 | 
+  329 |         const message = messageResponse.data;
+  330 |         const headers = message.payload?.headers || [];
+  331 |         const body = extractMessageBody(message.payload);
+  332 | 
+  333 |         console.log('✅ Email received');
+  334 | 
+  335 |         return {
+  336 |           subject: getHeader(headers, 'Subject'),
+  337 |           body: body,
+  338 |           snippet: message.snippet || '',
+  339 |           date: getHeader(headers, 'Date'),
+  340 |         };
+  341 |       }
+> 342 | 
+      |         ^ Error: No email received within 10 seconds from no-reply-qa@portal.actuaria.com
+  343 |       await new Promise(resolve => setTimeout(resolve, pollInterval));
+  344 | 
+  345 |     } catch (error: any) {
+  346 |       console.error(`❌ Error checking Gmail: ${error.message}`);
+  347 |       throw error;
+  348 |     }
+  349 |   }
+  350 | 
+  351 |   throw new Error(
+  352 |     `No email received within ${timeout / 1000} seconds from ${senderEmail}`
+  353 |   );
+  354 | }
+  355 | 
+  356 | /**
+  357 |  * Variant that accepts an explicit token and optional Gmail search query.
+  358 |  * `searchQuery` defaults to recent messages; callers can target a process
+  359 |  * number in the subject so polling does not get stuck on a newer unrelated email.
+  360 |  */
+  361 | export async function getRecentEmailWithToken(
+  362 |   senderEmail: string,
+  363 |   timeout: number = 30000,
+  364 |   tokenJson?: string,
+  365 |   searchQuery: string = 'newer_than:2m'
+  366 | ): Promise<{
+  367 |   subject: string;
+  368 |   body: string;
+  369 |   snippet: string;
+  370 |   date: string;
+  371 | }> {
+  372 |   const auth = await loadCredentials(tokenJson);
+  373 |   const gmail = google.gmail({ version: 'v1', auth });
+  374 | 
+  375 |   const startTime = Date.now();
+  376 |   const pollInterval = 3000;
+  377 | 
+  378 |   console.log(`📧 Waiting for email from ${senderEmail}...`);
+  379 | 
+  380 |   while (Date.now() - startTime < timeout) {
+  381 |     try {
+  382 |       const listResponse = await gmail.users.messages.list({
+  383 |         userId: 'me',
+  384 |         maxResults: 1,
+  385 |         q: `from:${senderEmail} ${searchQuery}`,
+  386 |       });
+  387 | 
+  388 |       const messages = listResponse.data.messages || [];
+  389 | 
+  390 |       if (messages.length > 0 && messages[0].id) {
+  391 |         const messageResponse = await gmail.users.messages.get({
+  392 |           userId: 'me',
+  393 |           id: messages[0].id!,
+  394 |           format: 'full',
+  395 |         });
+  396 | 
+  397 |         const message = messageResponse.data;
+  398 |         const headers = message.payload?.headers || [];
+  399 |         const body = extractMessageBody(message.payload);
+  400 | 
+  401 |         console.log('✅ Email received');
+  402 | 
+  403 |         return {
+  404 |           subject: getHeader(headers, 'Subject'),
+  405 |           body: body,
+  406 |           snippet: message.snippet || '',
+  407 |           date: getHeader(headers, 'Date'),
+  408 |         };
+  409 |       }
+  410 | 
+  411 |       await new Promise(resolve => setTimeout(resolve, pollInterval));
+  412 | 
+  413 |     } catch (error: any) {
+  414 |       console.error(`❌ Error checking Gmail: ${error.message}`);
+  415 |       throw error;
+  416 |     }
+  417 |   }
+  418 | 
+  419 |   throw new Error(
+  420 |     `No email received within ${timeout / 1000} seconds from ${senderEmail}`
+  421 |   );
+  422 | }
+  423 | 
+  424 | /**
+  425 |  * Delete all messages from a specific sender (useful for test cleanup)
+  426 |  * 
+  427 |  * @param senderEmail - Email address of the sender
+  428 |  * @param maxMessages - Maximum number of messages to delete (default: 10)
+  429 |  */
+  430 | export async function deleteEmailsFrom(
+  431 |   senderEmail: string,
+  432 |   maxMessages: number = 10
+  433 | ): Promise<number> {
+  434 |   const auth = await loadCredentials();
+  435 |   const gmail = google.gmail({ version: 'v1', auth });
+  436 | 
+  437 |   console.log(`🗑️  Deleting emails from ${senderEmail}...`);
+  438 | 
+  439 |   try {
+  440 |     const listResponse = await gmail.users.messages.list({
+  441 |       userId: 'me',
+  442 |       maxResults: maxMessages,
+```

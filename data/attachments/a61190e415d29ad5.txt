@@ -1,0 +1,239 @@
+🎭️ [EstudioActuarial-CrearNuevo] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-CrearNuevo] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-CrearNuevo] Sesión iniciada correctamente
+🔍 [EstudioActuarial-CrearNuevo] Dashboard cargado correctamente
+🔍 [EstudioActuarial-CrearNuevo] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-01] Nueva empresa - primera vez en el sistema
+ℹ️  [TC02-01] Ejecutando flujo completo de creación de estudio actuarial (wizard de 10 pasos)
+
+======================================================================
+🎯 INICIANDO FLUJO DEL NUEVO WIZARD (10 PASOS)
+======================================================================
+   • archivoNomina: ./tests/data/documents/caso1.xlsx
+   • archivoBeneficios: ./tests/data/documents/PagosporEmpleados.xlsx
+   • viaNomina: Sin traspasos
+   • normativa: pymes
+   • saldosContables: Sí, confirmo
+======================================================================
+
+ℹ️  [NuevoEstudioWorkflow] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [NuevoEstudioWorkflow] Contexto           : Paso 10 = botón "Siguiente" (enviar pedido)
+ℹ️  [NuevoEstudioWorkflow] Env                : CONFIRMAR_PEDIDO_MOCK = 'false'
+ℹ️  [NuevoEstudioWorkflow] Lectura del env    : valor 'false' → el mock queda DESACTIVADO (backend real)
+ℹ️  [NuevoEstudioWorkflow] Config del TC      : confirmarPedidoMock = { enabled: false, debugNetwork: false }
+ℹ️  [NuevoEstudioWorkflow] Modo efectivo      : 🔴 MOCK DESACTIVADO — sin interceptación; el flujo corre contra el BACKEND REAL
+⚠️  [NuevoEstudioWorkflow] INTERCEPTARÁ: no (backend real)
+ℹ️  [NuevoEstudioWorkflow] ═══════════════════════════════════════════
+
+📍 Paso 1: Creando estudio y configurando fecha de valoración
+
+📍 Paso 1: Abriendo nuevo estudio actuarial
+✅ [EstudioActuarialPage] Wizard abierto en el Paso 1 de 10 (etapa A · Estudio base)
+
+📍 Paso 1: Configurando fecha de valoración
+👆 [EstudioActuarialPage] 2025: Selección "anioValoracion"
+👆 [EstudioActuarialPage] /Noviembre/i: Selección "mesCorte"
+✓ [EstudioActuarialPage] Año de valoración: esperado "2025" → actual "2025"
+✓ [EstudioActuarialPage] Mes de valoración: esperado "Diciembre" → actual "Diciembre"
+✓ [EstudioActuarialPage] Mes de corte de nómina: esperado "Noviembre" → actual "Noviembre"
+✅ [EstudioActuarialPage] Fecha de valoración configurada
+✅ [NuevoEstudioWorkflow] Fecha de valoración configurada
+👆 [EstudioActuarialPage] avanzó al paso 2: Siguiente
+
+📍 Paso 2: Respondiendo el estudio base (saldos contables / tipo de empresa)
+
+📍 Paso 2: Configurando el estudio base
+⏳ [EstudioActuarialPage] Consulta de estudios anteriores finalizada (~8s)
+ℹ️  [EstudioActuarialPage] Paso 2: variante detectada → "Saldos contables"
+✅ [EstudioActuarialPage] Saldos contables: "Sí, confirmo"
+✅ [NuevoEstudioWorkflow] Paso 2 respondido
+👆 [EstudioActuarialPage] avanzó al paso 3: Siguiente
+
+📍 Paso 3: Cargando base de nómina
+
+📍 Paso 3: Configurando carga de nómina
+👆 [EstudioActuarialPage] Actualizar mi base del año anterior: Vía de nómina
+✅ [EstudioActuarialPage] Vía de nómina seleccionada: "Actualizar mi base del año anterior"
+ℹ️  [EstudioActuarialPage] Descargando la base del año anterior ya validada
+✅ [EstudioActuarialPage] Base descargada: 138387-plantilla-2024.xlsx
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: caso1.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~32s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: caso1.xlsx
+👆 [EstudioActuarialPage] No tengo traspasos en el período: Traspasos
+✅ [EstudioActuarialPage] Carga de nómina configurada
+✅ [NuevoEstudioWorkflow] Nómina cargada y validada
+👆 [EstudioActuarialPage] avanzó al paso 4: Siguiente
+
+📍 Paso 4: Revisando resumen de la nómina
+
+📍 Paso 4: Confirmando el resumen de la nómina
+✅ [EstudioActuarialPage] Resumen de nómina confirmado
+✅ [NuevoEstudioWorkflow] Resumen de nómina confirmado
+👆 [EstudioActuarialPage] avanzó al paso 5: Siguiente
+
+📍 Paso 5: Configurando tasas y política
+
+📍 Paso 5: Configurando tasas y política del estudio
+✓ [EstudioActuarialPage] Normativa contable: esperado "pymes" → actual "NIIF_PYMES"
+✓ [EstudioActuarialPage] Incremento salarial estándar: esperado "2.3" → actual "2.3"
+✓ [EstudioActuarialPage] Tasa de rotación estándar: esperado "11.8" → actual "11.8"
+✓ [EstudioActuarialPage] Política de pago: esperado "pensionMensual" → actual "P"
+✅ [EstudioActuarialPage] Tasas y política configuradas
+✅ [NuevoEstudioWorkflow] Tasas y política configuradas
+👆 [EstudioActuarialPage] avanzó al paso 6: Siguiente
+
+📍 Paso 6: Cargando beneficios pagados
+
+📍 Paso 6: Configurando beneficios pagados
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: PagosporEmpleados.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~0s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: PagosporEmpleados.xlsx
+👆 [EstudioActuarialPage] provisionTotal: Criterio de registro de pagos
+✅ [EstudioActuarialPage] Beneficios pagados configurados
+✅ [NuevoEstudioWorkflow] Beneficios pagados configurados
+👆 [EstudioActuarialPage] avanzó al paso 7: Siguiente
+
+📍 Paso 7: Definiendo nivel de detalle de saldos de AID
+
+📍 Paso 7: Declarando saldos de AID
+✅ [EstudioActuarialPage] Nivel de detalle de AID declarado: sinSaldos
+✅ [NuevoEstudioWorkflow] Saldos de AID definidos
+👆 [EstudioActuarialPage] avanzó al paso 8: Siguiente
+
+📍 Paso 8: Seleccionando tasa de impuesto a la renta
+
+📍 Paso 8: Declarando tasa de impuesto a la renta
+✅ [EstudioActuarialPage] Tasa de impuesto a la renta: estandar
+✅ [NuevoEstudioWorkflow] Tasa de impuesto a la renta definida
+👆 [EstudioActuarialPage] avanzó al paso 9: Siguiente
+
+📍 Paso 9: Revisando información antes del pedido
+
+📍 Paso 9: Confirmando la revisión previa al pedido
+✅ [EstudioActuarialPage] Revisión del pedido confirmada
+✅ [NuevoEstudioWorkflow] Revisión confirmada
+👆 [EstudioActuarialPage] avanzó al paso 10: Siguiente
+
+📍 Paso 10: Completando datos del pedido
+
+📍 Paso 10: Completando los datos del pedido
+✓ [EstudioActuarialPage] Número de teléfono: esperado "0992700726" → actual "0992700726"
+📊 [EstudioActuarialPage] Contacto del pedido precargado desde el perfil
+✅ [EstudioActuarialPage] Datos del pedido completados
+
+📍 Paso 10: Verificando la sección "Datos de facturación"
+✓ [EstudioActuarialPage] Razón social: esperado "MODITEX S.A." → actual "MODITEX S.A."
+✓ [EstudioActuarialPage] RUC: esperado "0992700726001" → actual "0992700726001"
+✓ [EstudioActuarialPage] Provincia: esperado "GUAYAS" → actual "GUAYAS"
+✓ [EstudioActuarialPage] Ciudad: esperado "GUAYAQUIL" → actual "GUAYAQUIL"
+✅ [EstudioActuarialPage] Sección "Datos de facturación" verificada (con texto, sin "[object Object]")
+ℹ️  [NuevoEstudioWorkflow] Verificando detalle de la factura
+✓ [EstudioActuarialPage] Item factura: JUBILACION PATRONAL NIIF PYMES 2025 (17 TRABAJADORES): esperado "$196.32" → actual "$196.32"
+✓ [EstudioActuarialPage] Item factura: DESAHUCIO NIIF PYMES 2025 (17 TRABAJADORES): esperado "$123.68" → actual "$123.68"
+✓ [EstudioActuarialPage] Factura Descuento: esperado "$0.00" → actual "$0.00"
+✓ [EstudioActuarialPage] Factura Subtotal: esperado "$320.00" → actual "$320.00"
+✓ [EstudioActuarialPage] Factura IVA: esperado "$48.00" → actual "$48.00"
+✓ [EstudioActuarialPage] Factura Total: esperado "$368.00" → actual "$368.00"
+✅ [EstudioActuarialPage] Factura completa verificada
+✅ [NuevoEstudioWorkflow] Datos del pedido completados
+
+📍 Paso 7: Enviando pedido del estudio
+ℹ️  [EstudioActuarial-Step7-Enviar] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [EstudioActuarial-Step7-Enviar] Contexto           : paso 7 - justo antes de hacer clic en "Siguiente" (Enviar)
+ℹ️  [EstudioActuarial-Step7-Enviar] Env                : CONFIRMAR_PEDIDO_MOCK = 'false'
+ℹ️  [EstudioActuarial-Step7-Enviar] Lectura del env    : valor 'false' → el mock queda DESACTIVADO (backend real)
+ℹ️  [EstudioActuarial-Step7-Enviar] Config del TC      : confirmarPedidoMock = { enabled: false, debugNetwork: false }
+ℹ️  [EstudioActuarial-Step7-Enviar] Modo efectivo      : 🔴 MOCK DESACTIVADO — sin interceptación; el flujo corre contra el BACKEND REAL
+⚠️  [EstudioActuarial-Step7-Enviar] INTERCEPTARÁ: no (backend real)
+ℹ️  [EstudioActuarial-Step7-Enviar] ═══════════════════════════════════════════
+⚠️  [EstudioActuarial-Step7-Enviar] 🔴 MOCK DESACTIVADO: sin interceptación - el flujo se ejecutará contra el BACKEND REAL
+ℹ️  [EstudioActuarial-Step7-Enviar] Verificando pantalla final de confirmación (backend real, sin interceptación)
+ℹ️  [EstudioActuarialPage] Verificando pantalla final "Pedido enviado"
+ℹ️  [EstudioActuarialPage] No se detectó diálogo de encuesta (o ya estaba cerrado)
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 148978
+✅ [EstudioActuarialPage] Pedido en seguimiento · proceso 148978 · estado "Pedido enviado"
+✅ [EstudioActuarial-Step7-Enviar] 🔴 CONFIRMADO: flujo completado contra el BACKEND REAL (mock desactivado por CONFIRMAR_PEDIDO_MOCK=false)
+
+======================================================================
+🎯 FLUJO DEL NUEVO WIZARD COMPLETADO
+======================================================================
+   • duracion: 144.8s
+======================================================================
+
+✅ [TC02-01] Pedido creado contra el backend real; se verificará el email de factura
+ℹ️  Iniciando flujo de validación de email de factura
+ℹ️  Gmail Token Config: Using token from 'GMAIL_TOKEN'
+ℹ️  Token validation: Token found
+ℹ️  [EstudioActuarialPage] Verificando pantalla final "Pedido enviado"
+ℹ️  [EstudioActuarialPage] Diálogo de encuesta detectado - cerrando con X
+✅ [EstudioActuarialPage] Diálogo de encuesta cerrado
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 148978
+✅ [EstudioActuarialPage] Pedido en seguimiento · proceso 148978 · estado "Pedido enviado"
+✅ Estado del pedido: Pedido enviado
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 148978
+ℹ️  Número de proceso mostrado en la pantalla final: 148978
+ℹ️  Buscando email con proceso 148978 en Gmail...
+ℹ️  Intento 1/10 - Buscando email...
+📧 Waiting for email from no-reply-qa@portal.actuaria.com...
+✅ Email received
+ℹ️  Subject encontrado: Detalle del Proceso 148978
+✅ Email con proceso 148978 encontrado!
+✅ Subject verificado: Detalle del Proceso 148978
+ℹ️  Verificando contenido del email...
+ℹ️  Email body length: 8716 characters
+✅ Campo encontrado: "Datos del cliente"
+✅ Campo encontrado: "Razón Social"
+✅ Campo encontrado: "RUC"
+✅ Campo encontrado: "Correo"
+✅ Campo encontrado: "Datos de facturación"
+✅ Campo encontrado: "Información del estudio"
+✅ Campo encontrado: "Fecha de valoración"
+✅ Campo encontrado: "Mes de corte de nómina"
+✅ Campo encontrado: "Tipo de informe"
+✅ Campo encontrado: "Saldos contables"
+✅ Campo encontrado: "Jubilación Patronal"
+✅ Campo encontrado: "Bonificación por Desahucio"
+✅ Campo encontrado: "Parámetros adicionales"
+✅ Campo encontrado: "Porcentaje de incremento salarial"
+✅ Campo encontrado: "Tasa de rotación"
+✅ Todos los campos requeridos están presentes (15 campos)
+✅ Razón social verificado en el email
+✅ RUC verificado en el email
+✅ Correo verificado en el email
+✅ Dirección verificado en el email
+✅ Teléfono verificado en el email
+✅ Tipo de informe verificado en el email
+✅ Mes de corte de nómina verificado en el email
+✅ Porcentaje de incremento verificado en el email
+✅ Tasa de rotación verificado en el email
+✅ Número de proceso 148978 verificado en el subject del email
+✅ Todos los datos de cliente y del estudio coinciden con los valores esperados
+ℹ️    Razón Social: MODITEX S.A.
+ℹ️    Tipo Informe: NIIF_PYMES
+ℹ️    Mes Corte: Noviembre
+ℹ️    % Incremento: Estándar 2.3%
+ℹ️    Tasa Rotación: Estándar 11.8%
+ℹ️    Número Proceso: 148978
+
+======================================================================
+🎯 VERIFICACIÓN DE EMAIL COMPLETADA
+======================================================================
+   • Estado final del pedido: Pedido enviado
+   • Email recibido: [OCULTO]
+   • Número de proceso: Coincide entre app y email
+   • Campos requeridos: Todos presentes
+   • Datos específicos: Coinciden con valores esperados
+======================================================================
+
+
+✅ ✅ ✅ [TC02-01] TC02-01 finalizado exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

@@ -1,0 +1,23 @@
+[LOG] Using Firebase Production Services for environment: stage [7:24:19 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-08T19:24:20.531Z} [7:24:20 PM]
+[LOG] Using Firebase Production Services for environment: stage [7:24:24 PM]
+[LOG] Using Firebase Production Services for environment: stage [7:24:26 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [7:24:27 PM]
+[LOG] Using Firebase Production Services for environment: stage [7:24:29 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [7:24:30 PM]
+❌ CONSOLE ERROR: Error: Formato incorrecto. Descarga la plantilla desde el paso 1 y súbela sin modificar sus columnas para continuar.
+    at procesarArchivoSaldosAid (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47350:11)
+    at async handleProcesarArchivo (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47397:25)
+❌ CONSOLE ERROR: Error: Formato incorrecto. Descarga la plantilla desde el paso 1 y súbela sin modificar sus columnas para continuar.
+    at procesarArchivoSaldosAid (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47350:11)
+    at async handleProcesarArchivo (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47397:25)
+
+⚠️  1 error(s) detected during test execution:
+  1. Error: Formato incorrecto. Descarga la plantilla desde el paso 1 y súbela sin modificar sus columnas para continuar.
+    at procesarArchivoSaldosAid (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47350:11)
+    at async handleProcesarArchivo (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47397:25)
+
+⚠️  1 error(s) detected during test execution:
+  1. Error: Formato incorrecto. Descarga la plantilla desde el paso 1 y súbela sin modificar sus columnas para continuar.
+    at procesarArchivoSaldosAid (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47350:11)
+    at async handleProcesarArchivo (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/NewStudy-DyIvu7qs.js:47397:25)

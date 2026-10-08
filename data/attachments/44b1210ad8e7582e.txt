@@ -1,0 +1,350 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/EstudioActuarial/crearEstudio.test.ts >> Verificar primera empresa con año 2025 y datos recuperados (usuario DEMO) >> Crear Estudio Actuarial | [HP] | TC02-01-H: Verificar primera empresa con año 2025 y mes de corte Diciembre (No continene datos de 2025, datos son agregados)
+- Location: tests/specs/EstudioActuarial/crearEstudio.test.ts:301:2
+
+# Error details
+
+```
+Error: El mini-stepper del Paso 4 ("Esto entendimos de tu información") no muestra el sub-paso "Nómina de activos" con su chip de progreso. Títulos y chips visibles: Inconsistencias, Desvinculaciones, Confirmación
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "0"
+        - button [ref=f1e11] [cursor=pointer]:
+          - img "image" [ref=f1e12]
+          - paragraph [ref=f1e13]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e16]:
+      - generic [ref=f1e17]:
+        - link [ref=f1e18] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e19]
+        - button "abrir/cerrar menú" [ref=f1e20] [cursor=pointer]
+      - generic [ref=f1e25]:
+        - textbox "Buscar..." [ref=f1e29]
+        - group
+      - list [ref=f1e31]:
+        - button "Inicio" [ref=f1e32] [cursor=pointer]
+        - list [ref=f1e38]:
+          - listitem [ref=f1e39]: Panel General
+          - generic [ref=f1e40]:
+            - button "Estudios Actuariales" [ref=f1e41] [cursor=pointer]
+            - generic [ref=f1e51]:
+              - link "Listado de estudios" [ref=f1e52] [cursor=pointer]:
+                - /url: /dashboard/estudios/mis-estudios
+              - link "Nuevo estudio" [ref=f1e58] [cursor=pointer]:
+                - /url: /dashboard/estudios/nuevo-estudio
+      - generic [ref=f1e65]:
+        - paragraph [ref=f1e66]: Actuaria+ Stage
+        - paragraph [ref=f1e67]: soporteplus@actuaria.com
+        - generic [ref=f1e68]: v 1.11.3
+    - generic [ref=f1e73]:
+      - generic [ref=f1e74]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e75]
+        - paragraph [ref=f1e76]: "Sesión anterior: hoy, 19:04 · hace 46 segundos"
+      - generic [ref=f1e77]:
+        - button "Inicio" [ref=f1e78] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e80] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e82] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e84] [cursor=pointer]
+        - button "Control tributario" [ref=f1e86] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e88] [cursor=pointer]
+      - separator [ref=f1e90]
+      - generic [ref=f1e91]:
+        - generic [ref=f1e93]:
+          - 'heading "Nuevo estudio actuarial: DEMOGRAFIX S.A. modalidad Asesoría Personalizada" [level=4] [ref=f1e94]'
+          - paragraph [ref=f1e95]: Completa los pasos para solicitar el estudio actuarial de tu empresa.
+        - navigation "breadcrumb" [ref=f1e96]:
+          - list [ref=f1e97]:
+            - listitem [ref=f1e98]:
+              - link "Inicio" [ref=f1e99] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=f1e100]
+            - listitem [ref=f1e103]:
+              - heading "Estudio actuarial" [level=6] [ref=f1e104]
+        - generic [ref=f1e106]:
+          - heading "Etapa B · Parámetros e información · pantalla 2 de 4" [level=6] [ref=f1e107]
+          - paragraph [ref=f1e108]: Paso 4 de 10
+          - generic [ref=f1e109]:
+            - 'generic "Regresar a: Datos iniciales del estudio" [ref=f1e110]':
+              - generic [ref=f1e111] [cursor=pointer]
+            - 'generic "Regresar a: Configuración de hipótesis" [ref=f1e112]':
+              - generic [ref=f1e113] [cursor=pointer]
+            - 'generic "Regresar a: Carga de nómina" [ref=f1e114]':
+              - generic [ref=f1e115] [cursor=pointer]
+            - 'generic "Avanzar a: Validación de la información" [ref=f1e116]':
+              - generic [ref=f1e117] [cursor=pointer]
+        - generic [ref=f1e132]:
+          - generic [ref=f1e133]:
+            - heading "Esto entendimos de tu información" [level=5] [ref=f1e135]
+            - paragraph [ref=f1e136]: Revisa el resumen y confirma antes de continuar.
+          - generic [ref=f1e140]:
+            - generic [ref=f1e142]:
+              - generic [ref=f1e148]:
+                - generic [ref=f1e149]: Inconsistencias
+                - text: Completado · 1/1
+              - generic [ref=f1e157]:
+                - generic [ref=f1e158]: Desvinculaciones
+                - text: Completado · 616/616
+              - generic [ref=f1e162]:
+                - img [ref=f1e164]:
+                  - generic [ref=f1e166]: "3"
+                - generic [ref=f1e167]:
+                  - generic [ref=f1e168]: Confirmación
+                  - text: En progreso · 1/1
+            - button [ref=f1e170] [cursor=pointer]
+            - generic [ref=f1e175]:
+              - generic [ref=f1e178]:
+                - heading "Resumen de validación" [level=3] [ref=f1e179]
+                - paragraph [ref=f1e180]: Revisa el resumen antes de continuar. Una vez confirmado, la información se usará para el cálculo.
+              - separator [ref=f1e181]
+              - generic [ref=f1e182]:
+                - generic [ref=f1e183]:
+                  - paragraph [ref=f1e184]: Inconsistencias aprobadas
+                  - generic [ref=f1e185]: 1 / 1
+                - generic [ref=f1e187]:
+                  - paragraph [ref=f1e188]: Desvinculados con motivo asignado
+                  - generic [ref=f1e189]: 616 / 616
+              - generic [ref=f1e192]:
+                - alert [ref=f1e194]:
+                  - generic [ref=f1e198]:
+                    - generic [ref=f1e199]: 2 observaciones que no impiden continuar
+                    - text: "Puedes continuar, pero revisa:"
+                    - list [ref=f1e200]:
+                      - listitem [ref=f1e201]:
+                        - generic [ref=f1e202]:
+                          - generic [ref=f1e203]: 3 colaboradores sin cargo registrado
+                          - 'generic "Procedencia: Estudio base. Venía en tu base del año anterior, la que Actuaria ya validó." [ref=f1e204]': Estudio base
+                      - listitem [ref=f1e206]:
+                        - generic [ref=f1e207]:
+                          - generic [ref=f1e208]: 1 colaborador con fecha de ingreso posterior a la fecha de valoración
+                          - 'generic "Procedencia: Tú. Lo ingresaste o actualizaste tú en el archivo que subiste." [ref=f1e209]': Tú
+                - generic [ref=f1e211] [cursor=pointer]:
+                  - checkbox "Confirmo que esta información refleja mi nómina al cierre del período." [checked] [active] [ref=f1e213]
+                  - heading "Confirmo que esta información refleja mi nómina al cierre del período." [level=6] [ref=f1e216]
+          - generic [ref=f1e217]:
+            - button [ref=f1e218] [cursor=pointer]
+            - button [ref=f1e222] [cursor=pointer]
+  - link "Escríbenos a WhatsApp" [ref=f1e226] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  3599 | 		await expect(dropdown).toBeVisible({ timeout: 5000 });
+  3600 | 	}
+  3601 | 
+  3602 | 	async selectIvaDropdownValue(optionName: string, expectedValue: string) {
+  3603 | 		const dropdown = this.page.getByLabel('%');
+  3604 | 
+  3605 | 		// Click to open dropdown
+  3606 | 		await dropdown.click({ timeout: ACTION_TIMEOUT_MS });
+  3607 | 		await this.page.waitForTimeout(500);
+  3608 | 
+  3609 | 		// Select option
+  3610 | 		await this.page.getByRole('option', { name: optionName }).click({ timeout: ACTION_TIMEOUT_MS });
+  3611 | 
+  3612 | 		// Wait for selection to be applied
+  3613 | 		await this.page.waitForTimeout(500);
+  3614 | 
+  3615 | 		// Verify value by checking if the selected option text is visible in dropdown
+  3616 | 		// For custom dropdowns, check the text content instead of value attribute
+  3617 | 		await expect(dropdown).toContainText(expectedValue);
+  3618 | 	}
+  3619 | 
+  3620 | 	/**
+  3621 | 	 * Invoice Details Verification (Detalle de la factura)
+  3622 | 	 * NOTA: los métodos verifyInvoice* del flujo anterior fueron reemplazados por
+  3623 | 	 * las versiones del Paso 10 del nuevo wizard (ver sección "NUEVO FLUJO").
+  3624 | 	 */
+  3625 | 
+  3626 | 	/**
+  3627 | 	 * Verify error messages for file validation
+  3628 | 	 */
+  3629 | 	async verifyFileValidationErrors(expectedErrors: string[]) {
+  3630 | 		await this.page.getByRole('button', { name: 'Ver más' }).click({ timeout: ACTION_TIMEOUT_MS });
+  3631 | 		// Wait for first expected error to appear (documents may take a moment to render)
+  3632 | 		if (expectedErrors.length > 0) {
+  3633 | 			await expect(this.page.locator(`text=${expectedErrors[0]}`).first()).toBeVisible({ timeout: 10000 });
+  3634 | 		}
+  3635 | 
+  3636 | 		for (const errorMsg of expectedErrors) {
+  3637 | 			await expect(this.page.locator(`text=${errorMsg}`).first()).toBeVisible();
+  3638 | 		}
+  3639 | 	}
+  3640 | 
+  3641 | 	/**
+  3642 | 	 * Verify single error message (for upload errors without Ver más button)
+  3643 | 	 */
+  3644 | 	async verifySingleUploadError(errorMessage: string) {
+  3645 | 		const alertError = this.page.locator('div[role="alert"]').filter({ hasText: errorMessage });
+  3646 | 		await expect(alertError).toBeVisible({ timeout: 10000 });
+  3647 | 		this.pageLogger.exito(`Error message verified: ${errorMessage}`);
+  3648 | 	}
+  3649 | 
+  3650 | 	/**
+  3651 | 	 * Verify error alert contains expected text
+  3652 | 	 *
+  3653 | 	 * ⚠️ No se puede usar `locator('div[role="alert"]')` a secas: en el wizard
+  3654 | 	 * conviven varios `role="alert"` a la vez (los `MuiAlert` de la pantalla más
+  3655 | 	 * los `notistack` de los toasts "Tasas y política guardadas" / "Cargando el
+  3656 | 	 * archivo"), y la aserción de texto entra en *strict mode violation*. Se
+  3657 | 	 * filtra el alert por el propio texto esperado (el match de string es
+  3658 | 	 * substring e insensible a mayúsculas).
+  3659 | 	 */
+  3660 | 	async verifyErrorAlertContains(expectedText: string) {
+  3661 | 		const alertError = this.page.locator('div[role="alert"]').filter({ hasText: expectedText });
+  3662 | 		await this.waitForVisible(alertError.first(), `alert con el texto "${expectedText}"`, 20000);
+  3663 | 		this.pageLogger.exito(`Error alert contains: ${expectedText}`);
+  3664 | 	}
+  3665 | 
+  3666 | 	/**
+  3667 | 	 * Verifica que el wizard está en el paso indicado.
+  3668 | 	 *
+  3669 | 	 * ⚠️ El rediseño muestra el avance como **párrafo** (`paragraph: Paso 1 de 10`),
+  3670 | 	 * NO como heading. El `getByRole('heading', { name: 'Paso N de' })` anterior
+  3671 | 	 * no encontraba nunca nada → TC03-02 y TC03-05 en rojo permanente. Se reutiliza
+  3672 | 	 * el localizador de {@link waitForStep} ("Paso N de 10"), verificado en vivo.
+  3673 | 	 */
+  3674 | 	async verifyStepHeading(stepNumber: number) {
+  3675 | 		await this.waitForStep(stepNumber);
+  3676 | 		this.pageLogger.exito(`Indicador "Paso ${stepNumber} de 10" visible`);
+  3677 | 	}
+  3678 | 
+  3679 | 	/**
+  3680 | 	 * Verifica el **mini-stepper del Paso 4** ("Esto entendimos de tu información"), cuyos
+  3681 | 	 * sub-pasos y chips de progreso se leen de la pantalla:
+  3682 | 	 * `Nómina de activos` → `Inconsistencias` → `Desvinculaciones` → `Confirmación`
+  3683 | 	 * (p. ej. `Desvinculaciones: Completado · 616/616`, `Inconsistencias: En progreso · 1/1`).
+  3684 | 	 *
+  3685 | 	 * La verificación es de **sólo lectura**: no abre ni resuelve ningún sub-paso, así que
+  3686 | 	 * sirve igual al entrar al paso que al terminarlo (el recorrido lo hace
+  3687 | 	 * `confirmNominaSummary`). Los títulos siguen visibles al avanzar de sub-paso.
+  3688 | 	 *
+  3689 | 	 * @returns resumen legible por sub-paso, p. ej. `Nómina de activos: Completado · 17/17`.
+  3690 | 	 */
+  3691 | 	async verifyPaso4Subpasos(): Promise<string[]> {
+  3692 | 		await expect(this.page.getByRole('heading', { name: 'Esto entendimos de tu información' })).toBeVisible({ timeout: 30000 });
+  3693 | 
+  3694 | 		const cuerpo = (await this.page.locator('body').innerText()).replace(/[\u200b\s]+/gi, ' ');
+  3695 | 		const resumen: string[] = [];
+  3696 | 		for (const titulo of PASO4_SUBPASOS) {
+  3697 | 			const encontrado = cuerpo.match(new RegExp(`${escapeRegExp(titulo)}\\s+(Completado|En progreso|Pendiente)\\s+·\\s+(\\d+)\\s*/\\s*(\\d+)`));
+  3698 | 			if (!encontrado) {
+> 3699 | 				throw new Error(
+       |           ^ Error: El mini-stepper del Paso 4 ("Esto entendimos de tu información") no muestra el sub-paso "Nómina de activos" con su chip de progreso. Títulos y chips visibles: Inconsistencias, Desvinculaciones, Confirmación
+  3700 | 					`El mini-stepper del Paso 4 ("Esto entendimos de tu información") no muestra el sub-paso "${titulo}" con su chip de progreso. ` +
+  3701 | 						`Títulos y chips visibles: ${PASO4_SUBPASOS.filter((t) => cuerpo.includes(t)).join(', ') || 'ninguno'}`
+  3702 | 				);
+  3703 | 			}
+  3704 | 			resumen.push(`${titulo}: ${encontrado[1]} · ${encontrado[2]}/${encontrado[3]}`);
+  3705 | 		}
+  3706 | 
+  3707 | 		this.pageLogger.info(`Sub-pasos del Paso 4 → ${resumen.join(' | ')}`);
+  3708 | 		this.pageLogger.exito(`Mini-stepper del Paso 4 verificado (${resumen.length} sub-pasos)`);
+  3709 | 		return resumen;
+  3710 | 	}
+  3711 | 
+  3712 | 	/**
+  3713 | 	 * Verify landing on Paso 4 - Desvinculaciones screen
+  3714 | 	 * Waits for network idle, then checks the step heading and section title
+  3715 | 	 *
+  3716 | 	 * ⚠️ Pantalla del wizard ANTERIOR (7 pasos). En el rediseño de 10 pasos el
+  3717 | 	 * Paso 4 es "Esto entendimos de tu información" y no existe "Empleados
+  3718 | 	 * activos"/"Desvinculaciones". Solo la usa un workflow legacy.
+  3719 | 	 */
+  3720 | 	async verifyPaso4Desvinculaciones() {
+  3721 | 		this.pageLogger.info(`URL actual: ${this.page.url()}`);
+  3722 | 		await expect(this.page.getByRole('heading', { name: 'Paso 4 de' })).toBeVisible({ timeout: 30000 });
+  3723 | 		await expect(this.page.getByText('Empleados activos')).toBeVisible({ timeout: 15000 });
+  3724 | 		this.pageLogger.exito('Pantalla Paso 4 - Empleados activos (Resumen) verificada');
+  3725 | 	}
+  3726 | 
+  3727 | 	// ============================================================================
+  3728 | 	// MIS ESTUDIOS · LISTADO UNIFICADO (rediseño sin pestañas)
+  3729 | 	//
+  3730 | 	// ⚠️ El rediseño eliminó las pestañas "Estudios Pendientes"/"Solicitadas": la
+  3731 | 	// página `/dashboard/estudios/mis-estudios` muestra UNA única tabla con todos
+  3732 | 	// los estados en la columna ESTADO ("Pendiente", "Solicitado", "En Cola") y
+  3733 | 	// paginada (5 filas por defecto). Los estudios pendientes —los únicos con
+  3734 | 	// acciones "Continuar" y "Eliminar"— se localizan filtrando por ESTADO y
+  3735 | 	// avanzando de página hasta encontrarlos.
+  3736 | 	// ============================================================================
+  3737 | 
+  3738 | 	/**
+  3739 | 	 * Navega al listado unificado de estudios y espera a que los datos estén
+  3740 | 	 * realmente cargados.
+  3741 | 	 */
+  3742 | 	async navigateToMisEstudios() {
+  3743 | 		this.pageLogger.info('Esperando el listado unificado de Mis Estudios');
+  3744 | 		await this.waitForVisible(this.estudiosTable, 'tabla del listado de estudios', NAV_TIMEOUT_MS);
+  3745 | 		await this.waitForEstudiosListLoaded();
+  3746 | 		this.pageLogger.exito('Listado de Mis Estudios cargado');
+  3747 | 	}
+  3748 | 
+  3749 | 	/** Filas de datos del listado de estudios. */
+  3750 | 	private studyRows(): Locator {
+  3751 | 		return this.estudiosTable.locator('tbody tr');
+  3752 | 	}
+  3753 | 
+  3754 | 	/** Spinners de carga del listado (MUI). */
+  3755 | 	private estudiosLoadingSpinners(): Locator {
+  3756 | 		return this.page.locator('.MuiCircularProgress-root, .MuiSkeleton-root, [role="progressbar"]');
+  3757 | 	}
+  3758 | 
+  3759 | 	/**
+  3760 | 	 * Espera a que el listado termine de cargar.
+  3761 | 	 *
+  3762 | 	 * ⚠️ La tabla se pinta como "vacía" MIENTRAS el query de estudios
+  3763 | 	 * (`firestore/query/custom` filtrando por RUC) sigue en vuelo: en stage se
+  3764 | 	 * midió el placeholder `Mis estudios 0` + `0-0 de 0` + la fila "Todavía no
+  3765 | 	 * tienes estudios para esta empresa" durante ~2,5 s antes de los datos reales.
+  3766 | 	 * Esperar solo a que exista una fila devuelve ese placeholder y hace que la
+  3767 | 	 * búsqueda de pendientes concluya (mal) que la cuenta no tiene estudios.
+  3768 | 	 *
+  3769 | 	 * Criterio: hay una fila con datos reales o, si no, ya no quedan spinners y la
+  3770 | 	 * única fila es el estado vacío definitivo (cuenta sin estudios de verdad).
+  3771 | 	 */
+  3772 | 	private async waitForEstudiosListLoaded() {
+  3773 | 		await expect
+  3774 | 			.poll(
+  3775 | 				async () => {
+  3776 | 					const rowTexts = (await this.studyRows().allInnerTexts()).map((text) => text.replace(/\s+/g, ' ').trim());
+  3777 | 					const nonEmptyRows = rowTexts.filter((text) => text.length > 0);
+  3778 | 					if (nonEmptyRows.some((text) => !ESTUDIOS_EMPTY_STATE_PATTERN.test(text))) return true;
+  3779 | 
+  3780 | 					const spinners = await this.estudiosLoadingSpinners().count();
+  3781 | 					return spinners === 0 && nonEmptyRows.some((text) => ESTUDIOS_EMPTY_STATE_PATTERN.test(text));
+  3782 | 				},
+  3783 | 				{ timeout: SLOW_ACTION_TIMEOUT_MS, intervals: [250, 500, 1000] }
+  3784 | 			)
+  3785 | 			.toBe(true);
+  3786 | 
+  3787 | 		const alert = this.page.getByText(/No pudimos cargar la información de tu empresa/i);
+  3788 | 		if (await alert.isVisible({ timeout: ACTION_TIMEOUT_MS }).catch(() => false)) {
+  3789 | 			this.pageLogger.advertencia('La página muestra "No pudimos cargar la información de tu empresa" (backend); el listado de estudios sí cargó');
+  3790 | 		}
+  3791 | 	}
+  3792 | 
+  3793 | 	/**
+  3794 | 	 * Total de estudios del listado, leído del rango de paginación ("1-25 de 100")
+  3795 | 	 * o, si no hay paginador, del encabezado "Mis estudios {N}".
+  3796 | 	 *
+  3797 | 	 * ⚠️ Es el total de la cuenta, NO el de un estado concreto: la página ya no
+  3798 | 	 * expone contadores por estado (antes venían en la pestaña "ESTUDIOS
+  3799 | 	 * PENDIENTES (N)"). Sirve para comprobar que una eliminación resta 1.
+```

@@ -1,0 +1,50 @@
+🎭️ [EstudioActuarial-Pendientes] Preparando entorno → /dashboard/estudios/mis-estudios
+🔐 [EstudioActuarial-Pendientes] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-Pendientes] Sesión iniciada correctamente
+🔍 [EstudioActuarial-Pendientes] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-Pendientes] goto /dashboard/estudios/mis-estudios interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/mis-estudios
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/mis-estudios", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-Pendientes] Navegación exitosa → /dashboard/estudios/mis-estudios
+🎭️ [TC03-05] Continuación de un estudio pendiente localizado tras paginar el listado
+ℹ️  [TC03-05] Verificando que la paginación del listado no bloquea el acceso a estudios pendientes
+ℹ️  Iniciando workflow: Verificar continuación con estudios pendientes en página 2+
+ℹ️  [EstudioActuarialPage] Esperando el listado unificado de Mis Estudios
+⚠️  [EstudioActuarialPage] La página muestra "No pudimos cargar la información de tu empresa" (backend); el listado de estudios sí cargó
+✅ [EstudioActuarialPage] Listado de Mis Estudios cargado
+ℹ️  [EstudioActuarialPage] El listado ya muestra 5 filas por página
+ℹ️  [EstudioActuarialPage] Buscando estudios "Pendiente" en el listado (máx. 5 página(s))
+ℹ️  [EstudioActuarialPage] Revisando página 1 del listado (5 fila(s))
+ℹ️  [EstudioActuarialPage] Revisando página 2 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 2, fila 5): id=4IGsHxuNKzElc3qlzY1b, paso=10
+ℹ️  [EstudioActuarialPage] Revisando página 3 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 3, fila 3): id=5IO4gYdB0djnCzC9wQaJ, paso=4
+ℹ️  [EstudioActuarialPage] Revisando página 4 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 4, fila 3): id=6Nis0m6LrRbCNzKu8d6U, paso=2
+ℹ️  [EstudioActuarialPage] Revisando página 5 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 5, fila 4): id=7dU7hgwRni3TDhc2n617, paso=10
+✅ Estudio pendiente localizado tras paginar: página 2 (se revisaron 4 página(s) con pendientes)
+ℹ️  [EstudioActuarialPage] Continuando con el estudio pendiente 4IGsHxuNKzElc3qlzY1b (paso 10)
+ℹ️  [EstudioActuarialPage] Datos de la fila: 08/10/2026 | 2024 | NIIF PYMES | — | Pendiente | 10/10 | Continuar
+ℹ️  [EstudioActuarialPage] El estudio 4IGsHxuNKzElc3qlzY1b no está en la página actual del listado; volviendo a la página 2
+ℹ️  [EstudioActuarialPage] Listado posicionado en la página 2
+ℹ️  [EstudioActuarialPage] 🔍 Intento 1 (click on <a> "Continuar")...
+✅ [EstudioActuarialPage] ✅ "Continuar" navegó a: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/4IGsHxuNKzElc3qlzY1b/9
+👆 Click para estudio 4IGsHxuNKzElc3qlzY1b (página 2, paso 10): Botón Continuar
+✅ Redireccionado a la URL correcta para el paso 10 (índice 9)
+✅ [EstudioActuarialPage] Indicador "Paso 10 de 10" visible
+✅ El indicador muestra "Paso 10 de 10"
+
+✅ ✅ ✅ Flujo de paginación de estudios pendientes completado
+
+✅ [TC03-05] Búsqueda paginada y continuación de estudio pendiente verificadas
+
+✅ ✅ ✅ [TC03-05] TC03-05 finalizado exitosamente
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr

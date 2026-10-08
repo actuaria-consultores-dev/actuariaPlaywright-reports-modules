@@ -1,0 +1,106 @@
+🎭️ [EstudioActuarial-2025-DataRecovery] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-2025-DataRecovery] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-2025-DataRecovery] Sesión iniciada correctamente
+🔍 [EstudioActuarial-2025-DataRecovery] Dashboard cargado correctamente
+🔍 [EstudioActuarial-2025-DataRecovery] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-01-H] Año 2025 - mes de corte Diciembre - recuperación de saldos contables
+ℹ️  [TC02-01-H] Verificando recuperación automática de datos del estudio del año anterior
+⚠️  [TC02-01-H] Saldos editados manualmente: Jubilación Patronal y Bonificación por Desahucio
+
+======================================================================
+🎯 INICIANDO FLUJO ESTUDIO ACTUARIAL CON RECUPERACIÓN DE DATOS (2025)
+======================================================================
+   • Año de valoración: 2025
+   • Mes de valoración: 31 de Diciembre
+   • Mes de corte: Diciembre
+   • Opción saldos: primerEstudio
+   • Normativa: pymes
+   • Tasa incremento: estandar
+   • Tasa rotación: especifico
+======================================================================
+
+
+📍 Paso 1: Configurando fecha de valoración: 2025 / 31 de Diciembre / corte Diciembre
+
+📍 Paso 1: Configurando fecha de valoración
+👆 [EstudioActuarialPage] 2025: Selección "anioValoracion"
+👆 [EstudioActuarialPage] /Diciembre/i: Selección "mesCorte"
+✓ [EstudioActuarialPage] Año de valoración: esperado "2025" → actual "2025"
+✓ [EstudioActuarialPage] Mes de valoración: esperado "Diciembre" → actual "Diciembre"
+✓ [EstudioActuarialPage] Mes de corte de nómina: esperado "Diciembre" → actual "Diciembre"
+✅ [EstudioActuarialPage] Fecha de valoración configurada
+✅ [TC02-01-H-Workflow] Fecha de valoración configurada
+👆 [EstudioActuarialPage] avanzó al paso 2: Siguiente
+
+📍 Paso 2: Saldos contables: seleccionando "No, deseo seleccionar valores diferentes"
+
+📍 Paso 2: Configurando el estudio base
+⏳ [EstudioActuarialPage] Consulta de estudios anteriores finalizada (~7s)
+ℹ️  [EstudioActuarialPage] Paso 2: variante detectada → "Saldos contables"
+✅ [EstudioActuarialPage] Saldos contables: "No, deseo seleccionar valores diferentes"
+✅ [TC02-01-H-Workflow] Paso 2 respondido
+ℹ️  [TC02-01-H-Workflow] Editando saldos: Jubilación=4, Desahucio=4
+ℹ️  [EstudioActuarialPage] Panel de edición de saldos abierto
+✅ [EstudioActuarialPage] Jubilación Patronal establecida a: 4
+✅ [EstudioActuarialPage] Bonificación por Desahucio establecida a: 4
+✅ [EstudioActuarialPage] Saldos guardados
+ℹ️  [TC02-01-H-Workflow] Verificando valores de celdas de saldos
+✅ [EstudioActuarialPage] Celdas de saldos verificadas: nth(2)=4, nth(3)=4
+✅ [TC02-01-H-Workflow] Celdas de saldos verificadas: Jubilación=4, Desahucio=4
+👆 [EstudioActuarialPage] avanzó al paso 3: Siguiente
+
+📍 Paso 3: Cargando base de nómina
+ℹ️  [TC02-01-H-Workflow] Subiendo archivo de nómina: caso1.xlsx
+
+📍 Paso 3: Configurando carga de nómina
+👆 [EstudioActuarialPage] Actualizar mi base del año anterior: Vía de nómina
+✅ [EstudioActuarialPage] Vía de nómina seleccionada: "Actualizar mi base del año anterior"
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: caso1.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~14s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: caso1.xlsx
+👆 [EstudioActuarialPage] No tengo traspasos en el período: Traspasos
+✅ [EstudioActuarialPage] Carga de nómina configurada
+✅ [TC02-01-H-Workflow] Nómina cargada y validada
+👆 [EstudioActuarialPage] avanzó al paso 4: Siguiente
+
+📍 Paso 4: Confirmando el resumen de la nómina
+
+📍 Paso 4: Confirmando el resumen de la nómina
+👆 [EstudioActuarialPage] sub-paso "Inconsistencias" del Paso 4: Aprobar 1 tarjeta(s) de inconsistencias
+ℹ️  [EstudioActuarialPage] Sub-paso del Paso 4 resuelto (inconsistencias aprobadas: 1, tarjetas de desvinculados con motivo: 0)
+👆 [EstudioActuarialPage] mini-stepper del Paso 4: Guardar y avanzar
+ℹ️  [EstudioActuarialPage] "Guardar y avanzar" del Paso 4 sigue deshabilitado: reintentando (2/3) por si el sub-paso todavía está cargando
+✓ [EstudioActuarialPage] Motivo de salida (tarjeta 1/1 de desvinculados): esperado "motivo aceptado por la app" → actual "Jubilado pendiente de pago"
+ℹ️  [EstudioActuarialPage] Sub-paso del Paso 4 resuelto (inconsistencias aprobadas: 0, tarjetas de desvinculados con motivo: 1)
+👆 [EstudioActuarialPage] mini-stepper del Paso 4: Guardar y avanzar
+⚠️  [EstudioActuarialPage] Ninguna opción de "Motivo de salida" habilitó "Guardar y avanzar" en la tarjeta 1/1 de desvinculados
+ℹ️  [EstudioActuarialPage] "Guardar y avanzar" del Paso 4 sigue deshabilitado: reintentando (2/3) por si el sub-paso todavía está cargando
+✓ [EstudioActuarialPage] Motivo de salida (tarjeta 1/1 de desvinculados): esperado "motivo aceptado por la app" → actual "Jubilado con pensión mensual"
+ℹ️  [EstudioActuarialPage] Sub-paso del Paso 4 resuelto (inconsistencias aprobadas: 0, tarjetas de desvinculados con motivo: 1)
+👆 [EstudioActuarialPage] mini-stepper del Paso 4: Guardar y avanzar
+⚠️  [EstudioActuarialPage] Ninguna opción de "Motivo de salida" habilitó "Guardar y avanzar" en la tarjeta 1/1 de desvinculados
+ℹ️  [EstudioActuarialPage] "Guardar y avanzar" del Paso 4 sigue deshabilitado: reintentando (2/3) por si el sub-paso todavía está cargando
+✓ [EstudioActuarialPage] Motivo de salida (tarjeta 1/1 de desvinculados): esperado "motivo aceptado por la app" → actual "Jubilado pendiente de pago"
+ℹ️  [EstudioActuarialPage] Sub-paso del Paso 4 resuelto (inconsistencias aprobadas: 0, tarjetas de desvinculados con motivo: 1)
+👆 [EstudioActuarialPage] mini-stepper del Paso 4: Guardar y avanzar
+⚠️  [EstudioActuarialPage] Ninguna opción de "Motivo de salida" habilitó "Guardar y avanzar" en la tarjeta 1/1 de desvinculados
+ℹ️  [EstudioActuarialPage] "Guardar y avanzar" del Paso 4 sigue deshabilitado: reintentando (2/3) por si el sub-paso todavía está cargando
+✓ [EstudioActuarialPage] Motivo de salida (tarjeta 1/1 de desvinculados): esperado "motivo aceptado por la app" → actual "Renuncia"
+ℹ️  [EstudioActuarialPage] Sub-paso del Paso 4 resuelto (inconsistencias aprobadas: 0, tarjetas de desvinculados con motivo: 1)
+👆 [EstudioActuarialPage] mini-stepper del Paso 4: Guardar y avanzar
+⚠️  [EstudioActuarialPage] Ninguna opción de "Motivo de salida" habilitó "Guardar y avanzar" en la tarjeta 1/1 de desvinculados
+✅ [EstudioActuarialPage] Resumen de nómina confirmado
+✅ [TC02-01-H-Workflow] Resumen de nómina confirmado
+❌ [TC02-01-H] TC02-01-H falló
+   Detalle: El mini-stepper del Paso 4 ("Esto entendimos de tu información") no muestra el sub-paso "Nómina de activos" con su chip de progreso. Títulos y chips visibles: Inconsistencias, Desvinculaciones, Confirmación
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/S2PpcoBNTeyAhJSRcki5/3
+  • RED (4xx/5xx) → GET https://actuafast-api-383942996286.us-east1.run.app/estudios/136750/version/G0WZRGfWCsup56S2v1Tb/plantilla-modificada → 400
+===================================================================
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

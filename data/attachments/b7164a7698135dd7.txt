@@ -1,0 +1,5 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/uVGFd2026FGsyKcaTp18/3
+  • RED (4xx/5xx) → GET https://actuafast-api-383942996286.us-east1.run.app/estudios/136750/version/G0WZRGfWCsup56S2v1Tb/plantilla-modificada → 400
+===================================================================

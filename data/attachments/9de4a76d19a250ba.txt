@@ -1,0 +1,70 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-10] Archivo inválido en sección Beneficios Pagados - debe mostrar mensaje de error
+ℹ️  [TC02-10] Mensaje de error esperado: "/Formato de archivo no admitido/i"
+
+======================================================================
+🎯 PASO 6 · ERROR DE FORMATO EN ARCHIVO DE PAGOS
+======================================================================
+   • Archivo de pagos: payroll.txt
+   • Error esperado: /Formato de archivo no admitido/i
+======================================================================
+
+
+📍 Paso 1: Abriendo nuevo estudio actuarial
+✅ [EstudioActuarialPage] Wizard abierto en el Paso 1 de 10 (etapa A · Estudio base)
+
+📍 Paso 1: Configurando fecha de valoración
+👆 [EstudioActuarialPage] 2024: Selección "anioValoracion"
+👆 [EstudioActuarialPage] /Noviembre/i: Selección "mesCorte"
+✓ [EstudioActuarialPage] Año de valoración: esperado "2024" → actual "2024"
+✓ [EstudioActuarialPage] Mes de valoración: esperado "Diciembre" → actual "Diciembre"
+✓ [EstudioActuarialPage] Mes de corte de nómina: esperado "Noviembre" → actual "Noviembre"
+✅ [EstudioActuarialPage] Fecha de valoración configurada
+👆 [EstudioActuarialPage] avanzó al paso 2: Siguiente
+
+📍 Paso 2: Configurando el estudio base
+ℹ️  [EstudioActuarialPage] Paso 2: variante detectada → "Tipo de empresa"
+✓ [EstudioActuarialPage] Tipo de empresa: esperado "iniciaOperaciones" → actual "I (La empresa inicia operaciones en el año de valoración)"
+✅ [EstudioActuarialPage] Tipo de empresa: iniciaOperaciones
+👆 [EstudioActuarialPage] avanzó al paso 3: Siguiente
+👆 [EstudioActuarialPage] Actualizar mi base del año anterior: Vía de nómina
+✅ [EstudioActuarialPage] Vía de nómina seleccionada: "Actualizar mi base del año anterior"
+ℹ️  [BeneficiosFileErrorWorkflow] Paso 3 preparado: listo para subir el archivo de prueba
+
+📍 Paso 3: Configurando carga de nómina
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: caso1.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~0s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: caso1.xlsx
+👆 [EstudioActuarialPage] No tengo traspasos en el período: Traspasos
+✅ [EstudioActuarialPage] Carga de nómina configurada
+👆 [EstudioActuarialPage] avanzó al paso 4: Siguiente
+
+📍 Paso 4: Confirmando el resumen de la nómina
+✅ [EstudioActuarialPage] Resumen de nómina confirmado
+👆 [EstudioActuarialPage] avanzó al paso 5: Siguiente
+
+📍 Paso 5: Configurando tasas y política del estudio
+✓ [EstudioActuarialPage] Normativa contable: esperado "pymes" → actual "NIIF_PYMES"
+✓ [EstudioActuarialPage] Incremento salarial estándar: esperado "2.3" → actual "2.3"
+✓ [EstudioActuarialPage] Tasa de rotación estándar: esperado "11.8" → actual "11.8"
+✓ [EstudioActuarialPage] Política de pago: esperado "pensionMensual" → actual "P"
+✅ [EstudioActuarialPage] Tasas y política configuradas
+👆 [EstudioActuarialPage] avanzó al paso 6: Siguiente
+ℹ️  [EstudioActuarialPage] Archivo de pagos inválido seleccionado: payroll.txt
+✓ [EstudioActuarialPage] Mensaje de formato no admitido: esperado "/Formato de archivo no admitido/i" → actual "Formato de archivo no admitido. Revisa los formatos aceptados e inténtalo de nuevo."
+✅ [EstudioActuarialPage] La app rechazó el archivo por formato no admitido
+✅ [BeneficiosFileErrorWorkflow] Error de beneficios verificado: "/Formato de archivo no admitido/i"
+✅ [TC02-10] Mensaje de error de beneficios mostrado correctamente
+
+✅ ✅ ✅ [TC02-10] TC02-10 finalizado exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr

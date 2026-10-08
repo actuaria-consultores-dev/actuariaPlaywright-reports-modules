@@ -1,0 +1,187 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-GestionCompleta] goto /dashboard/estudios/nuevo-estudio interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-09] Fecha de valoración 2024 Junio - flujo completo con nómina y beneficios
+ℹ️  [TC02-09] Fecha de corte: Junio 2024 - verifica que el flujo funciona con mes intermedio del año
+
+======================================================================
+🎯 INICIANDO FLUJO DEL NUEVO WIZARD (10 PASOS)
+======================================================================
+   • archivoNomina: ./tests/data/documents/caso1.xlsx
+   • archivoBeneficios: ./tests/data/documents/PagosporEmpleados.xlsx
+   • viaNomina: Sin traspasos
+   • normativa: pymes
+   • saldosContables: Sí, confirmo
+======================================================================
+
+ℹ️  [NuevoEstudioWorkflow] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [NuevoEstudioWorkflow] Contexto           : Paso 10 = botón "Siguiente" (enviar pedido)
+ℹ️  [NuevoEstudioWorkflow] Env                : CONFIRMAR_PEDIDO_MOCK = 'false'
+ℹ️  [NuevoEstudioWorkflow] Lectura del env    : valor 'false' → el mock queda DESACTIVADO (backend real)
+ℹ️  [NuevoEstudioWorkflow] Config del TC      : confirmarPedidoMock = { enabled: false, debugNetwork: false }
+ℹ️  [NuevoEstudioWorkflow] Modo efectivo      : 🔴 MOCK DESACTIVADO — sin interceptación; el flujo corre contra el BACKEND REAL
+⚠️  [NuevoEstudioWorkflow] INTERCEPTARÁ: no (backend real)
+ℹ️  [NuevoEstudioWorkflow] ═══════════════════════════════════════════
+
+📍 Paso 1: Creando estudio y configurando fecha de valoración
+
+📍 Paso 1: Abriendo nuevo estudio actuarial
+✅ [EstudioActuarialPage] Wizard abierto en el Paso 1 de 10 (etapa A · Estudio base)
+
+📍 Paso 1: Configurando fecha de valoración
+👆 [EstudioActuarialPage] 2024: Selección "anioValoracion"
+👆 [EstudioActuarialPage] /Junio/i: Selección "mesValoracion"
+✓ [EstudioActuarialPage] Año de valoración: esperado "2024" → actual "2024"
+✓ [EstudioActuarialPage] Mes de valoración: esperado "Junio" → actual "Junio"
+✓ [EstudioActuarialPage] Mes de corte de nómina: esperado "Mayo" → actual "Mayo"
+✅ [EstudioActuarialPage] Fecha de valoración configurada
+✅ [NuevoEstudioWorkflow] Fecha de valoración configurada
+👆 [EstudioActuarialPage] avanzó al paso 2: Siguiente
+
+📍 Paso 2: Respondiendo el estudio base (saldos contables / tipo de empresa)
+
+📍 Paso 2: Configurando el estudio base
+ℹ️  [EstudioActuarialPage] Paso 2: variante detectada → "Tipo de empresa"
+✓ [EstudioActuarialPage] Tipo de empresa: esperado "iniciaOperaciones" → actual "I (La empresa inicia operaciones en el año de valoración)"
+✅ [EstudioActuarialPage] Tipo de empresa: iniciaOperaciones
+✅ [NuevoEstudioWorkflow] Paso 2 respondido
+👆 [EstudioActuarialPage] avanzó al paso 3: Siguiente
+
+📍 Paso 3: Cargando base de nómina
+
+📍 Paso 3: Configurando carga de nómina
+👆 [EstudioActuarialPage] Actualizar mi base del año anterior: Vía de nómina
+✅ [EstudioActuarialPage] Vía de nómina seleccionada: "Actualizar mi base del año anterior"
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: caso1.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~0s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: caso1.xlsx
+👆 [EstudioActuarialPage] No tengo traspasos en el período: Traspasos
+✅ [EstudioActuarialPage] Carga de nómina configurada
+✅ [NuevoEstudioWorkflow] Nómina cargada y validada
+👆 [EstudioActuarialPage] avanzó al paso 4: Siguiente
+
+📍 Paso 4: Revisando resumen de la nómina
+
+📍 Paso 4: Confirmando el resumen de la nómina
+✅ [EstudioActuarialPage] Resumen de nómina confirmado
+✅ [NuevoEstudioWorkflow] Resumen de nómina confirmado
+👆 [EstudioActuarialPage] avanzó al paso 5: Siguiente
+
+📍 Paso 5: Configurando tasas y política
+
+📍 Paso 5: Configurando tasas y política del estudio
+✓ [EstudioActuarialPage] Normativa contable: esperado "pymes" → actual "NIIF_PYMES"
+✓ [EstudioActuarialPage] Incremento salarial estándar: esperado "2.3" → actual "2.3"
+✓ [EstudioActuarialPage] Tasa de rotación estándar: esperado "11.8" → actual "11.8"
+✓ [EstudioActuarialPage] Política de pago: esperado "pensionMensual" → actual "P"
+✅ [EstudioActuarialPage] Tasas y política configuradas
+✅ [NuevoEstudioWorkflow] Tasas y política configuradas
+👆 [EstudioActuarialPage] avanzó al paso 6: Siguiente
+
+📍 Paso 6: Cargando beneficios pagados
+
+📍 Paso 6: Configurando beneficios pagados
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: PagosporEmpleados.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~0s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: PagosporEmpleados.xlsx
+👆 [EstudioActuarialPage] provisionTotal: Criterio de registro de pagos
+✅ [EstudioActuarialPage] Beneficios pagados configurados
+✅ [NuevoEstudioWorkflow] Beneficios pagados configurados
+👆 [EstudioActuarialPage] avanzó al paso 7: Siguiente
+
+📍 Paso 7: Definiendo nivel de detalle de saldos de AID
+
+📍 Paso 7: Declarando saldos de AID
+✅ [EstudioActuarialPage] Nivel de detalle de AID declarado: sinSaldos
+✅ [NuevoEstudioWorkflow] Saldos de AID definidos
+👆 [EstudioActuarialPage] avanzó al paso 8: Siguiente
+
+📍 Paso 8: Seleccionando tasa de impuesto a la renta
+
+📍 Paso 8: Declarando tasa de impuesto a la renta
+✅ [EstudioActuarialPage] Tasa de impuesto a la renta: estandar
+✅ [NuevoEstudioWorkflow] Tasa de impuesto a la renta definida
+👆 [EstudioActuarialPage] avanzó al paso 9: Siguiente
+
+📍 Paso 9: Revisando información antes del pedido
+
+📍 Paso 9: Confirmando la revisión previa al pedido
+✅ [EstudioActuarialPage] Revisión del pedido confirmada
+✅ [NuevoEstudioWorkflow] Revisión confirmada
+👆 [EstudioActuarialPage] avanzó al paso 10: Siguiente
+
+📍 Paso 10: Completando datos del pedido
+
+📍 Paso 10: Completando los datos del pedido
+✓ [EstudioActuarialPage] Número de teléfono: esperado "0992700726" → actual "0992700726"
+📊 [EstudioActuarialPage] Contacto del pedido precargado desde el perfil
+✅ [EstudioActuarialPage] Datos del pedido completados
+
+📍 Paso 10: Verificando la sección "Datos de facturación"
+📊 [EstudioActuarialPage] Razón social: "23KA S.A." (con texto, sin [object Object])
+📊 [EstudioActuarialPage] RUC: "0791830214001" (con texto, sin [object Object])
+📊 [EstudioActuarialPage] Provincia: "GUAYAS" (con texto, sin [object Object])
+📊 [EstudioActuarialPage] Ciudad: "DURAN" (con texto, sin [object Object])
+✅ [EstudioActuarialPage] Sección "Datos de facturación" verificada (con texto, sin "[object Object]")
+✅ [NuevoEstudioWorkflow] Datos del pedido completados
+
+📍 Paso 7: Enviando pedido del estudio
+ℹ️  [EstudioActuarial-Step7-Enviar] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [EstudioActuarial-Step7-Enviar] Contexto           : paso 7 - justo antes de hacer clic en "Siguiente" (Enviar)
+ℹ️  [EstudioActuarial-Step7-Enviar] Env                : CONFIRMAR_PEDIDO_MOCK = 'false'
+ℹ️  [EstudioActuarial-Step7-Enviar] Lectura del env    : valor 'false' → el mock queda DESACTIVADO (backend real)
+ℹ️  [EstudioActuarial-Step7-Enviar] Config del TC      : confirmarPedidoMock = { enabled: false, debugNetwork: false }
+ℹ️  [EstudioActuarial-Step7-Enviar] Modo efectivo      : 🔴 MOCK DESACTIVADO — sin interceptación; el flujo corre contra el BACKEND REAL
+⚠️  [EstudioActuarial-Step7-Enviar] INTERCEPTARÁ: no (backend real)
+ℹ️  [EstudioActuarial-Step7-Enviar] ═══════════════════════════════════════════
+⚠️  [EstudioActuarial-Step7-Enviar] 🔴 MOCK DESACTIVADO: sin interceptación - el flujo se ejecutará contra el BACKEND REAL
+ℹ️  [EstudioActuarial-Step7-Enviar] Verificando pantalla final de confirmación (backend real, sin interceptación)
+ℹ️  [EstudioActuarialPage] Verificando pantalla final "Pedido enviado"
+ℹ️  [EstudioActuarialPage] Diálogo de encuesta detectado - cerrando con X
+✅ [EstudioActuarialPage] Diálogo de encuesta cerrado
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 148987
+✅ [EstudioActuarialPage] Pedido en seguimiento · proceso 148987 · estado "Pedido enviado"
+✅ [EstudioActuarial-Step7-Enviar] 🔴 CONFIRMADO: flujo completado contra el BACKEND REAL (mock desactivado por CONFIRMAR_PEDIDO_MOCK=false)
+
+======================================================================
+🎯 FLUJO DEL NUEVO WIZARD COMPLETADO
+======================================================================
+   • duracion: 62.8s
+======================================================================
+
+✅ [TC02-09] Flujo con fecha Junio 2024 completado correctamente
+ℹ️  Iniciando flujo de validación de email de factura
+ℹ️  Gmail Token Config: Using token from 'GMAIL_TOKEN'
+ℹ️  Token validation: Token found
+ℹ️  [EstudioActuarialPage] Verificando pantalla final "Pedido enviado"
+ℹ️  [EstudioActuarialPage] No se detectó diálogo de encuesta (o ya estaba cerrado)
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 148987
+✅ [EstudioActuarialPage] Pedido en seguimiento · proceso 148987 · estado "Pedido enviado"
+✅ Estado del pedido: Pedido enviado
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 148987
+ℹ️  Número de proceso mostrado en la pantalla final: 148987
+ℹ️  Buscando email con proceso 148987 en Gmail...
+ℹ️  Intento 1/10 - Buscando email...
+📧 Waiting for email from no-reply-qa@portal.actuaria.com...
+❌ [TC02-09] TC02-09 falló
+   Detalle: No email received within 10 seconds from no-reply-qa@portal.actuaria.com
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/ZNrYo6s0h0RygfFJKU1j/10
+  • CONSOLE → Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com').
+===================================================================
+
+ℹ️  9 non-blocking error(s) ignored by filter.
+
+📋 9 console message(s) logged to stderr

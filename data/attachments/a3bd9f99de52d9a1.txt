@@ -1,0 +1,15 @@
+[LOG] Using Firebase Production Services for environment: stage [7:14:23 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-08T19:14:23.665Z} [7:14:23 PM]
+[LOG] Using Firebase Production Services for environment: stage [7:14:25 PM]
+[LOG] Using Firebase Production Services for environment: stage [7:14:27 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [7:14:29 PM]
+[LOG] Using Firebase Production Services for environment: stage [7:14:31 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [7:14:31 PM]
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError$1, message: Se encontraron errores en el archivo, content: Array(2)}

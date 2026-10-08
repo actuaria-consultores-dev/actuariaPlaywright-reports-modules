@@ -1,0 +1,57 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-GestionCompleta] goto /dashboard/estudios/nuevo-estudio interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-08] Archivo de nómina con columnas/datos faltantes - debe mostrar errores de validación
+⚠️  [TC02-08] Se esperan 2 errores de validación al procesar el archivo
+
+======================================================================
+🎯 PASO 3 · ERRORES AL CARGAR LA NÓMINA
+======================================================================
+   • Archivo: missingData.xlsx
+   • Errores esperados: 2
+======================================================================
+
+
+📍 Paso 1: Abriendo nuevo estudio actuarial
+✅ [EstudioActuarialPage] Wizard abierto en el Paso 1 de 10 (etapa A · Estudio base)
+
+📍 Paso 1: Configurando fecha de valoración
+👆 [EstudioActuarialPage] 2024: Selección "anioValoracion"
+👆 [EstudioActuarialPage] /Noviembre/i: Selección "mesCorte"
+✓ [EstudioActuarialPage] Año de valoración: esperado "2024" → actual "2024"
+✓ [EstudioActuarialPage] Mes de valoración: esperado "Diciembre" → actual "Diciembre"
+✓ [EstudioActuarialPage] Mes de corte de nómina: esperado "Noviembre" → actual "Noviembre"
+✅ [EstudioActuarialPage] Fecha de valoración configurada
+👆 [EstudioActuarialPage] avanzó al paso 2: Siguiente
+
+📍 Paso 2: Configurando el estudio base
+ℹ️  [EstudioActuarialPage] Paso 2: variante detectada → "Tipo de empresa"
+✓ [EstudioActuarialPage] Tipo de empresa: esperado "primerEstudio" → actual "N (Es el primer estudio actuarial de la empresa)"
+✅ [EstudioActuarialPage] Tipo de empresa: primerEstudio
+👆 [EstudioActuarialPage] avanzó al paso 3: Siguiente
+👆 [EstudioActuarialPage] Actualizar mi base del año anterior: Vía de nómina
+✅ [EstudioActuarialPage] Vía de nómina seleccionada: "Actualizar mi base del año anterior"
+ℹ️  [NominaValidationErrorsWorkflow] Paso 3 preparado: listo para subir el archivo de prueba
+ℹ️  [EstudioActuarialPage] Archivo inválido seleccionado: missingData.xlsx
+✅ [EstudioActuarialPage] Resultado de la validación disponible para "missingData.xlsx"
+ℹ️  [EstudioActuarialPage] Errores visibles de validación: 23KA | PANEL GENERAL | Actuaria+ Stage | soporteplus@actuaria.com | Sesión anterior: hoy, 19:12 · hace 2 minutos | Completa los pasos para solicitar el estudio actuarial de tu empresa. | Inicio | | Estudio actuarial | Paso 3 de 10 | Descarga tu base del año anterior ya validada, actualiza solo lo que cambió y súbela. Así no tienes que volver a ingresar a todos tus colaboradores. | Completa la plantilla con tus colaboradores activos, jubilados patronales con pensión mensual y pendientes de pago. | Empezarás desde la plantilla en blanco No pudimos ofrecerte tu base del año anterior: El cliente no tiene estudios anteriores registrados. | Formato Excel (.xlsx o .xls) · Tamaño máximo 1 MB | Tamaño máximo 1MB | | Sube tu base en el paso 2 para responder esta pregunta. | No pudimos procesar tu archivo. Encontramos 5 errores que debes corregir. Corrige tu base y vuelve a subirla. Mientras haya errores no podemos continuar con tu estudio. | Fila Columna Valor recibido Valor esperado Qué corregir 5 B vacío Identificación faltante 8 B vacío Identificación faltante 12 B vacío Identificación faltante 8 B vacío Se encontraron filas con identificaciones duplicadas 12 B vacío Se encontraron filas con identificaciones duplicadas | Corrige los errores de tu base y vuelve a subir el archivo para continuar. | La nómina debe contener al menos un empleado | La nómina debe contener al menos un empleado | | | | |
+✓ [EstudioActuarialPage] Error de validación: esperado "/No pudimos procesar tu archivo/i" → actual "/No pudimos procesar tu archivo/i"
+✓ [EstudioActuarialPage] Error de validación: esperado "/errores? (?:que debes corregir|encontrados)/i" → actual "/errores? (?:que debes corregir|encontrados)/i"
+✅ [EstudioActuarialPage] 2 error(es) de validación verificados
+✅ [NominaValidationErrorsWorkflow] 2 error(es) verificados
+✅ [TC02-08] Errores de validación mostrados correctamente en la interfaz
+
+✅ ✅ ✅ [TC02-08] TC02-08 finalizado exitosamente
+
+
+ℹ️  10 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

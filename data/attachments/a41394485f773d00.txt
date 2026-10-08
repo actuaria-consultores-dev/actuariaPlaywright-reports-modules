@@ -1,0 +1,5 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/xG21Rr5IuUWp8JEqMqMD/10
+  • CONSOLE → Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). (×2)
+===================================================================

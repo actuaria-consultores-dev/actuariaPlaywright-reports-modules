@@ -1,0 +1,38 @@
+🎭️ [EstudioActuarial-Pendientes] Preparando entorno → /dashboard/estudios/mis-estudios
+🔐 [EstudioActuarial-Pendientes] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-Pendientes] Sesión iniciada correctamente
+🔍 [EstudioActuarial-Pendientes] Dashboard cargado correctamente
+🔍 [EstudioActuarial-Pendientes] Navegación exitosa → /dashboard/estudios/mis-estudios
+🎭️ [TC03-02] Continuación de estudio pendiente desde Mis Estudios
+ℹ️  [TC03-02] Buscando primer estudio pendiente disponible en el listado (pagina a pagina si es necesario)
+ℹ️  Iniciando flujo: Continuar con estudio pendiente
+ℹ️  [EstudioActuarialPage] Esperando el listado unificado de Mis Estudios
+⚠️  [EstudioActuarialPage] La página muestra "No pudimos cargar la información de tu empresa" (backend); el listado de estudios sí cargó
+✅ [EstudioActuarialPage] Listado de Mis Estudios cargado
+ℹ️  [EstudioActuarialPage] Buscando estudios "Pendiente" en el listado (máx. 10 página(s))
+ℹ️  [EstudioActuarialPage] Revisando página 1 del listado (5 fila(s))
+ℹ️  [EstudioActuarialPage] Revisando página 2 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 2, fila 5): id=4IGsHxuNKzElc3qlzY1b, paso=10
+ℹ️  [EstudioActuarialPage] Datos de la fila: 08/10/2026 | 2024 | NIIF PYMES | — | Pendiente | 10/10 | Continuar
+✅ Estudio pendiente encontrado: id=4IGsHxuNKzElc3qlzY1b (página 2, paso 10)
+ℹ️  [EstudioActuarialPage] Continuando con el estudio pendiente 4IGsHxuNKzElc3qlzY1b (paso 10)
+ℹ️  [EstudioActuarialPage] Datos de la fila: 08/10/2026 | 2024 | NIIF PYMES | — | Pendiente | 10/10 | Continuar
+ℹ️  [EstudioActuarialPage] 🔍 Intento 1 (click on <a> "Continuar")...
+✅ [EstudioActuarialPage] ✅ "Continuar" navegó a: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/4IGsHxuNKzElc3qlzY1b/9
+👆 Click para estudio 4IGsHxuNKzElc3qlzY1b en paso 10: Botón Continuar
+✅ Redireccionado a la URL correcta para el paso 10 (índice 9)
+✅ [EstudioActuarialPage] Indicador "Paso 10 de 10" visible
+✅ El indicador muestra "Paso 10 de 10"
+
+✅ ✅ ✅ Flujo de continuar con estudio pendiente completado
+
+✅ [TC03-02] Navegación al estudio pendiente verificada correctamente
+
+✅ ✅ ✅ [TC03-02] TC03-02 finalizado exitosamente
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

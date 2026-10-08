@@ -1,0 +1,43 @@
+🎭️ [EstudioActuarial-Pendientes] Preparando entorno → /dashboard/estudios/mis-estudios
+🔐 [EstudioActuarial-Pendientes] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-Pendientes] Sesión iniciada correctamente
+🔍 [EstudioActuarial-Pendientes] Dashboard cargado correctamente
+🔍 [EstudioActuarial-Pendientes] Navegación exitosa → /dashboard/estudios/mis-estudios
+🎭️ [TC03-01] Eliminación de estudio pendiente desde Mis Estudios
+ℹ️  [TC03-01] Localizando un estudio pendiente en el listado unificado (pagina a pagina si es necesario)
+ℹ️  🔍 Iniciando flujo de verificación de eliminación de estudio pendiente...
+ℹ️  [EstudioActuarialPage] Esperando el listado unificado de Mis Estudios
+⚠️  [EstudioActuarialPage] La página muestra "No pudimos cargar la información de tu empresa" (backend); el listado de estudios sí cargó
+✅ [EstudioActuarialPage] Listado de Mis Estudios cargado
+ℹ️  [EstudioActuarialPage] Total de estudios (paginación "1-5 de 542"): 542
+ℹ️  📊 Total de estudios antes de eliminar: 542
+ℹ️  [EstudioActuarialPage] Buscando estudios "Pendiente" en el listado (máx. 10 página(s))
+ℹ️  [EstudioActuarialPage] Revisando página 1 del listado (5 fila(s))
+ℹ️  [EstudioActuarialPage] Revisando página 2 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 2, fila 3): id=3BQaj4b48djou5gfJdPD, paso=10
+ℹ️  [EstudioActuarialPage] Datos de la fila: 08/10/2026 | 2024 | NIIF PYMES | — | Pendiente | 10/10 | Continuar
+ℹ️  🎯 Estudio pendiente seleccionado: id=3BQaj4b48djou5gfJdPD (página 2, fila 3, paso 10)
+ℹ️  [EstudioActuarialPage] Eliminando el estudio pendiente 3BQaj4b48djou5gfJdPD (página 2, fila 3)
+ℹ️  [EstudioActuarialPage] Datos de la fila: 08/10/2026 | 2024 | NIIF PYMES | — | Pendiente | 10/10 | Continuar
+ℹ️  [EstudioActuarialPage] Intento de eliminación 1 (button[aria-label="Eliminar"])...
+✅ [EstudioActuarialPage] Botón "Eliminar" presionado (button[aria-label="Eliminar"])
+✅ [EstudioActuarialPage] Eliminación confirmada con "Aceptar"
+ℹ️  [EstudioActuarialPage] Validando eliminación del estudio 3BQaj4b48djou5gfJdPD (total antes: 542)
+✅ [EstudioActuarialPage] El estudio 3BQaj4b48djou5gfJdPD ya no aparece en el listado
+ℹ️  [EstudioActuarialPage] Total de estudios (paginación "1-5 de 541"): 541
+
+✅ ✅ ✅ [EstudioActuarialPage] Total de estudios actualizado: 542 → 541
+
+
+✅ ✅ ✅ Flujo de verificación de eliminación de estudio pendiente completado exitosamente
+
+✅ [TC03-01] Eliminación verificada - el estudio desapareció del listado y el total bajó en 1
+
+✅ ✅ ✅ [TC03-01] TC03-01 finalizado exitosamente
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr
