@@ -1,0 +1,397 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/EstudioActuarial/crearEstudio.test.ts >> Verificar primera empresa con año 2025 y datos recuperados (usuario DEMO) >> Crear Estudio Actuarial | [HP] | TC02-01-H: Verificar primera empresa con año 2025 y mes de corte Diciembre (No continene datos de 2025, datos son agregados)
+- Location: tests/specs/EstudioActuarial/crearEstudio.test.ts:302:2
+
+# Error details
+
+```
+Error: "Calcular" no completó la tarjeta "Tasa de rotación" tras 3 intentos. "Promedio Total" quedó en "0.0". Grilla: 2021 2022 2023 2024 2025 No. trabajadores al inicio del año 650 640 675 690 0 Salidas 90 75 80 75 0 Rotación Promedio 13.8 11.7 11.9 10.9 0.0 · Alertas:  | Es tu primer estudio con nosotros No tenemos un estudio anterior del cual traer tu histórico de rotación. Completa los años 2021 a 2024 y nosotros ya calculamos 2025 con la base que cargaste. El próximo año lo traeremos automáticamente.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e2]:
+  - generic [ref=f2e3]:
+    - banner [ref=f2e4]:
+      - generic [ref=f2e6]:
+        - button "Notificaciones" [ref=f2e7] [cursor=pointer]:
+          - generic [ref=f2e8]: "0"
+        - button [ref=f2e11] [cursor=pointer]:
+          - img "DEMOGRAFIX S.A." [ref=f2e13]
+          - paragraph [ref=f2e14]: DEMOGRAFIX S.A.
+    - complementary [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - link [ref=f2e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f2e20]
+        - button "abrir/cerrar menú" [ref=f2e21] [cursor=pointer]
+      - generic [ref=f2e26]:
+        - textbox "Buscar..." [ref=f2e30]
+        - group
+      - list [ref=f2e32]:
+        - button "Inicio" [ref=f2e33] [cursor=pointer]
+        - list [ref=f2e39]:
+          - listitem [ref=f2e40]: Panel General
+          - generic [ref=f2e41]:
+            - button "Estudios Actuariales" [ref=f2e42] [cursor=pointer]
+            - generic [ref=f2e52]:
+              - link "Listado de estudios" [ref=f2e53] [cursor=pointer]:
+                - /url: /dashboard/estudios/mis-estudios
+              - link "Nuevo estudio" [ref=f2e59] [cursor=pointer]:
+                - /url: /dashboard/estudios/nuevo-estudio
+      - generic [ref=f2e66]:
+        - paragraph [ref=f2e67]: Actuaria+ Stage
+        - paragraph [ref=f2e68]: soporteplus@actuaria.com
+        - generic [ref=f2e69]: v 1.11.3
+    - generic [ref=f2e74]:
+      - generic [ref=f2e75]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f2e76]
+        - paragraph [ref=f2e77]: "Sesión anterior: hoy, 15:31 · hace 14 minutos"
+      - generic [ref=f2e78]:
+        - button "Inicio" [ref=f2e79] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f2e81] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f2e83] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f2e85] [cursor=pointer]
+        - button "Control tributario" [ref=f2e87] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f2e89] [cursor=pointer]
+      - separator [ref=f2e91]
+      - generic [ref=f2e92]:
+        - generic [ref=f2e94]:
+          - 'heading "Nuevo estudio actuarial: DEMOGRAFIX S.A." [level=4] [ref=f2e95]'
+          - paragraph [ref=f2e96]: Completa los pasos para solicitar el estudio actuarial de tu empresa.
+        - navigation "breadcrumb" [ref=f2e97]:
+          - list [ref=f2e98]:
+            - listitem [ref=f2e99]:
+              - link "Inicio" [ref=f2e100] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=f2e101]
+            - listitem [ref=f2e104]:
+              - heading "Estudio actuarial" [level=6] [ref=f2e105]
+        - generic [ref=f2e107]:
+          - heading "Etapa B · Parámetros e información · pantalla 3 de 4" [level=6] [ref=f2e108]
+          - paragraph [ref=f2e109]: Paso 5 de 10
+          - generic [ref=f2e110]:
+            - 'generic "Regresar a: Datos iniciales del estudio" [ref=f2e111]':
+              - generic [ref=f2e112] [cursor=pointer]
+            - 'generic "Regresar a: Configuración de hipótesis" [ref=f2e113]':
+              - generic [ref=f2e114] [cursor=pointer]
+            - 'generic "Regresar a: Carga de nómina" [ref=f2e115]':
+              - generic [ref=f2e116] [cursor=pointer]
+            - 'generic "Regresar a: Validación de la información" [ref=f2e117]':
+              - generic [ref=f2e118] [cursor=pointer]
+            - 'generic "Avanzar a: Variables actuariales" [ref=f2e119]':
+              - generic [ref=f2e120] [cursor=pointer]
+        - generic [ref=f2e133]:
+          - generic [ref=f2e134]:
+            - heading "Tasas y política de tu estudio" [level=5] [ref=f2e136]
+            - paragraph [ref=f2e137]: Algunos parámetros vienen de tu estudio anterior. Revisa que sigan siendo correctos y ábrelos solo si necesitas cambiar alguno.
+          - generic [ref=f2e141]:
+            - heading [level=3] [ref=f2e143]:
+              - button "Tipo de normativa contable Del estudio anterior NIIF completa (Bonos USA)" [ref=f2e144] [cursor=pointer]:
+                - generic [ref=f2e146]:
+                  - generic [ref=f2e147]:
+                    - heading "Tipo de normativa contable" [level=6] [ref=f2e148]
+                    - generic [ref=f2e149]: Del estudio anterior
+                    - generic [ref=f2e153]: "Procedencia: Es la normativa que declaraste en tu estudio anterior. No la volvimos a preguntar: si tu empresa cambió de normativa contable, ábrela y corrígela. Afectación: Define los informes que emitimos y los artículos que se facturan en tu pedido, y es el criterio contable con el que valoramos la obligación. Cambiarla cambia el detalle de lo que recibes."
+                  - paragraph [ref=f2e154]: NIIF completa (Bonos USA)
+            - heading [level=3] [ref=f2e159]:
+              - button "Tasa de incremento salarial a corto plazo Calculado por Actuaria 2,3%" [ref=f2e160] [cursor=pointer]:
+                - generic [ref=f2e162]:
+                  - generic [ref=f2e163]:
+                    - heading "Tasa de incremento salarial a corto plazo" [level=6] [ref=f2e164]
+                    - generic [ref=f2e165]: Calculado por Actuaria
+                    - generic [ref=f2e169]: "Procedencia: Es la tasa estándar que Actuaria estima para el año de valoración. La usas mientras no declares una específica de tu empresa. Afectación: Con esta tasa proyectamos los sueldos futuros de tu nómina, que son la base de la jubilación patronal y del desahucio. Una tasa más alta proyecta sueldos mayores y eleva la provisión que registras."
+                  - paragraph [ref=f2e170]: 2,3%
+            - generic [ref=f2e174]:
+              - heading [level=3] [ref=f2e175]:
+                - button "Tasa de rotación Del estudio anterior Falta completar 0%" [expanded] [ref=f2e176] [cursor=pointer]:
+                  - generic [ref=f2e178]:
+                    - generic [ref=f2e179]:
+                      - heading "Tasa de rotación" [level=6] [ref=f2e180]
+                      - generic [ref=f2e181]: Del estudio anterior
+                      - generic [ref=f2e183]: Falta completar
+                      - generic [ref=f2e189]: "Procedencia: El movimiento de personal viene de tu estudio anterior y esos años no se modifican, porque forman parte de un informe ya entregado. El año en curso lo calculamos con la base que cargaste. Afectación: Mide con qué frecuencia tus colaboradores salen antes de alcanzar la jubilación patronal. Cuanta más rotación, menos personal llega a jubilarse y menor es la provisión de jubilación patronal."
+                    - paragraph [ref=f2e190]: 0%
+              - region "Tasa de rotación Del estudio anterior Falta completar 0%" [ref=f2e197]:
+                - generic [ref=f2e198]:
+                  - paragraph [ref=f2e199]: Puedes tomar la tasa estándar de mercado que calcula Actuaria, o calcular la de tu empresa con los últimos cinco años de movimiento de personal.
+                  - generic [ref=f2e200]:
+                    - alert [ref=f2e202]:
+                      - generic [ref=f2e206]:
+                        - generic [ref=f2e207]: Es tu primer estudio con nosotros
+                        - text: No tenemos un estudio anterior del cual traer tu histórico de rotación. Completa los años 2021 a 2024 y nosotros ya calculamos 2025 con la base que cargaste. El próximo año lo traeremos automáticamente.
+                    - group [ref=f2e209]:
+                      - radiogroup [ref=f2e210]:
+                        - generic [ref=f2e211] [cursor=pointer]:
+                          - radio "Específico" [checked] [ref=f2e213]
+                          - generic [ref=f2e219]: Específico
+                    - generic [ref=f2e220]:
+                      - paragraph [ref=f2e221]: Ingresa el número de trabajadores al inicio de cada año y las salidas. Recuerda, no registres como salida al personal que haya ingresado y salido durante el mismo año, ni tampoco a los traspasos salientes. Luego, presiona calcular para obtener la rotación promedio.
+                      - tooltip "Dato recuperado del estudio anterior" [ref=f2e222]
+                      - grid [ref=f2e228]:
+                        - row [ref=f2e229]:
+                          - columnheader [ref=f2e230]
+                          - columnheader "2021" [ref=f2e232]
+                          - columnheader "2022" [ref=f2e236]
+                          - columnheader "2023" [ref=f2e240]
+                          - columnheader "2024" [ref=f2e244]
+                          - columnheader "2025" [ref=f2e248]
+                        - rowgroup [ref=f2e252]:
+                          - row [ref=f2e253]:
+                            - gridcell "No. trabajadores al inicio del año" [ref=f2e254]
+                            - gridcell "650" [ref=f2e255]
+                            - gridcell "640" [ref=f2e256]
+                            - gridcell "675" [ref=f2e257]
+                            - gridcell "690" [ref=f2e258]
+                            - gridcell "0" [ref=f2e259]
+                          - row [ref=f2e260]:
+                            - gridcell "Salidas" [ref=f2e261]
+                            - gridcell "90" [ref=f2e262]
+                            - gridcell "75" [ref=f2e263]
+                            - gridcell "80" [ref=f2e264]
+                            - gridcell "75" [ref=f2e265]
+                            - gridcell "0" [ref=f2e266]
+                          - row [ref=f2e267]:
+                            - gridcell "Rotación Promedio" [ref=f2e268]
+                            - gridcell "13.8" [ref=f2e269]
+                            - gridcell "11.7" [ref=f2e270]
+                            - gridcell "11.9" [ref=f2e271]
+                            - gridcell "10.9" [ref=f2e272]
+                            - gridcell "0.0" [ref=f2e273]
+                      - generic [ref=f2e274]:
+                        - generic [ref=f2e275]:
+                          - generic [ref=f2e276]: Promedio Total
+                          - generic [ref=f2e277]:
+                            - textbox "Promedio Total" [disabled] [ref=f2e278]: "0.0"
+                            - group:
+                              - generic: Promedio Total
+                        - button "Calcular" [active] [ref=f2e279] [cursor=pointer]
+            - heading [level=3] [ref=f2e281]:
+              - button "Política de pago de jubilación patronal Falta completar Pendiente" [ref=f2e282] [cursor=pointer]:
+                - generic [ref=f2e284]:
+                  - generic [ref=f2e285]:
+                    - heading "Política de pago de jubilación patronal" [level=6] [ref=f2e286]
+                    - generic [ref=f2e287]: Falta completar
+                    - generic [ref=f2e293]: "Procedencia: Todavía no has declarado la política de pago de tu empresa. Afectación: Determina cómo se valora la obligación: «Pensión mensual» la valora como una renta y «Fondo global» como un pago único, resultados materialmente distintos sobre la misma nómina. Sin política definida aplicamos el mínimo legal. También alimenta el acta de finiquito de jubilación patronal."
+                  - paragraph [ref=f2e294]: Pendiente
+          - generic [ref=f2e298]:
+            - button [ref=f2e299] [cursor=pointer]
+            - button "Siguiente" [disabled]
+  - link "Escríbenos a WhatsApp" [ref=f2e303] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  1591 | 	 * Completa la grilla de rotación en TODOS los años que la app deje editables.
+  1592 | 	 *
+  1593 | 	 * La grilla trae una columna BLOQUEADA (`celda-bloqueada`) que la app llena con
+  1594 | 	 * la base cargada; el resto son editables (`MuiDataGrid-cell--editable`). Los
+  1595 | 	 * años editables se DETECTAN del DOM en vez de asumirse (cambian según la fecha
+  1596 | 	 * de valoración), y sólo se rellenan los que además vengan en `rotationData`.
+  1597 | 	 */
+  1598 | 	private async fillRotacionGrid(
+  1599 | 		rotationData?: Array<{ year: number; trabajadoresInicio: string; salidas: string }>,
+  1600 | 	) {
+  1601 | 		if (!rotationData?.length) {
+  1602 | 			this.pageLogger.advertencia(
+  1603 | 				'Tasa de rotación "Específico" sin `rotationData`: la grilla queda con los ceros precargados y "Calcular" no podrá promediar nada.',
+  1604 | 			);
+  1605 | 			return;
+  1606 | 		}
+  1607 | 
+  1608 | 		// Años realmente editables (se leen de la fila "Salidas", que existe siempre).
+  1609 | 		const celdas = this.page.locator('.MuiDataGrid-row[data-id="Salidas"] [data-field]');
+  1610 | 		await this.waitForVisible(celdas.first(), 'grilla de rotación (fila "Salidas")', 30000);
+  1611 | 		const campos = await celdas.evaluateAll((nodos) =>
+  1612 | 			nodos.map((nodo) => ({
+  1613 | 				year: nodo.getAttribute('data-field') ?? '',
+  1614 | 				editable: (nodo.className ?? '').includes('MuiDataGrid-cell--editable'),
+  1615 | 				valor: (nodo.textContent ?? '').trim(),
+  1616 | 			})),
+  1617 | 		);
+  1618 | 		const editables = campos.filter((c) => c.editable && /^\d{4}$/.test(c.year)).map((c) => c.year);
+  1619 | 		const bloqueados = campos.filter((c) => !c.editable && /^\d{4}$/.test(c.year)).map((c) => c.year);
+  1620 | 		this.pageLogger.info(
+  1621 | 			`Grilla de rotación → años editables: ${editables.join(', ') || '(ninguno)'} · ` +
+  1622 | 				`bloqueados: ${bloqueados.join(', ') || '(ninguno)'} · valores actuales: ` +
+  1623 | 				`${campos.filter((c) => /^\d{4}$/.test(c.year)).map((c) => `${c.year}=${c.valor || '∅'}`).join(' ')}`,
+  1624 | 		);
+  1625 | 
+  1626 | 		const filas: Array<[string, 'trabajadoresInicio' | 'salidas']> = [
+  1627 | 			['No. trabajadores al inicio del año', 'trabajadoresInicio'],
+  1628 | 			['Salidas', 'salidas'],
+  1629 | 		];
+  1630 | 		let completados = 0;
+  1631 | 		const omitidos: string[] = [];
+  1632 | 		for (const dato of rotationData) {
+  1633 | 			const year = String(dato.year);
+  1634 | 			if (!editables.includes(year)) {
+  1635 | 				omitidos.push(year);
+  1636 | 				continue;
+  1637 | 			}
+  1638 | 			for (const [fila, campo] of filas) {
+  1639 | 				await this.fillRotacionCell(fila, year, dato[campo]);
+  1640 | 			}
+  1641 | 			completados++;
+  1642 | 		}
+  1643 | 		this.pageLogger.interaccion('Grilla de rotación', `${completados} año(s) completados`);
+  1644 | 		if (omitidos.length) {
+  1645 | 			this.pageLogger.advertencia(
+  1646 | 				`Años de \`rotationData\` omitidos porque la app no los deja editar (bloqueados o ausentes): ${omitidos.join(', ')}`,
+  1647 | 			);
+  1648 | 		}
+  1649 | 	}
+  1650 | 
+  1651 | 	/**
+  1652 | 	 * Pulsa "Calcular" y espera a que la tarjeta quede COMPLETA.
+  1653 | 	 *
+  1654 | 	 * ⚠️ No se puede usar "Siguiente" como señal: el botón se habilita recién
+  1655 | 	 * cuando **todas** las tarjetas del Paso 5 están completas (la política de
+  1656 | 	 * pago se configura después). La señal correcta es el encabezado de la propia
+  1657 | 	 * tarjeta, que pasa de `"… Falta completar"` a `"Tasa de rotación Ingresado
+  1658 | 	 * por ti 14,1%"`.
+  1659 | 	 *
+  1660 | 	 * Si tras los reintentos la tarjeta sigue pendiente, se vuelca el estado de la
+  1661 | 	 * grilla, del campo "Promedio Total" y de las alertas en el mensaje de error.
+  1662 | 	 */
+  1663 | 	private async calcularPromedioRotacion(expected?: string) {
+  1664 | 		const calcular = this.page.getByRole('button', { name: /^Calcular$/i }).first();
+  1665 | 		await this.waitForVisible(calcular, 'botón "Calcular" de la tasa de rotación', 30000);
+  1666 | 		const promedio = this.page.getByRole('textbox', { name: /Promedio Total/i }).first();
+  1667 | 		await this.waitForVisible(promedio, 'campo "Promedio Total"', 30000);
+  1668 | 
+  1669 | 		const tarjeta = this.page.getByRole('button', { name: /Tasa de rotación/i }).first();
+  1670 | 		const completa = async () => {
+  1671 | 			const texto = await tarjeta.innerText().catch(() => '');
+  1672 | 			return !/Falta completar/i.test(texto) && /\d+[.,]\d\s*%/.test(texto);
+  1673 | 		};
+  1674 | 
+  1675 | 		let ok = await completa();
+  1676 | 		for (let intento = 1; intento <= 3 && !ok; intento++) {
+  1677 | 			this.pageLogger.interaccion('Tasa de rotación', `click en "Calcular" (intento ${intento}/3)`);
+  1678 | 			await calcular.click({ timeout: 20000 });
+  1679 | 			await expect(tarjeta).not.toContainText(/Falta completar/i, { timeout: 20000 }).catch(() => undefined);
+  1680 | 			ok = await completa();
+  1681 | 		}
+  1682 | 
+  1683 | 		const valor = normalize(await promedio.inputValue().catch(() => ''));
+  1684 | 		if (!ok || !valor || Number(valor) === 0) {
+  1685 | 			const grilla = await this.page
+  1686 | 				.locator('.MuiDataGrid-root')
+  1687 | 				.first()
+  1688 | 				.innerText()
+  1689 | 				.catch(() => '');
+  1690 | 			const avisos = await this.page.locator('[role="alert"]').allInnerTexts().catch(() => [] as string[]);
+> 1691 | 			throw new Error(
+       |          ^ Error: "Calcular" no completó la tarjeta "Tasa de rotación" tras 3 intentos. "Promedio Total" quedó en "0.0". Grilla: 2021 2022 2023 2024 2025 No. trabajadores al inicio del año 650 640 675 690 0 Salidas 90 75 80 75 0 Rotación Promedio 13.8 11.7 11.9 10.9 0.0 · Alertas:  | Es tu primer estudio con nosotros No tenemos un estudio anterior del cual traer tu histórico de rotación. Completa los años 2021 a 2024 y nosotros ya calculamos 2025 con la base que cargaste. El próximo año lo traeremos automáticamente.
+  1692 | 				`"Calcular" no completó la tarjeta "Tasa de rotación" tras 3 intentos. ` +
+  1693 | 					`"Promedio Total" quedó en "${valor || '∅'}". ` +
+  1694 | 					`Grilla: ${grilla.replace(/\s+/g, ' ').slice(0, 600) || '(sin texto)'} · ` +
+  1695 | 					`Alertas: ${avisos.join(' | ').replace(/\s+/g, ' ').slice(0, 400) || '(ninguna)'}`,
+  1696 | 			);
+  1697 | 		}
+  1698 | 		this.pageLogger.validarCampo(
+  1699 | 			'Tasa de rotación calculada (Promedio Total)',
+  1700 | 			expected ?? '(calculado por la app)',
+  1701 | 			valor,
+  1702 | 			true,
+  1703 | 		);
+  1704 | 		if (expected && Number(valor) !== Number(expected)) {
+  1705 | 			this.pageLogger.advertencia(
+  1706 | 				`"Promedio Total" calculó "${valor}" y el config espera "${expected}"; el valor lo define la app a partir de la grilla.`,
+  1707 | 			);
+  1708 | 		}
+  1709 | 	}
+  1710 | 
+  1711 | 	/**
+  1712 | 	 * PASO 6 — Etapa B · Parámetros e información (4/4):
+  1713 | 	 * "Beneficios pagados durante el año de valoración".
+  1714 | 	 *  - Paso 2: subir el archivo de pagos (PagosporEmpleados.xlsx) — **opcional**,
+  1715 | 	 *    el criterio `sinPagos` declara cero pagos y no necesita archivo.
+  1716 | 	 *  - Paso 3: criterio de registro (4 tarjetas-botón `role="radio"`).
+  1717 | 	 *  - Checkbox obligatorio `name="confirmoPagos"`; sin él "Siguiente" queda
+  1718 | 	 *    deshabilitado.
+  1719 | 	 */
+  1720 | 	async configureBeneficiosPagadosStep(opts: {
+  1721 | 		filePath?: string;
+  1722 | 		criterio?: 'provisionTotal' | 'provision31Dic' | 'provision31DicMasIncremento' | 'sinPagos';
+  1723 | 	}) {
+  1724 | 		this.pageLogger.paso(6, 'Configurando beneficios pagados');
+  1725 | 
+  1726 | 		const criterios: Record<string, RegExp> = {
+  1727 | 			provisionTotal: /El pago total se tomó de la provisión existente/,
+  1728 | 			provision31Dic: /Se usó la provisión acumulada hasta el 31 de diciembre de 2024/,
+  1729 | 			provision31DicMasIncremento: /Se usó la provisión acumulada hasta el 31 de diciembre de 2024 más el incremento proyectado/,
+  1730 | 			sinPagos: /No se realizaron pagos con cargo a provisiones en el período/,
+  1731 | 		};
+  1732 | 		const criterioKey = opts.criterio ?? 'provisionTotal';
+  1733 | 		const criterio = criterios[criterioKey];
+  1734 | 
+  1735 | 		// El criterio "sinPagos" declara cero pagos con cargo a provisiones: la
+  1736 | 		// propia app indica que NO hace falta cargar el archivo del Paso 2.
+  1737 | 		if (criterioKey === 'sinPagos') {
+  1738 | 			this.pageLogger.info('Criterio "sinPagos": no se requiere cargar el archivo de pagos');
+  1739 | 		} else {
+  1740 | 			if (!opts.filePath) {
+  1741 | 				throw new Error(
+  1742 | 					`El criterio "${criterioKey}" requiere \`beneficiosFile\`; usa el criterio 'sinPagos' si no hay archivo.`,
+  1743 | 				);
+  1744 | 			}
+  1745 | 			const resultado = this.page.getByRole('button', { name: /Previsualizar pagos cargados/i }).first();
+  1746 | 			await this.uploadNominaFile(opts.filePath, undefined, resultado);
+  1747 | 		}
+  1748 | 
+  1749 | 		const card = this.optionCard(criterio);
+  1750 | 		await this.waitForVisible(card, `tarjeta de criterio de registro de pagos "${criterioKey}"`, 30000);
+  1751 | 		if ((await card.getAttribute('aria-checked')) !== 'true') {
+  1752 | 			await this.activateControl(card, `tarjeta de criterio "${criterioKey}"`);
+  1753 | 		}
+  1754 | 		this.pageLogger.interaccion('Criterio de registro de pagos', criterioKey);
+  1755 | 
+  1756 | 		// El checkbox va al final: la app habilita "Siguiente" sólo con criterio
+  1757 | 		// elegido + confirmación marcada.
+  1758 | 		await this.setCheckbox(/Confirmo el valor de los beneficios pagados\./);
+  1759 | 		this.pageLogger.exito('Beneficios pagados configurados');
+  1760 | 	}
+  1761 | 
+  1762 | 	/**
+  1763 | 	 * PASO 3 — Sube un archivo de nómina INVÁLIDO y espera a que la app termine
+  1764 | 	 * de revisarlo.
+  1765 | 	 *
+  1766 | 	 * A diferencia de {@link uploadNominaFile} aquí NO se espera la tarjeta de
+  1767 | 	 * resultado con los botones de eliminar/descargar: la app pinta el detalle
+  1768 | 	 * de errores (botón "Ver más") o rechaza el archivo de inmediato con un
+  1769 | 	 * `role="alert"`.
+  1770 | 	 *
+  1771 | 	 * El widget puede rechazar la **extensión** en el cliente (sin llamar al
+  1772 | 	 * backend): en ese caso no hay chip ni tarjeta de validación, solo el helper
+  1773 | 	 * text "Formato de archivo no admitido…". Se compite contra el chip para no
+  1774 | 	 * gastar 90 s esperando una señal que nunca va a llegar.
+  1775 | 	 */
+  1776 | 	async uploadNominaFileInvalido(filePath: string, expectedFileName?: string, timeout = 240000) {
+  1777 | 		const input = this.page.locator('input[type="file"]').last();
+  1778 | 		await input.waitFor({ state: 'attached', timeout: 30000 });
+  1779 | 		await input.setInputFiles(filePath, { timeout: SLOW_ACTION_TIMEOUT_MS });
+  1780 | 
+  1781 | 		const name = expectedFileName ?? path.basename(filePath);
+  1782 | 		this.pageLogger.info(`Archivo inválido seleccionado: ${name}`);
+  1783 | 
+  1784 | 		// La app muestra el chip con el nombre del archivo y luego el toast
+  1785 | 		// "Procesando archivo…" mientras lo valida — salvo si la extensión se
+  1786 | 		// rechaza al vuelo, donde solo aparece el mensaje de formato.
+  1787 | 		const chip = this.page.getByRole('heading', { name: new RegExp(escapeRegExp(name), 'i') }).first();
+  1788 | 		const rechazoFormato = this.page.getByText(FILE_FORMAT_REJECTED_REGEX).first();
+  1789 | 
+  1790 | 		const primeraSenal = await this.waitForAnyVisible([chip, rechazoFormato], 90000);
+  1791 | 		if (primeraSenal === 1) {
+```

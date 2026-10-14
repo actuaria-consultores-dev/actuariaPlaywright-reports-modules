@@ -1,0 +1,33 @@
+[LOG] Using Firebase Production Services for environment: stage [3:50:47 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-14T15:50:48.412Z} [3:50:48 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:50:49 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:50:51 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [3:50:52 PM]
+❌ CONSOLE ERROR: AxiosError: No se pudo obtener el análisis de datos de la empresa
+    at settle (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12382:12)
+    at XMLHttpRequest.onloadend (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12828:7)
+    at Axios.request (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:13593:41)
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10631:11
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10710:7
+❌ CONSOLE ERROR: AxiosError: No se pudo obtener el análisis de datos de la empresa
+    at settle (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12382:12)
+    at XMLHttpRequest.onloadend (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12828:7)
+    at Axios.request (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:13593:41)
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10631:11
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10710:7
+
+⚠️  1 error(s) detected during test execution:
+  1. AxiosError: No se pudo obtener el análisis de datos de la empresa
+    at settle (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12382:12)
+    at XMLHttpRequest.onloadend (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12828:7)
+    at Axios.request (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:13593:41)
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10631:11
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10710:7
+
+⚠️  1 error(s) detected during test execution:
+  1. AxiosError: No se pudo obtener el análisis de datos de la empresa
+    at settle (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12382:12)
+    at XMLHttpRequest.onloadend (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:12828:7)
+    at Axios.request (https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/useUserData-FVH9pfE2.js:13593:41)
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10631:11
+    at async https://storage.googleapis.com/bucket-componentes-8479e849/modulo-estudios/dist/assets/MisEstudios-T9N_z_R3.js:10710:7

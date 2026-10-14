@@ -1,0 +1,7 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/znNfMv01bLFD8WyV2U45/4
+  • RED (4xx/5xx) → GET https://actuafast-api-383942996286.us-east1.run.app/estudios/136750/version/G0WZRGfWCsup56S2v1Tb/plantilla-modificada → 400
+  • RED (4xx/5xx) → GET https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?gsessionid=YClCuz4zI79AMZWpTSH0956i4AVSYdX_fmoosAD36FogLEqBFd3JaQ&VER=8&database=projects%2Fact-compass-stage-proj%2Fdatabases%2F(default)&RID=rpc&SID=lfrGsJfBWTsOFzRlgEj-Hg&AID=13&CI=0&TYPE=xmlhttp&zx=l2wkiis2avkf&t=1 → 400
+  • CONSOLE → [2026-10-14T15:50:32.336Z] @firebase/firestore: Firestore (12.12.0): WebChannelConnection RPC 'Listen' stream 0x6589448e transport errored. Name: undefined Message: undefined
+===================================================================
