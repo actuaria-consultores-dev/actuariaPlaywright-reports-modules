@@ -1,0 +1,15 @@
+[LOG] Using Firebase Production Services for environment: stage [5:48:02 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-22T17:48:04.172Z} [5:48:04 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:48:05 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:48:07 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [5:48:09 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:48:11 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [5:48:12 PM]
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+❌ CONSOLE ERROR: {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError$1, message: Se detectaron errores en el formato de las columnas del archivo., content: Array(1)}

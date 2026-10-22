@@ -1,0 +1,16 @@
+[LOG] Using Firebase Production Services for environment: stage [5:44:48 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-22T17:44:50.505Z} [5:44:50 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:44:52 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [5:44:53 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:44:55 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [5:44:56 PM]
+⚠️ Uncaught exception: Cannot read properties of null (reading 'sequence')
+❌ CONSOLE ERROR: Uncaught exception: Cannot read properties of null (reading 'sequence')
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [5:45:35 PM]
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [5:45:35 PM]
+
+⚠️  1 error(s) detected during test execution:
+  1. Uncaught exception: Cannot read properties of null (reading 'sequence')
+
+⚠️  1 error(s) detected during test execution:
+  1. Uncaught exception: Cannot read properties of null (reading 'sequence')

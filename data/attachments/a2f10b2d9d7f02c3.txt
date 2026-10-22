@@ -1,0 +1,266 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/EstudioActuarial/crearEstudio.test.ts >> Verificar creacion Estudio actuarial cusando empresa por primea vez en el sistema (no estudios previos) >> Crear Estudio Actuarial | [AP] | TC02-24: Verificar normativa NIIF Completa con bonos de EE.UU. en el Paso 5
+- Location: tests/specs/EstudioActuarial/crearEstudio.test.ts:260:2
+
+# Error details
+
+```
+Error: ⏱️ Timeout esperando indicador del paso 5 (estado=visible, 30000ms).
+  Locator: getByText(/Paso\s+5\s+de\s+\d+/i).first()
+  URL actual: https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio/TU7XHKlG5IdEacEBR4ak/3
+  Headings visibles en pantalla: Hola, CHRISTIAN | Nuevo estudio actuarial: MODITEX S.A. | Estudio actuarial | Revisión de tu nómina | Revisión de tu nómina | No necesitas validar tu nómina | Sin estudio anterior | Nada que clasificar | Directo al cálculo | Cambiar de empresa
+  Error original: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByText(/Paso\s+5\s+de\s+\d+/i).first() to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e2]:
+  - generic [ref=f2e3]:
+    - banner [ref=f2e4]:
+      - generic [ref=f2e6]:
+        - button "Notificaciones" [ref=f2e7] [cursor=pointer]:
+          - generic [ref=f2e8]: 99+
+        - button "M MODITEX" [ref=f2e12] [cursor=pointer]:
+          - generic [ref=f2e13]: M
+          - paragraph [ref=f2e14]: MODITEX
+    - complementary [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - link [ref=f2e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f2e20]
+        - button "abrir/cerrar menú" [ref=f2e21] [cursor=pointer]
+      - generic [ref=f2e26]:
+        - textbox "Buscar..." [ref=f2e30]
+        - group
+      - list [ref=f2e32]:
+        - button "Inicio" [ref=f2e33] [cursor=pointer]
+        - list [ref=f2e39]:
+          - listitem [ref=f2e40]: Panel General
+          - generic [ref=f2e41]:
+            - button "Estudios Actuariales" [ref=f2e42] [cursor=pointer]
+            - generic [ref=f2e52]:
+              - link "Listado de estudios" [ref=f2e53] [cursor=pointer]:
+                - /url: /dashboard/estudios/mis-estudios
+              - link "Nuevo estudio" [ref=f2e59] [cursor=pointer]:
+                - /url: /dashboard/estudios/nuevo-estudio
+      - generic [ref=f2e66]:
+        - paragraph [ref=f2e67]: Actuaria+ Stage
+        - paragraph [ref=f2e68]: soporteplus@actuaria.com
+        - generic [ref=f2e69]: v 1.11.4
+    - generic [ref=f2e74]:
+      - generic [ref=f2e75]:
+        - heading "Hola, CHRISTIAN" [level=1] [ref=f2e76]
+        - paragraph [ref=f2e77]: "Sesión anterior: hoy, 17:41 · hace 1 minuto"
+      - generic [ref=f2e78]:
+        - button "Inicio" [ref=f2e79] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f2e81] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f2e83] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f2e85] [cursor=pointer]
+        - button "Control tributario" [ref=f2e87] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f2e89] [cursor=pointer]
+      - separator [ref=f2e91]
+      - generic [ref=f2e92]:
+        - generic [ref=f2e94]:
+          - 'heading "Nuevo estudio actuarial: MODITEX S.A." [level=4] [ref=f2e95]'
+          - paragraph [ref=f2e96]: Completa los pasos para solicitar el estudio actuarial de tu empresa.
+        - navigation "breadcrumb" [ref=f2e97]:
+          - list [ref=f2e98]:
+            - listitem [ref=f2e99]:
+              - link "Inicio" [ref=f2e100] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=f2e101]
+            - listitem [ref=f2e104]:
+              - heading "Estudio actuarial" [level=6] [ref=f2e105]
+        - generic [ref=f2e107]:
+          - heading "Tasas y política" [level=6] [ref=f2e108]
+          - paragraph [ref=f2e109]: Paso 5 de 9
+          - generic [ref=f2e110]:
+            - 'generic "Volver a: Fecha de valoración" [ref=f2e111]':
+              - generic [ref=f2e112] [cursor=pointer]
+            - 'generic "Volver a: Saldos contables" [ref=f2e113]':
+              - generic [ref=f2e114] [cursor=pointer]
+            - 'generic "Volver a: Carga de nómina" [ref=f2e115]':
+              - generic [ref=f2e116] [cursor=pointer]
+            - 'generic "Volver a: Revisión de tu nómina" [ref=f2e117]':
+              - generic [ref=f2e118] [cursor=pointer]
+            - 'generic "Ir a: Tasas y política" [ref=f2e119]':
+              - generic [ref=f2e120] [cursor=pointer]
+        - generic [ref=f2e131]:
+          - generic [ref=f2e132]:
+            - heading "Tasas y política de tu estudio" [level=5] [ref=f2e134]
+            - paragraph [ref=f2e135]: Revisa los cuatro parámetros de tu estudio y ábrelos solo si necesitas cambiar alguno.
+          - generic [ref=f2e139]:
+            - generic [ref=f2e140]:
+              - heading [level=3] [ref=f2e141]:
+                - button "Tipo de normativa contable Falta completar" [expanded] [ref=f2e142] [cursor=pointer]:
+                  - generic [ref=f2e145]:
+                    - heading "Tipo de normativa contable" [level=6] [ref=f2e146]
+                    - generic [ref=f2e147]: Falta completar
+                    - generic [ref=f2e153]: "Procedencia: Todavía no has declarado la normativa contable de tu empresa. Afectación: Define los informes que emitimos y los artículos que se facturan en tu solicitud, y es el criterio contable con el que valoramos la obligación. Cambiarla cambia el detalle de lo que recibes."
+              - region "Tipo de normativa contable Falta completar" [ref=f2e160]:
+                - generic [ref=f2e161]:
+                  - paragraph [ref=f2e162]: Selecciona la opción que corresponde a la normativa contable interna de tu empresa. De ella dependen los informes que emitimos.
+                  - group [ref=f2e164]:
+                    - radiogroup "Tipo de normativa" [ref=f2e165]:
+                      - generic [ref=f2e166]:
+                        - generic [ref=f2e168] [cursor=pointer]:
+                          - radio "NIIF completas (bonos USA)" [ref=f2e170]
+                          - generic [ref=f2e174]: NIIF completas (bonos USA)
+                        - generic [ref=f2e176] [cursor=pointer]:
+                          - radio "NIIF completas (bonos locales)" [ref=f2e178]
+                          - generic [ref=f2e182]: NIIF completas (bonos locales)
+                        - generic [ref=f2e184] [cursor=pointer]:
+                          - radio "NIIF para PYMES" [ref=f2e186]
+                          - generic [ref=f2e190]: NIIF para PYMES
+                        - generic [ref=f2e192] [cursor=pointer]:
+                          - radio "Normativa ecuatoriana (NEC)" [ref=f2e194]
+                          - generic [ref=f2e198]: Normativa ecuatoriana (NEC)
+            - heading [level=3] [ref=f2e200]:
+              - button "Tasa de incremento salarial a corto plazo Falta completar" [ref=f2e201] [cursor=pointer]:
+                - generic [ref=f2e204]:
+                  - heading "Tasa de incremento salarial a corto plazo" [level=6] [ref=f2e205]
+                  - generic [ref=f2e206]: Falta completar
+                  - generic [ref=f2e212]: "Procedencia: Todavía no hay tasa: toma la estándar de Actuaria o digita la que proyecta tu empresa. Afectación: Con esta tasa proyectamos los sueldos futuros de tu nómina, que son la base de la jubilación patronal y del desahucio. Una tasa más alta proyecta sueldos mayores y eleva la provisión que registras."
+            - heading [level=3] [ref=f2e217]:
+              - button "Tasa de rotación Calculado por Actuaria 11,8%" [ref=f2e218] [cursor=pointer]:
+                - generic [ref=f2e220]:
+                  - generic [ref=f2e221]:
+                    - heading "Tasa de rotación" [level=6] [ref=f2e222]
+                    - generic [ref=f2e223]: Calculado por Actuaria
+                    - generic [ref=f2e227]: "Procedencia: Es la tasa estándar de mercado que calcula Actuaria. La usas mientras no calcules la de tu empresa con tu propio movimiento de personal. Afectación: Mide con qué frecuencia tus colaboradores salen antes de alcanzar la jubilación patronal. Cuanta más rotación, menos personal llega a jubilarse y menor es la provisión de jubilación patronal."
+                  - paragraph [ref=f2e228]: 11,8%
+            - heading [level=3] [ref=f2e233]:
+              - button "Política de pago de jubilación patronal Falta completar" [ref=f2e234] [cursor=pointer]:
+                - generic [ref=f2e237]:
+                  - heading "Política de pago de jubilación patronal" [level=6] [ref=f2e238]
+                  - generic [ref=f2e239]: Falta completar
+                  - generic [ref=f2e245]: "Procedencia: Todavía no has declarado la política de pago de tu empresa. Afectación: Determina cómo se valora la obligación: «Pensión mensual» la valora como una renta y «Fondo global» como un pago único, resultados materialmente distintos sobre la misma nómina. Sin política definida aplicamos el mínimo legal. También alimenta el acta de finiquito de jubilación patronal."
+          - generic [ref=f2e249]:
+            - button [ref=f2e250] [cursor=pointer]
+            - button "Siguiente" [disabled]
+      - alert [ref=f2e257]:
+        - generic [ref=f2e258]: Nómina guardada correctamente
+  - link "Escríbenos a WhatsApp" [ref=f2e261] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  50  | 		await this.waitForState(locator, 'visible', description, timeout);
+  51  | 	}
+  52  | 
+  53  | 	async waitForHidden(locator: Locator, description: string, timeout: number = 10000): Promise<void> {
+  54  | 		await this.waitForState(locator, 'hidden', description, timeout);
+  55  | 	}
+  56  | 
+  57  | 	/**
+  58  | 	 * Espera a que CUALQUIERA de los locators sea visible.
+  59  | 	 *
+  60  | 	 * Útil cuando la app puede pintar dos pantallas excluyentes (p. ej. la
+  61  | 	 * tarjeta esperada **o** su error boundary) y queremos reaccionar a la
+  62  | 	 * primera que aparezca sin esperar el timeout completo.
+  63  | 	 *
+  64  | 	 * @returns índice del primer locator visible, o `-1` si ninguno lo fue.
+  65  | 	 */
+  66  | 	async waitForAnyVisible(locators: Locator[], timeout: number = 10000): Promise<number> {
+  67  | 		// `Promise.any` adjunta handlers a TODAS las promesas, así que las que
+  68  | 		// pierden no generan "unhandled rejection" cuando rechazan más tarde.
+  69  | 		const candidates = locators.map((loc, index) =>
+  70  | 			loc.first().waitFor({ state: 'visible', timeout }).then(() => index)
+  71  | 		);
+  72  | 		try {
+  73  | 			return await Promise.any(candidates);
+  74  | 		} catch {
+  75  | 			return -1;
+  76  | 		}
+  77  | 	}
+  78  | 
+  79  | 	/**
+  80  | 	 * Error enriquecido para un **defecto de la aplicación** (no del test).
+  81  | 	 *
+  82  | 	 * Se usa cuando la app se rompe por sí misma (error boundary, crash de
+  83  | 	 * render) y la aserción no puede satisfacerse: así el reporte dice
+  84  | 	 * explícitamente "esto es un bug de la app" en vez de un timeout pelado,
+  85  | 	 * e incluye la causa raíz (consola/red) detectada.
+  86  | 	 */
+  87  | 	async buildAppDefectError(title: string, detail: string): Promise<Error> {
+  88  | 		let context = '';
+  89  | 		try {
+  90  | 			const url = this.page.url();
+  91  | 			// `allTextContents()` es una llamada de protocolo SIN timeout propio: si
+  92  | 			// la app está bloqueada no resuelve nunca y el reporte del problema se
+  93  | 			// convierte en otro cuelgue (timeout opaco del hook). `safeBestEffort`
+  94  | 			// acota el best-effort a 2s y devuelve el fallback.
+  95  | 			const headings = await safeBestEffort(
+  96  | 				this.page.locator('h1, h2, h3, h4, h5, h6').allTextContents(),
+  97  | 				[] as string[]
+  98  | 			);
+  99  | 			const visible = headings.map((h) => h.trim()).filter(Boolean).slice(0, 15);
+  100 | 			context =
+  101 | 				`\n  URL actual: ${url}` +
+  102 | 				`\n  Headings visibles en pantalla: ${visible.join(' | ') || '(ninguno)'}`;
+  103 | 		} catch {
+  104 | 			// La página ya no está disponible (se cerró o navegó fuera)
+  105 | 		}
+  106 | 
+  107 | 		const cause = buildRootCauseBlock(getPageDiagnostics());
+  108 | 		return new Error(
+  109 | 			`🐞 DEFECTO DE LA APLICACIÓN (no del test): ${title}\n` +
+  110 | 			`  ${detail}${context}${cause || ''}`
+  111 | 		);
+  112 | 	}
+  113 | 
+  114 | 	private async buildContextError(
+  115 | 		description: string,
+  116 | 		locator: Locator,
+  117 | 		state: string,
+  118 | 		timeout: number,
+  119 | 		original: unknown
+  120 | 	): Promise<Error> {
+  121 | 		const originalMsg = original instanceof Error ? original.message : String(original);
+  122 | 
+  123 | 		// Snapshot del estado de la página al momento del fallo (best-effort)
+  124 | 		let snapshot = '';
+  125 | 		try {
+  126 | 			const url = this.page.url();
+  127 | 			// Best-effort acotado: nunca debe colgar el reporte del error.
+  128 | 			const headings = await safeBestEffort(
+  129 | 				this.page.locator('h1, h2, h3, h4, h5, h6').allTextContents(),
+  130 | 				[] as string[]
+  131 | 			);
+  132 | 			const visibleHeadings = headings.map((h) => h.trim()).filter(Boolean).slice(0, 15);
+  133 | 			snapshot = `\n  URL actual: ${url}`;
+  134 | 			if (url.includes('/error')) {
+  135 | 				snapshot += '\n  ⚠️ La aplicación navegó a la página de ERROR (/error) - probablemente un error del backend';
+  136 | 			}
+  137 | 			snapshot += visibleHeadings.length
+  138 | 				? `\n  Headings visibles en pantalla: ${visibleHeadings.join(' | ')}`
+  139 | 				: '\n  Headings visibles en pantalla: (ninguno)';
+  140 | 		} catch {
+  141 | 			// La página ya no está disponible (se cerró o navegó fuera)
+  142 | 		}
+  143 | 
+  144 | 		const cause = buildRootCauseBlock(getPageDiagnostics());
+  145 | 
+  146 | 		const message =
+  147 | 			`⏱️ Timeout esperando ${description} (estado=${state}, ${timeout}ms).\n` +
+  148 | 			`  Locator: ${locator}${snapshot}${cause || ''}\n` +
+  149 | 			`  Error original: ${originalMsg}`;
+> 150 | 		return new Error(message);
+      |          ^ Error: ⏱️ Timeout esperando indicador del paso 5 (estado=visible, 30000ms).
+  151 | 	}
+  152 | }
+  153 | 
+```

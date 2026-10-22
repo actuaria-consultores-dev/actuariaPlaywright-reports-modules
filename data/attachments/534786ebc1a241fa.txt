@@ -1,0 +1,15 @@
+[LOG] Using Firebase Production Services for environment: stage [5:46:10 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-22T17:46:12.119Z} [5:46:12 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:46:13 PM]
+[LOG] Using Firebase Production Services for environment: stage [5:46:15 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.1.18 [5:46:17 PM]
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [5:49:19 PM]
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [5:49:20 PM]
+
+⚠️  1 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+
+⚠️  1 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)

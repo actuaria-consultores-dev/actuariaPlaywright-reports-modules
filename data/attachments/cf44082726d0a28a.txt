@@ -1,0 +1,252 @@
+🎭️ [EstudioActuarial-GestionCompleta] Preparando entorno → /dashboard/estudios/nuevo-estudio
+🔐 [EstudioActuarial-GestionCompleta] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-GestionCompleta] Sesión iniciada correctamente
+🔍 [EstudioActuarial-GestionCompleta] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-GestionCompleta] goto /dashboard/estudios/nuevo-estudio interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/nuevo-estudio", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-GestionCompleta] Navegación exitosa → /dashboard/estudios/nuevo-estudio
+🎭️ [TC02-05] Tasa de incremento salarial a corto plazo específica
+⚠️  [TC02-05] Tasa de incremento a corto plazo configurada manualmente - difiere del valor estándar
+
+======================================================================
+🎯 INICIANDO FLUJO DEL NUEVO WIZARD (9 PASOS)
+======================================================================
+   • pasoInicial: 1
+   • archivoNomina: ./tests/data/documents/caso1.xlsx
+   • archivoBeneficios: (paso omitido para primer estudio)
+   • viaNomina: Sin traspasos
+   • normativa: pymes
+   • saldosContables: Sí, confirmo
+======================================================================
+
+ℹ️  [NuevoEstudioWorkflow] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [NuevoEstudioWorkflow] Contexto           : Paso 9 = botón "Siguiente" (enviar pedido)
+ℹ️  [NuevoEstudioWorkflow] Env                : CONFIRMAR_PEDIDO_MOCK = 'true'
+ℹ️  [NuevoEstudioWorkflow] Lectura del env    : valor 'true' → el mock queda ACTIVADO
+ℹ️  [NuevoEstudioWorkflow] Config del TC      : confirmarPedidoMock = { enabled: true, debugNetwork: false }
+ℹ️  [NuevoEstudioWorkflow] Modo efectivo      : 🟢 MOCK ACTIVADO — los endpoints del paso final serán interceptados (el backend real NO se toca)
+✅ [NuevoEstudioWorkflow] INTERCEPTARÁ: sí
+ℹ️  [NuevoEstudioWorkflow] ═══════════════════════════════════════════
+
+📍 Paso 1: Creando estudio y configurando fecha de valoración
+
+📍 Paso 1: Abriendo nuevo estudio actuarial
+✅ [EstudioActuarialPage] Wizard abierto en el Paso 1 de 10 (etapa A · Estudio base)
+
+📍 Paso 1: Configurando fecha de valoración
+👆 [EstudioActuarialPage] 2024: Selección "anioValoracion"
+👆 [EstudioActuarialPage] /Noviembre/i: Selección "mesCorte"
+✓ [EstudioActuarialPage] Año de valoración: esperado "2024" → actual "2024"
+✓ [EstudioActuarialPage] Mes de valoración: esperado "Diciembre" → actual "Diciembre"
+✓ [EstudioActuarialPage] Mes de corte de nómina: esperado "Noviembre" → actual "Noviembre"
+✅ [EstudioActuarialPage] Fecha de valoración configurada
+✅ [NuevoEstudioWorkflow] Fecha de valoración configurada
+👆 [EstudioActuarialPage] avanzó al paso 2: Siguiente
+
+📍 Paso 2: Respondiendo el estudio base (saldos contables / tipo de empresa)
+
+📍 Paso 2: Configurando el estudio base
+ℹ️  [EstudioActuarialPage] Paso 2: variante detectada → "Tipo de empresa"
+✓ [EstudioActuarialPage] Tipo de empresa: esperado "primerEstudio" → actual "N (Es el primer estudio actuarial de la empresa)"
+✅ [EstudioActuarialPage] Tipo de empresa: primerEstudio
+✅ [NuevoEstudioWorkflow] Paso 2 respondido
+👆 [EstudioActuarialPage] avanzó al paso 3: Siguiente
+
+📍 Paso 3: Cargando base de nómina
+
+📍 Paso 3: Configurando carga de nómina
+👆 [EstudioActuarialPage] Actualizar mi base del año anterior: Vía de nómina
+✅ [EstudioActuarialPage] Vía de nómina seleccionada: "Actualizar mi base del año anterior"
+ℹ️  [EstudioActuarialPage] Archivo seleccionado: caso1.xlsx
+⏳ [EstudioActuarialPage] Procesamiento del archivo finalizado (~0s)
+✅ [EstudioActuarialPage] Archivo procesado correctamente: caso1.xlsx
+👆 [EstudioActuarialPage] No tengo traspasos en el período: Traspasos
+✅ [EstudioActuarialPage] Carga de nómina configurada
+✅ [NuevoEstudioWorkflow] Nómina cargada y validada
+👆 [EstudioActuarialPage] avanzó al paso 4: Siguiente
+
+📍 Paso 4: Revisando resumen de la nómina
+
+📍 Paso 4: Confirmando el resumen de la nómina
+ℹ️  [EstudioActuarialPage] La aplicación indica que la revisión de nómina no aplica; se continúa sin confirmación.
+✅ [NuevoEstudioWorkflow] Resumen de nómina confirmado
+👆 [EstudioActuarialPage] avanzó al paso 5: Siguiente
+
+📍 Paso 5: Configurando tasas y política
+
+📍 Paso 5: Configurando tasas y política del estudio
+✓ [EstudioActuarialPage] Normativa contable: esperado "pymes" → actual "NIIF_PYMES"
+✓ [EstudioActuarialPage] Incremento salarial específico: esperado "5.23" → actual "5.23"
+✓ [EstudioActuarialPage] Tasa de rotación estándar: esperado "11.8" → actual "11.8"
+✓ [EstudioActuarialPage] Política de pago: esperado "pensionMensual" → actual "P"
+✅ [EstudioActuarialPage] Tasas y política configuradas
+✅ [NuevoEstudioWorkflow] Tasas y política configuradas
+👆 [EstudioActuarialPage] avanzó al paso 6: Siguiente
+
+📍 Paso 6: Definiendo nivel de detalle de saldos de AID
+
+📍 Paso 6: Declarando saldos de AID
+✅ [EstudioActuarialPage] Nivel de detalle de AID declarado: sinSaldos
+✅ [NuevoEstudioWorkflow] Saldos de AID definidos
+👆 [EstudioActuarialPage] avanzó al paso 7: Siguiente
+
+📍 Paso 7: Seleccionando tasa de impuesto a la renta
+
+📍 Paso 7: Declarando tasa de impuesto a la renta
+✅ [EstudioActuarialPage] Tasa de impuesto a la renta: estandar
+✅ [NuevoEstudioWorkflow] Tasa de impuesto a la renta definida
+👆 [EstudioActuarialPage] avanzó al paso 8: Siguiente
+
+📍 Paso 8: Revisando información antes del pedido
+
+📍 Paso 8: Confirmando la revisión previa al pedido
+⚠️  [EstudioActuarialPage] Secciones del resumen del Paso 8 no encontradas (la app las renderiza de forma condicional): Beneficios pagados
+✅ [EstudioActuarialPage] Revisión del pedido confirmada
+✅ [NuevoEstudioWorkflow] Revisión confirmada
+👆 [EstudioActuarialPage] avanzó al paso 9: Siguiente
+
+📍 Paso 9: Completando datos del pedido
+
+📍 Paso 9: Completando los datos del pedido
+✓ [EstudioActuarialPage] Número de teléfono: esperado "0992700726" → actual "0992700726"
+📊 [EstudioActuarialPage] Contacto del pedido precargado desde el perfil
+📊 [EstudioActuarialPage] Correo de contacto coincide con el destinatario esperado: actuariatest3@gmail.com
+✅ [EstudioActuarialPage] Datos del pedido completados
+
+📍 Paso 10: Verificando la sección "Datos de facturación"
+📊 [EstudioActuarialPage] Razón social: "23KA S.A." (con texto, sin [object Object])
+📊 [EstudioActuarialPage] RUC: "0791830214001" (con texto, sin [object Object])
+📊 [EstudioActuarialPage] Provincia: "GUAYAS" (con texto, sin [object Object])
+📊 [EstudioActuarialPage] Ciudad: "DURAN" (con texto, sin [object Object])
+✅ [EstudioActuarialPage] Sección "Datos de facturación" verificada (con texto, sin "[object Object]")
+✅ [NuevoEstudioWorkflow] Datos del pedido completados
+
+📍 Paso 9: Enviando pedido del estudio
+ℹ️  [EstudioActuarial-Step9-Enviar] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [EstudioActuarial-Step9-Enviar] Contexto           : paso 9 - justo antes de hacer clic en "Siguiente" (Enviar)
+ℹ️  [EstudioActuarial-Step9-Enviar] Env                : CONFIRMAR_PEDIDO_MOCK = 'true'
+ℹ️  [EstudioActuarial-Step9-Enviar] Lectura del env    : valor 'true' → el mock queda ACTIVADO
+ℹ️  [EstudioActuarial-Step9-Enviar] Config del TC      : confirmarPedidoMock = { enabled: true, debugNetwork: false }
+ℹ️  [EstudioActuarial-Step9-Enviar] Modo efectivo      : 🟢 MOCK ACTIVADO — los endpoints del paso final serán interceptados (el backend real NO se toca)
+✅ [EstudioActuarial-Step9-Enviar] INTERCEPTARÁ: sí
+ℹ️  [EstudioActuarial-Step9-Enviar] ═══════════════════════════════════════════
+ℹ️  [EstudioActuarial-Step9-Enviar] MODO MOCK: armando interceptación antes de hacer clic en "Siguiente"
+
+======================================================================
+🎯 ARMANDO INTERCEPTACIÓN DE ENDPOINTS (MOCKOON-STYLE)
+======================================================================
+   • ingresarPedido: /\/workflow\/ingresar-pedido(?:\?|$)/
+   • workflowEstado: /\/workflow\/(?!ingresar-pedido)/
+   • ventaEfectiva: /\/(?:api|salesforce)\/EffectiveSale\/search\//
+   • notificaciones: /\/firestore\/send-email(?:\?|$)/
+======================================================================
+
+✅ [NuevoEstudioWorkflow] 🟢 MOCK ACTIVO: interceptando 4 endpoints del paso "Enviar pedido"
+ℹ️  [NuevoEstudioWorkflow]    1) POST workflow/ingresar-pedido
+ℹ️  [NuevoEstudioWorkflow]    2) GET  workflow/status (catch-all → SUCCEEDED)
+ℹ️  [NuevoEstudioWorkflow]    3) GET  EffectiveSale/search/{idVentaEfectiva}
+ℹ️  [NuevoEstudioWorkflow]    4) POST firestore/send-email
+✅ [NuevoEstudioWorkflow] Rutas de interceptación registradas (el backend real no recibirá estas llamadas)
+✅ [EstudioActuarial-Step9-Enviar] 🟢 MOCK ACTIVO: las peticiones del paso 9 serán respondidas por el mock (el backend real no se toca)
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://f.clarity.ms/collect -> 204
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6 -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/8qtnMUXl6GOaSqBI5pFp?database=estudios-actuariales&collection=pedidos&includeSubcollections=true&subcollectionDepth=5 -> 200
+ℹ️  [NuevoEstudioWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido -> 200
+ℹ️  [NuevoEstudioWorkflow] Interceptado (workflow estado): GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F711149ec-1320-4c65-9d24-c673c7b73554
+ℹ️  [NuevoEstudioWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F711149ec-1320-4c65-9d24-c673c7b73554
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F711149ec-1320-4c65-9d24-c673c7b73554 -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/parametros?collection=constantes -> 200
+ℹ️  [NuevoEstudioWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/search/a0FVD0000096WzK2AU
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/search/a0FVD0000096WzK2AU -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/8qtnMUXl6GOaSqBI5pFp -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7 -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/parametros?collection=constantes -> 200
+ℹ️  [NuevoEstudioWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/search/a0FVD0000096WzK2AU
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/search/a0FVD0000096WzK2AU -> 200
+ℹ️  [NuevoEstudioWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email -> 200
+ℹ️  [NuevoEstudioWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://f.clarity.ms/collect -> 204
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7 -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/8qtnMUXl6GOaSqBI5pFp -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/8qtnMUXl6GOaSqBI5pFp -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/8qtnMUXl6GOaSqBI5pFp -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/8qtnMUXl6GOaSqBI5pFp?database=estudios-actuariales&collection=pedidos&includeSubcollections=true&subcollectionDepth=5 -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://f.clarity.ms/collect -> 204
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://f.clarity.ms/collect -> 204
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://smle.li/44fKZ3zVZGs79jja?playground=true&correo=actuariatest3%40gmail.com&numero_proceso=491888 -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://prod-api.smileweb.net/api/v1/form-data/44fKZ3zVZGs79jja?correo=actuariatest3%40gmail.com&numero_proceso=491888&playground=true -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://static.smileweb.net/fonts/lemonmilk/LemonMilkPro-Bold.otf -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] GET https://static.smileweb.net/fonts/lemonmilk/LemonMilkPro-Regular.otf -> 200
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://f.clarity.ms/collect -> 204
+ℹ️  [NuevoEstudioWorkflow] [NET] POST https://f.clarity.ms/collect -> 204
+
+======================================================================
+🎯 📡 ENDPOINTS INTERCEPTADOS (MOCKOON-STYLE)
+======================================================================
+   • total: 4
+======================================================================
+
+
+======================================================================
+🎯 ▶ POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?ambiente=parametros_globales_pruebas&name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F711149ec-1320-4c65-9d24-c673c7b73554
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/search/a0FVD0000096WzK2AU
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+ℹ️  [EstudioActuarial-Step9-Enviar] Verificando pantalla final de confirmación
+ℹ️  [EstudioActuarialPage] Verificando pantalla final "Pedido enviado"
+ℹ️  [EstudioActuarialPage] Diálogo de encuesta detectado - cerrando con X
+✅ [EstudioActuarialPage] Diálogo de encuesta cerrado
+ℹ️  [EstudioActuarialPage] Extrayendo número de proceso
+✅ [EstudioActuarialPage] Número de proceso extraído: 491888
+✅ [EstudioActuarialPage] Pedido en seguimiento · proceso 491888 · estado "Enviado" · fecha enviado "22 de octubre"
+✅ [EstudioActuarial-Step9-Enviar] Confirmación del pedido verificada
+📊 [EstudioActuarial-Step9-Enviar] Endpoints interceptados: 4 de los esperados
+✅ [EstudioActuarial-Step9-Enviar] 🟢 CONFIRMADO: el mock interceptó el paso 9 (backend real no recibió estas llamadas)
+
+======================================================================
+🎯 FLUJO DEL NUEVO WIZARD COMPLETADO
+======================================================================
+   • duracion: 69.3s
+======================================================================
+
+✅ [TC02-05] Flujo con tasa a corto plazo específica completado correctamente
+
+✅ ✅ ✅ [TC02-05] TC02-05 finalizado exitosamente
+
+
+ℹ️  2 non-blocking error(s) ignored by filter.
+
+📋 9 console message(s) logged to stderr
