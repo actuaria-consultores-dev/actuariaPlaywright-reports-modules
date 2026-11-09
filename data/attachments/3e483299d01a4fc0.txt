@@ -1,0 +1,13 @@
+[LOG] Using Firebase Production Services for environment: stage [3:16:01 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-09T15:16:04.588Z} [3:16:04 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:16:06 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:16:10 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.2.0 [3:16:14 PM]
+⚠️ Uncaught exception: Cannot read properties of null (reading 'sequence')
+❌ CONSOLE ERROR: Uncaught exception: Cannot read properties of null (reading 'sequence')
+
+⚠️  1 error(s) detected during test execution:
+  1. Uncaught exception: Cannot read properties of null (reading 'sequence')
+
+⚠️  1 error(s) detected during test execution:
+  1. Uncaught exception: Cannot read properties of null (reading 'sequence')

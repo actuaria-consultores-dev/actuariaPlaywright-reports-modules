@@ -1,0 +1,19 @@
+[LOG] Using Firebase Production Services for environment: stage [3:22:30 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-09T15:22:32.590Z} [3:22:32 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:22:33 PM]
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+[LOG] Using Firebase Production Services for environment: stage [3:22:35 PM]
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+[INFO] Sistema Name:  Estudios - Stage version:  1.2.0 [3:22:38 PM]
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [3:26:06 PM]
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [3:26:06 PM]
+
+⚠️  2 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  2. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+
+⚠️  2 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  2. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)

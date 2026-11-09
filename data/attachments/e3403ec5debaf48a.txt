@@ -1,0 +1,6 @@
+[LOG] Using Firebase Production Services for environment: stage [3:19:20 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-09T15:19:23.308Z} [3:19:23 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:19:25 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:19:27 PM]
+[INFO] Sistema Name:  Estudios - Stage version:  1.2.0 [3:19:29 PM]
+[WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://smle.li') does not match the recipient window's origin ('https://act-compass-stage-proj.firebaseapp.com'). [3:21:01 PM]
